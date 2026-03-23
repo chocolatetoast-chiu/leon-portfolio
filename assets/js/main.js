@@ -1,11 +1,10 @@
 (function () {
   const textToType = 'Sovereign AI · Neuroimaging · Digital Twin for Healthcare';
   const typeElement = document.getElementById('typing-text');
-  if (!typeElement) return;
-
   let typeIndex = 0;
 
   function typeWriter() {
+    if (!typeElement) return;
     if (typeIndex < textToType.length) {
       typeElement.textContent += textToType.charAt(typeIndex);
       typeIndex++;
@@ -54,9 +53,11 @@
   };
 
   window.addEventListener('load', function () {
-    typeElement.textContent = '';
-    typeIndex = 0;
-    setTimeout(typeWriter, 500);
+    if (typeElement) {
+      typeElement.textContent = '';
+      typeIndex = 0;
+      setTimeout(typeWriter, 500);
+    }
   });
 
   document.querySelectorAll('.project-card[data-thumb]').forEach(function (card) {
