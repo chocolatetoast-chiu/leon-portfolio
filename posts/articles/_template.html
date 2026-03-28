@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>[Article Title] | Sheng-Chieh (Leon) Chiu</title>
+    <meta name="description" content="[Article description here]" />
+    <meta name="author" content="Sheng-Chieh (Leon) Chiu" />
+    <link rel="icon" href="../../assets/images/favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="../../assets/images/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../../assets/css/styles.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="container nav-inner">
+        <a href="../../index.html" class="logo">
+          <img class="logo-img" src="../../assets/images/favicon.png" alt="" width="36" height="36" />
+          <span>SC<span class="logo-light">.Chiu</span></span>
+        </a>
+        <div class="nav-links">
+          <a href="../../index.html" onclick="toggleMenu()">Home</a>
+          <a href="../../about.html" onclick="toggleMenu()">About</a>
+          <a href="../../cv.html" onclick="toggleMenu()">CV</a>
+          <div class="nav-dropdown">
+            <a href="#">Posts <i class="fas fa-chevron-down" aria-hidden="true"></i></a>
+            <div class="dropdown-menu">
+              <a href="../tutorials.html">Tutorials</a>
+              <a href="../reflections.html">Reflections</a>
+            </div>
+          </div>
+          <a href="../../contact.html" onclick="toggleMenu()">Contact</a>
+        </div>
+        <div class="nav-aside">
+          <div class="nav-social">
+            <a href="https://linkedin.com/in/chocolatetoast-chiu" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+            <a href="https://github.com/chocolatetoast-chiu" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+          </div>
+          <div class="mobile-menu-btn" onclick="toggleMenu()">
+            <i class="fas fa-bars" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <header class="article-header">
+      <div class="container">
+        <h1>[Article Title]</h1>
+        <div class="article-meta">
+          <time datetime="2026-01-01">January 1, 2026</time> · <span>Tutorials</span>
+        </div>
+      </div>
+    </header>
+
+    <article class="article-body">
+      <p>
+        This is a template for writing articles. Replace this content with your own. The article body supports
+        rich formatting as demonstrated below.
+      </p>
+
+      <h2>Section Heading</h2>
+      <p>
+        Use <code>&lt;h2&gt;</code> for major sections and <code>&lt;h3&gt;</code> for subsections. Keep the
+        hierarchy clean for readability.
+      </p>
+
+      <h3>Subsection</h3>
+      <p>
+        Paragraphs are styled with comfortable reading width and line height. You can write naturally and the
+        typography will handle the rest.
+      </p>
+
+      <blockquote>
+        Blockquotes are great for highlighting key insights or referencing others' work. They appear with a
+        navy left border and a subtle background.
+      </blockquote>
+
+      <figure>
+        <img src="../../assets/images/Home.jpg" alt="Placeholder image" />
+        <figcaption>Figure 1: Replace with your own image and caption.</figcaption>
+      </figure>
+
+      <p>
+        Inline code looks like <code>this</code>, and code blocks are styled with a dark navy background:
+      </p>
+
+      <pre><code>import torch
+model = torch.load('checkpoint.pth')
+print(model.eval())</code></pre>
+    </article>
+
+    <nav class="article-nav">
+      <a href="../tutorials.html"><i class="fas fa-arrow-left" aria-hidden="true"></i> Back to Tutorials</a>
+    </nav>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-social">
+          <a href="mailto:scchiu.phd@gmail.com" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+          <a href="https://linkedin.com/in/chocolatetoast-chiu" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+          <a href="https://github.com/chocolatetoast-chiu" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+        </div>
+        <div class="footer-copy">&copy; 2026 Sheng-Chieh (Leon) Chiu</div>
+      </div>
+    </footer>
+
+    <div id="scrollTop" onclick="scrollToTop()" role="button" tabindex="0" aria-label="Back to top">
+      <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </div>
+
+    <script src="../../assets/js/main.js"></script>
+  </body>
+</html>

@@ -6,7 +6,7 @@
     <title>Sheng-Chieh (Leon) Chiu | Postdoctoral Researcher</title>
     <meta
       name="description"
-      content="Sheng-Chieh (Leon) Chiu — Postdoc at NYCU Digital Medicine & Smart Healthcare Research Center. Ph.D. Biomedical Engineering (UAB). Deep learning, PET/MRI, trustworthy clinical AI."
+      content="Sheng-Chieh (Leon) Chiu — Postdoc at NYCU Digital Medicine & Smart Healthcare Research Center. Deep learning, PET/MRI, trustworthy clinical AI."
     />
     <meta name="author" content="Sheng-Chieh (Leon) Chiu" />
     <meta property="og:title" content="Sheng-Chieh (Leon) Chiu | Postdoctoral Researcher" />
@@ -32,20 +32,25 @@
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
   <body>
+    <!-- ═══ Navbar ═══ -->
     <nav>
       <div class="container nav-inner">
-        <a href="#hero" class="logo">
+        <a href="index.html" class="logo">
           <img class="logo-img" src="assets/images/favicon.png" alt="" width="36" height="36" />
           <span>SC<span class="logo-light">.Chiu</span></span>
         </a>
         <div class="nav-links">
-          <a href="#about" onclick="toggleMenu()">About</a>
-          <a href="#experience" onclick="toggleMenu()">Experience</a>
-          <a href="#education" onclick="toggleMenu()">Education</a>
-          <a href="#skills" onclick="toggleMenu()">Skills</a>
-          <a href="#research" onclick="toggleMenu()">Research</a>
-          <a href="#projects" onclick="toggleMenu()">Projects</a>
-          <a href="#contact" onclick="toggleMenu()">Contact</a>
+          <a href="index.html" onclick="toggleMenu()">Home</a>
+          <a href="about.html" onclick="toggleMenu()">About</a>
+          <a href="cv.html" onclick="toggleMenu()">CV</a>
+          <div class="nav-dropdown">
+            <a href="#">Posts <i class="fas fa-chevron-down" aria-hidden="true"></i></a>
+            <div class="dropdown-menu">
+              <a href="posts/tutorials.html">Tutorials</a>
+              <a href="posts/reflections.html">Reflections</a>
+            </div>
+          </div>
+          <a href="contact.html" onclick="toggleMenu()">Contact</a>
         </div>
         <div class="nav-aside">
           <div class="nav-social">
@@ -63,6 +68,7 @@
       </div>
     </nav>
 
+    <!-- ═══ Hero ═══ -->
     <header id="hero">
       <div class="hero-backdrop" role="presentation" aria-hidden="true"></div>
       <div class="hero-overlay" role="presentation" aria-hidden="true"></div>
@@ -74,294 +80,52 @@
           Sovereign AI and digital twin technologies for neurological and surgical care; amyloid PET/MRI
           quantification and trustworthy generative neuroimaging.
         </p>
-        <a href="#contact" class="btn-cta">Get In Touch</a>
+        <a href="about.html" class="btn-cta">Learn More About Me</a>
       </div>
     </header>
 
-    <section id="about">
+    <!-- ═══ About Preview ═══ -->
+    <div class="home-section">
       <div class="container">
-        <h2 class="section-title">About</h2>
-        <p class="section-lead fade-element">
-          I focus on the intersection of deep learning, neuroimaging, and trustworthy AI for clinical decision support.
-        </p>
-        <hr class="section-hr" />
-        <div class="about-layout fade-element">
-          <div class="about-portrait">
-            <img
-              src="assets/images/portrait.jpg"
-              alt="Sheng-Chieh (Leon) Chiu"
-              class="about-profile-img"
-              width="260"
-              height="260"
-            />
-          </div>
-          <div class="glass-card about-card">
-            <p class="about-text">
-              I am a Postdoctoral Researcher at the Digital Medicine and Smart Healthcare Research Center, National Yang
-              Ming Chiao Tung University (NYCU), focusing on sovereign AI and digital twin technologies for healthcare. I
-              completed my Ph.D. in Biomedical Engineering at the University of Alabama at Birmingham (UAB), where I
-              developed deep learning methods for amyloid PET quantification, MRI-assisted and MRI-less brain
-              segmentation, simultaneous PET/MR motion correction, and large-scale neuroimaging biomarker analysis. I work
-              at the interface of trustworthy clinical AI, neuroimaging, and real-time surgical computer vision.
+        <div class="home-section-header">
+          <h2>About</h2>
+        </div>
+        <div class="home-about-preview fade-element">
+          <img
+            src="assets/images/portrait.jpg"
+            alt="Sheng-Chieh (Leon) Chiu"
+            width="200"
+            height="200"
+          />
+          <div>
+            <p>
+              I am a Postdoctoral Researcher at the Digital Medicine and Smart Healthcare Research Center, NYCU,
+              working on sovereign AI and digital twin technologies for healthcare. My research journey began with
+              a deep personal motivation — caring for family members affected by neurodegenerative diseases — and
+              has since grown into a commitment to building trustworthy clinical AI at the intersection of
+              neuroimaging, deep learning, and surgical computer vision.
             </p>
+            <a href="about.html" class="see-more">Read my story <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
-    <section id="experience">
+    <!-- ═══ Featured Projects Preview ═══ -->
+    <div class="home-section">
       <div class="container">
-        <h2 class="section-title">Experience</h2>
-        <div class="experience-list">
-          <div class="glass-card exp-card fade-element">
-            <h3>Postdoctoral Researcher</h3>
-            <div class="exp-org">Digital Medicine and Smart Healthcare Research Center, NYCU · Taipei, Taiwan</div>
-            <div class="exp-dates">Feb 2026 – Present</div>
-            <ul>
-              <li>
-                Sovereign AI and digital twin technologies for trustworthy, locally governed clinical AI in neurology
-                and surgery.
-              </li>
-              <li>
-                Cross-modality generative AI: synthesize amyloid PET from structural MRI for burden estimation when PET
-                is unavailable, with safeguards against false positives in healthy populations.
-              </li>
-              <li>
-                Foundation-model framework for resting-state fMRI to learn healthy brain dynamics (self-supervised),
-                toward clinical perturbation modeling and digital twins.
-              </li>
-              <li>
-                Real-time computer vision for DaVinci robotic gynecologic surgery: detection and promptable segmentation
-                with visibility-aware tracking under occlusion.
-              </li>
-            </ul>
-          </div>
-          <div class="glass-card exp-card fade-element">
-            <h3>Graduate Research Assistant</h3>
-            <div class="exp-org">Department of Biomedical Engineering, UAB · Birmingham, AL, USA</div>
-            <div class="exp-dates">Sep 2020 – Aug 2025</div>
-            <ul>
-              <li>
-                Novel image processing and deep learning for amyloid PET quantification in Alzheimer’s disease: accuracy,
-                efficiency, and accessibility.
-              </li>
-              <li>
-                MRI-assisted and MRI-less DL segmentation pipelines; quantitative equivalence to FreeSurfer and robust
-                diagnostics across multi-site cohorts.
-              </li>
-              <li>
-                Tracer characteristic-based co-registration for simultaneous PET/MR motion correction; PET biomarker
-                (awSUVR) for MCI-to-AD progression with domain-specific anatomy and tracer modeling.
-              </li>
-              <li>
-                Large-scale stats: Centiloid calibration, equivalence testing, ROC, bootstrap; collaboration across
-                nuclear medicine, radiology, neurology, and CS.
-              </li>
-            </ul>
-          </div>
+        <div class="home-section-header">
+          <h2>Featured Work</h2>
+          <p>Selected research projects and publications</p>
         </div>
-      </div>
-    </section>
-
-    <section id="education">
-      <div class="container">
-        <h2 class="section-title">Education</h2>
-        <div class="timeline">
-          <div class="timeline-item fade-element">
-            <div class="timeline-dot"></div>
-            <div class="timeline-date">Sep 2020 – Aug 2025</div>
-            <div class="glass-card timeline-content">
-              <h3>Ph.D. in Biomedical Engineering</h3>
-              <h4>The University of Alabama at Birmingham (UAB), USA</h4>
-              <span class="gpa-badge">GPA: 3.85 / 4.0</span>
-              <p class="dissertation">
-                Dissertation: “Optimizing Quantification in Alzheimer’s Disease with PET Imaging through Advanced Imaging
-                and Deep Learning Techniques”
-              </p>
-            </div>
-          </div>
-          <div class="timeline-item fade-element">
-            <div class="timeline-dot"></div>
-            <div class="timeline-date">Sep 2016 – Jun 2020</div>
-            <div class="glass-card timeline-content">
-              <h3>B.S. in Biomedical Engineering</h3>
-              <h4>National Cheng Kung University (NCKU), Taiwan</h4>
-              <span class="gpa-badge">GPA: 3.76 / 4.30</span>
-              <span class="gpa-badge" style="margin-left: 0.5rem">Upper Division: 3.86 / 4.30</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="skills">
-      <div class="container">
-        <h2 class="section-title">Technical Skills</h2>
-        <div class="skills-grid">
-          <div class="glass-card skill-category fade-element">
-            <h3><i class="fas fa-brain" aria-hidden="true"></i> Deep Learning</h3>
-            <div class="skill-bar-container">
-              <div class="skill-info">
-                <span>Proficiency</span>
-                <span>90%</span>
-              </div>
-              <div class="progress-bg">
-                <div class="progress-fill" style="width: 90%"></div>
-              </div>
-            </div>
-            <div class="skill-tags">
-              <span class="skill-tag">Python</span>
-              <span class="skill-tag">TensorFlow</span>
-              <span class="skill-tag">PyTorch</span>
-            </div>
-          </div>
-          <div class="glass-card skill-category fade-element">
-            <h3><i class="fas fa-images" aria-hidden="true"></i> Medical Imaging</h3>
-            <div class="skill-bar-container">
-              <div class="skill-info">
-                <span>Proficiency</span>
-                <span>85%</span>
-              </div>
-              <div class="progress-bg">
-                <div class="progress-fill" style="width: 85%"></div>
-              </div>
-            </div>
-            <div class="skill-tags">
-              <span class="skill-tag">PET</span>
-              <span class="skill-tag">MRI</span>
-              <span class="skill-tag">Co-registration</span>
-              <span class="skill-tag">Segmentation</span>
-              <span class="skill-tag">Quantification</span>
-            </div>
-          </div>
-          <div class="glass-card skill-category fade-element">
-            <h3><i class="fas fa-tools" aria-hidden="true"></i> Imaging Tools</h3>
-            <div class="skill-bar-container">
-              <div class="skill-info">
-                <span>Proficiency</span>
-                <span>80%</span>
-              </div>
-              <div class="progress-bg">
-                <div class="progress-fill" style="width: 80%"></div>
-              </div>
-            </div>
-            <div class="skill-tags">
-              <span class="skill-tag">MATLAB</span>
-              <span class="skill-tag">3D Slicer</span>
-              <span class="skill-tag">SPM</span>
-              <span class="skill-tag">FSL</span>
-              <span class="skill-tag">FreeSurfer</span>
-              <span class="skill-tag">MRIcroGL</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="research">
-      <div class="container">
-        <h2 class="section-title">Research &amp; Publications</h2>
-
-        <div class="glass-card pub-card fade-element">
-          <span class="pub-status pub-status--published">Published</span>
-          <div class="pub-title">Amyloid PET quantification with deep learning segmentation models without MRI</div>
-          <div class="pub-meta">Chiu SC, Lin YC, McConathy J, Lin SY, Fang YHD · Mar 2026</div>
-          <div class="pub-meta">
-            EJNMMI Physics.
-            <a href="https://doi.org/10.1186/s40658-026-00854-8" target="_blank" rel="noopener noreferrer"
-              >doi.org/10.1186/s40658-026-00854-8</a
-            >
-          </div>
-        </div>
-
-        <div class="glass-card pub-card fade-element">
-          <span class="pub-status">In preparation</span>
-          <div class="pub-title">Deep learning MR-based segmentation approach for amyloid PET quantification (LEON)</div>
-          <div class="pub-meta">Chiu SC, Lin YC, McConathy J, Lin SY, Fang YHD · Mar 2026</div>
-          <div class="pub-meta">Target: EJNMMI Physics</div>
-        </div>
-
-        <div class="glass-card pub-card fade-element pub-card--line-accent">
-          <span class="pub-status pub-status--published">Published</span>
-          <div class="pub-title">
-            Motion correction of simultaneous brain PET/MR images based on tracer uptake characteristics
-          </div>
-          <div class="pub-meta">Chiu SC, Perucho JA, Fang YHD · Jul 2025</div>
-          <div class="pub-meta">
-            EJNMMI Physics 12(1):75 ·
-            <a href="https://doi.org/10.1186/s40658-025-00789-6" target="_blank" rel="noopener noreferrer"
-              >doi.org/10.1186/s40658-025-00789-6</a
-            >
-          </div>
-        </div>
-
-        <div class="glass-card pub-card fade-element">
-          <span class="pub-status">Preprint</span>
-          <div class="pub-title">
-            Prediction of MCI-to-AD progression with atrophy-weighted standard uptake value ratios of ¹⁸F-Florbetapir PET
-          </div>
-          <div class="pub-meta">Fang YHD, Perucho JA, Chiu SC, Lin YC, McConathy J · Mar 2023</div>
-          <div class="pub-meta">
-            medRxiv ·
-            <a href="https://doi.org/10.1101/2023.03.09.23287059" target="_blank" rel="noopener noreferrer"
-              >doi.org/10.1101/2023.03.09.23287059</a
-            >
-          </div>
-        </div>
-
-        <h3 class="subheading-muted">Conference posters</h3>
-        <div class="poster-grid">
-          <div class="glass-card poster-card fade-element">
-            <div class="poster-label">SNMMI · Jun 2024</div>
-            <div class="poster-title">
-              Evaluation of Deep Learning Models for Brain Parcellation in Neuroimaging of Alzheimer’s Disease
-            </div>
-            <a href="https://jnm.snmjournals.org/content/65/supplement_2/242449.abstract" target="_blank" rel="noopener"
-              >Abstract link</a
-            >
-          </div>
-          <div class="glass-card poster-card fade-element">
-            <div class="poster-label">SNMMI · Jun 2023</div>
-            <div class="poster-title">
-              Correction for Involuntary Motion of Simultaneous PET/MR Brain Scans Based on Regional Tracer
-              Characteristics
-            </div>
-            <a href="https://jnm.snmjournals.org/content/64/supplement_1/P1340.abstract" target="_blank" rel="noopener"
-              >Abstract link</a
-            >
-          </div>
-          <div class="glass-card poster-card fade-element">
-            <div class="poster-label">WMIC · Oct 2021</div>
-            <div class="poster-title">
-              Deep learning–based image processing and analysis with cloud computing for open-source imaging software
-            </div>
-            <a
-              href="https://www.xcdsystem.com/wmis/program/QSb7b5D/index.cfm?pgid=2585&sid=23773&abid=84541"
-              target="_blank"
-              rel="noopener"
-              >Program link</a
-            >
-            ·
-            <a href="https://github.com/IQMLatUAB/IQMLServer" target="_blank" rel="noopener">IQMLServer (GitHub)</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects">
-      <div class="container">
-        <h2 class="section-title">Featured projects</h2>
-        <!-- Optional thumbnails: add JPG/PNG under assets/images/ using each card's data-thumb filename. -->
         <div class="projects-grid">
-          <div class="glass-card project-card fade-element" data-thumb="project-leon.jpg">
-            <img alt="" class="project-thumb" loading="lazy" hidden />
+          <div class="glass-card project-card fade-element">
             <div class="project-header">
               <i class="far fa-folder folder-icon" aria-hidden="true"></i>
-              <div class="project-links"></div>
             </div>
             <h3 class="project-title">LEON brain segmentation</h3>
             <p class="project-desc">
-              MR-based deep learning segmentation (LEON) for amyloid PET quantification—diagnostic performance and
+              MR-based deep learning segmentation for amyloid PET quantification — diagnostic performance and
               equivalence to FreeSurfer across large neuroimaging cohorts.
             </p>
             <div class="project-tags">
@@ -370,16 +134,14 @@
               <span>PET/MRI</span>
             </div>
           </div>
-
-          <div class="glass-card project-card fade-element" data-thumb="project-mriless.jpg">
-            <img alt="" class="project-thumb" loading="lazy" hidden />
+          <div class="glass-card project-card fade-element">
             <div class="project-header">
               <i class="far fa-folder folder-icon" aria-hidden="true"></i>
             </div>
             <h3 class="project-title">MRI-less amyloid PET</h3>
             <p class="project-desc">
-              Deep learning quantification without MRI using synthetic CT for training; equivalent to MRI-based standard
-              and robust on external PET/CT cohorts.
+              Deep learning quantification without MRI using synthetic CT for training; equivalent to MRI-based
+              standard and robust on external PET/CT cohorts.
             </p>
             <div class="project-tags">
               <span>PyTorch</span>
@@ -387,16 +149,14 @@
               <span>Deep learning</span>
             </div>
           </div>
-
-          <div class="glass-card project-card fade-element" data-thumb="project-tcbc.jpg">
-            <img alt="" class="project-thumb" loading="lazy" hidden />
+          <div class="glass-card project-card fade-element">
             <div class="project-header">
               <i class="far fa-folder folder-icon" aria-hidden="true"></i>
             </div>
             <h3 class="project-title">TCBC motion correction</h3>
             <p class="project-desc">
-              Tracer characteristic–based co-registration for simultaneous PET/MR: reduced misalignment, improved
-              quantification and task detectability.
+              Tracer characteristic–based co-registration for simultaneous PET/MR: reduced misalignment and
+              improved quantification.
             </p>
             <div class="project-tags">
               <span>MATLAB</span>
@@ -404,108 +164,69 @@
               <span>Registration</span>
             </div>
           </div>
-
-          <div class="glass-card project-card fade-element" data-thumb="project-mask.jpg">
-            <img alt="" class="project-thumb" loading="lazy" hidden />
-            <div class="project-header">
-              <i class="far fa-folder folder-icon" aria-hidden="true"></i>
-              <div class="project-links">
-                <a href="https://github.com/chocolatetoast-chiu/CS665-765-Deep-Learning" target="_blank" rel="noopener" aria-label="GitHub"
-                  ><i class="fab fa-github" aria-hidden="true"></i
-                ></a>
-              </div>
-            </div>
-            <h3 class="project-title">Face mask detection</h3>
-            <p class="project-desc">
-              Modified VGG with four face detectors to estimate mask-wearing rates in a region (course project).
-            </p>
-            <div class="project-tags">
-              <span>Python</span>
-              <span>Transfer learning</span>
-              <span>Vision</span>
-            </div>
-          </div>
-
-          <div class="glass-card project-card fade-element" data-thumb="project-emospace.jpg">
-            <img alt="" class="project-thumb" loading="lazy" hidden />
-            <div class="project-header">
-              <i class="far fa-folder folder-icon" aria-hidden="true"></i>
-            </div>
-            <h3 class="project-title">EmoSpace</h3>
-            <p class="project-desc">
-              Mobile game for emotion-recognition training in children with ASD (ABA-inspired); RehabWeek 2019 Student
-              Design Challenge, 3rd place (RESNA).
-            </p>
-            <div class="project-tags">
-              <span>Unity</span>
-              <span>Mobile</span>
-              <span>ASD</span>
-            </div>
-          </div>
+        </div>
+        <div style="text-align: center">
+          <a href="cv.html#projects" class="see-more">View all projects <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
         </div>
       </div>
-    </section>
+    </div>
 
-    <section id="leadership">
+    <!-- ═══ Latest Posts Preview ═══ -->
+    <div class="home-section">
       <div class="container">
-        <h2 class="section-title">Leadership &amp; activities</h2>
-        <div class="glass-card fade-element leadership-panel">
-          <div class="leadership-card">
-            <div class="leadership-icon"><i class="fas fa-users" aria-hidden="true"></i></div>
-            <div>
-              <h4 class="leader-title">Vice President</h4>
-              <div class="leader-meta">Taiwanese Student Association at UAB · Jul 2021 – Aug 2022</div>
+        <div class="home-section-header">
+          <h2>Latest Posts</h2>
+          <p>Personal reflections on research, growth, and life</p>
+        </div>
+        <div class="post-list" style="max-width: 800px; margin: 0 auto">
+          <a href="posts/articles/finding-my-north-star.html" class="glass-card post-card fade-element">
+            <div class="post-date">January 4, 2025</div>
+            <div class="post-title">Finding My North Star (Mandarin)</div>
+            <div class="post-excerpt">透過年度回顧工作坊與人類圖的探索，找到人生使命的那一刻——用愛與真誠，真實且善良地與世界連結。</div>
+            <div class="post-tags">
+              <span>Reflection</span>
+              <span>Human Design</span>
             </div>
-          </div>
-          <div class="leadership-card">
-            <div class="leadership-icon"><i class="fas fa-tasks" aria-hidden="true"></i></div>
-            <div>
-              <h4 class="leader-title">Team lead</h4>
-              <div class="leader-meta">EmoSpace project · Oct 2018 – Dec 2019</div>
+          </a>
+          <a href="posts/articles/the-year-i-learned-to-let-go.html" class="glass-card post-card fade-element">
+            <div class="post-date">December 29, 2024</div>
+            <div class="post-title">The Year I Learned to Let Go (Mandarin)</div>
+            <div class="post-excerpt">2024年度回顧——從資格考的驚險、無以名狀的焦慮，到學會放下掌控、接受不完美，溫柔地向前走。</div>
+            <div class="post-tags">
+              <span>Reflection</span>
             </div>
-          </div>
-          <div class="leadership-card">
-            <div class="leadership-icon"><i class="fas fa-file-signature" aria-hidden="true"></i></div>
-            <div>
-              <h4 class="leader-title">Executive secretary</h4>
-              <div class="leader-meta">
-                Student Association, Biomedical Engineering Dept., NCKU · Sep 2018 – Jun 2019
-              </div>
-            </div>
-          </div>
-          <div class="leadership-card">
-            <div class="leadership-icon"><i class="fas fa-globe-asia" aria-hidden="true"></i></div>
-            <div>
-              <h4 class="leader-title">International exhibitor</h4>
-              <div class="leader-meta">Taiwan Festival in Japan (Sendai) · Mar 2019 – Oct 2019</div>
-            </div>
-          </div>
+          </a>
+        </div>
+        <div style="text-align: center">
+          <a href="posts/reflections.html" class="see-more">All reflections <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
         </div>
       </div>
-    </section>
+    </div>
 
-    <footer id="contact">
-      <div class="container">
-        <h2 class="section-title">Connect</h2>
-        <div class="contact-grid">
-          <a href="mailto:scchiu.phd@gmail.com" class="contact-item">
-            <div class="contact-icon"><i class="fas fa-envelope" aria-hidden="true"></i></div>
-            <div class="contact-text">scchiu.phd@gmail.com</div>
-          </a>
-          <a href="tel:+12055873706" class="contact-item">
-            <div class="contact-icon"><i class="fas fa-phone-alt" aria-hidden="true"></i></div>
-            <div class="contact-text">+1 (205) 587-3706</div>
-          </a>
-          <a href="tel:+886938605658" class="contact-item">
-            <div class="contact-icon"><i class="fas fa-mobile-screen" aria-hidden="true"></i></div>
-            <div class="contact-text">+886 938-605-658</div>
-          </a>
-          <a href="https://linkedin.com/in/chocolatetoast-chiu" target="_blank" rel="noopener" class="contact-item">
-            <div class="contact-icon"><i class="fab fa-linkedin-in" aria-hidden="true"></i></div>
-            <div class="contact-text">LinkedIn</div>
-          </a>
+    <!-- ═══ Contact CTA ═══ -->
+    <div class="home-section" style="background: var(--page-muted)">
+      <div class="container" style="text-align: center">
+        <div class="home-section-header">
+          <h2>Let's Connect</h2>
+          <p>Interested in collaboration or just want to say hello?</p>
         </div>
-        <div class="footer-bottom">© 2026 Sheng-Chieh (Leon) Chiu</div>
+        <a href="contact.html" class="btn-cta">Get In Touch</a>
+      </div>
+    </div>
+
+    <!-- ═══ Footer ═══ -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-social">
+          <a href="mailto:scchiu.phd@gmail.com" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+          <a href="https://linkedin.com/in/chocolatetoast-chiu" target="_blank" rel="noopener" aria-label="LinkedIn"
+            ><i class="fab fa-linkedin-in" aria-hidden="true"></i
+          ></a>
+          <a href="https://github.com/chocolatetoast-chiu" target="_blank" rel="noopener" aria-label="GitHub"
+            ><i class="fab fa-github" aria-hidden="true"></i
+          ></a>
+        </div>
+        <div class="footer-copy">&copy; 2026 Sheng-Chieh (Leon) Chiu</div>
       </div>
     </footer>
 
