@@ -1,239 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sheng-Chieh (Leon) Chiu | Postdoctoral Researcher</title>
-    <meta
-      name="description"
-      content="Sheng-Chieh (Leon) Chiu — Postdoc at NYCU Digital Medicine & Smart Healthcare Research Center. Deep learning, PET/MRI, trustworthy clinical AI."
-    />
-    <meta name="author" content="Sheng-Chieh (Leon) Chiu" />
-    <meta property="og:title" content="Sheng-Chieh (Leon) Chiu | Postdoctoral Researcher" />
-    <meta
-      property="og:description"
-      content="Sovereign AI, neuroimaging, and digital twin technologies for healthcare."
-    />
-    <meta property="og:type" content="website" />
-    <link rel="icon" href="assets/images/favicon.png" type="image/png" />
-    <link rel="apple-touch-icon" href="assets/images/favicon.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="assets/css/styles.css" />
-  </head>
-  <body>
-    <!-- ═══ Navbar ═══ -->
-    <nav>
-      <div class="container nav-inner">
-        <a href="index.html" class="logo">
-          <img class="logo-img" src="assets/images/favicon.png" alt="" width="36" height="36" />
-          <span>SC<span class="logo-light">.Chiu</span></span>
-        </a>
-        <div class="nav-links">
-          <a href="index.html" onclick="toggleMenu()">Home</a>
-          <a href="about.html" onclick="toggleMenu()">About</a>
-          <a href="cv.html" onclick="toggleMenu()">CV</a>
-          <div class="nav-dropdown">
-            <a href="#">Posts <i class="fas fa-chevron-down" aria-hidden="true"></i></a>
-            <div class="dropdown-menu">
-              <a href="posts/tutorials.html">Tutorials</a>
-              <a href="posts/reflections.html">Reflections</a>
-            </div>
-          </div>
-          <a href="contact.html" onclick="toggleMenu()">Contact</a>
-        </div>
-        <div class="nav-aside">
-          <div class="nav-social">
-            <a href="https://linkedin.com/in/chocolatetoast-chiu" target="_blank" rel="noopener" aria-label="LinkedIn"
-              ><i class="fab fa-linkedin-in" aria-hidden="true"></i
-            ></a>
-            <a href="https://github.com/chocolatetoast-chiu" target="_blank" rel="noopener" aria-label="GitHub"
-              ><i class="fab fa-github" aria-hidden="true"></i
-            ></a>
-          </div>
-          <div class="mobile-menu-btn" onclick="toggleMenu()">
-            <i class="fas fa-bars" aria-hidden="true"></i>
-          </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sheng-Chieh (Leon) Chiu | Postdoctoral Researcher</title>
+  <meta name="description" content="Sheng-Chieh (Leon) Chiu — Postdoc at NYCU Digital Medicine & Smart Healthcare Research Center. Deep learning, PET/MRI, trustworthy clinical AI.">
+  <meta name="author" content="Sheng-Chieh (Leon) Chiu">
+  <link rel="icon" href="assets/images/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <style>
+    /* Hero text-only layout (no portrait) */
+    .hero__inner {
+      grid-template-columns: 1fr !important;
+      max-width: 720px;
+    }
+    .hero__text { max-width: 720px; }
+    .hero__tagline {
+      font-size: 0.95rem;
+      color: var(--text-2);
+      line-height: 1.7;
+      margin-bottom: 36px;
+      max-width: 600px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════ NAV ═══════════ -->
+<nav class="nav" id="nav">
+  <div class="container nav__inner">
+    <a href="index.html" class="nav__logo">
+      <span>SC<span class="nav__logo-dot">.</span><span class="nav__logo-name">Chiu</span></span>
+    </a>
+    <div class="nav__links" id="navLinks">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="cv.html">CV</a>
+      <div class="nav-dropdown">
+        <a href="#">Posts <i class="fas fa-chevron-down"></i></a>
+        <div class="dropdown-menu">
+          <a href="posts/tutorials.html">Tutorials</a>
+          <a href="posts/reflections.html">Reflections</a>
         </div>
       </div>
-    </nav>
-
-    <!-- ═══ Hero ═══ -->
-    <header id="hero">
-      <div class="hero-backdrop" role="presentation" aria-hidden="true"></div>
-      <div class="hero-overlay" role="presentation" aria-hidden="true"></div>
-      <div class="container hero-content">
-        <h1 class="hero-name">Sheng-Chieh (Leon) Chiu</h1>
-        <div class="hero-title">Postdoctoral Researcher · Ph.D. Biomedical Engineering</div>
-        <div class="hero-subtitle" id="typing-text" aria-live="polite"></div>
-        <p class="hero-tagline">
-          Sovereign AI and digital twin technologies for neurological and surgical care; amyloid PET/MRI
-          quantification and trustworthy generative neuroimaging.
-        </p>
-        <a href="about.html" class="btn-cta">Learn More About Me</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="nav__aside">
+      <div class="nav__social">
+        <a href="https://linkedin.com/in/chocolatetoast-chiu" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/chocolatetoast-chiu" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
       </div>
-    </header>
+      <button class="nav__menu-btn" onclick="toggleMenu()" aria-label="Menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </div>
+</nav>
 
-    <!-- ═══ About Preview ═══ -->
-    <div class="home-section">
-      <div class="container">
-        <div class="home-section-header">
-          <h2>About</h2>
+<!-- ═══════════ HERO ═══════════ -->
+<section class="hero">
+  <canvas id="heroCanvas" class="hero__canvas"></canvas>
+  <div class="container hero__inner">
+    <div class="hero__text">
+      <span class="hero__label"><span class="lp">//</span> Postdoctoral Researcher · NYCU</span>
+      <h1 class="hero__name">Sheng-Chieh (Leon) Chiu</h1>
+      <p class="hero__keywords">Sovereign AI <span class="kd">·</span> Neuroimaging <span class="kd">·</span> Digital Twin</p>
+      <p class="hero__tagline">Sovereign AI and digital twin technologies for neurological and surgical care; amyloid PET/MRI quantification and trustworthy generative neuroimaging.</p>
+      <div class="hero__actions">
+        <a href="about.html" class="btn btn--glow">Learn More About Me <i class="fas fa-arrow-right" style="font-size:0.8em"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="hero__scroll-hint">
+    <span>Scroll</span>
+    <div class="hero__scroll-line"></div>
+  </div>
+</section>
+
+<!-- ═══════════ ABOUT PREVIEW ═══════════ -->
+<section class="section" id="about-preview">
+  <div class="container">
+    <p class="section__label" data-reveal><span class="lp">#</span> About</p>
+    <div style="display:grid; grid-template-columns:200px 1fr; gap:32px; align-items:start;" data-reveal="1">
+      <img src="assets/images/portrait.jpg" alt="Sheng-Chieh (Leon) Chiu" style="width:200px; height:200px; object-fit:cover; border-radius:var(--radius); border:1px solid var(--border-accent); filter:grayscale(10%) contrast(1.05);">
+      <div>
+        <p style="font-size:0.95rem; color:var(--text-2); line-height:1.7;">I am a Postdoctoral Researcher at the Digital Medicine and Smart Healthcare Research Center, NYCU, working on sovereign AI and digital twin technologies for healthcare. My research journey began with a deep personal motivation — caring for family members affected by neurodegenerative diseases — and has since grown into a commitment to building trustworthy clinical AI at the intersection of neuroimaging, deep learning, and surgical computer vision.</p>
+        <a href="about.html" class="link-arrow" style="margin-top:16px; display:inline-flex;">Read my story <i class="fas fa-arrow-right" style="font-size:0.8em"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ FEATURED WORK ═══════════ -->
+<section class="section" id="work">
+  <div class="container">
+    <p class="section__label" data-reveal><span class="lp">#</span> Featured Work</p>
+    <p class="section__desc" data-reveal>Selected research projects and publications</p>
+    <div class="work__grid">
+      <div class="work-card" data-reveal="1">
+        <span class="work-card__num">01</span>
+        <h3 class="work-card__title">LEON Brain Segmentation</h3>
+        <p class="work-card__desc">MR-based deep learning segmentation for amyloid PET quantification — diagnostic performance and equivalence to FreeSurfer across large neuroimaging cohorts.</p>
+        <div class="work-card__tags">
+          <span>Python</span>
+          <span>TensorFlow</span>
+          <span>PET/MRI</span>
         </div>
-        <div class="home-about-preview fade-element">
-          <img
-            src="assets/images/portrait.jpg"
-            alt="Sheng-Chieh (Leon) Chiu"
-            width="200"
-            height="200"
-          />
-          <div>
-            <p>
-              I am a Postdoctoral Researcher at the Digital Medicine and Smart Healthcare Research Center, NYCU,
-              working on sovereign AI and digital twin technologies for healthcare. My research journey began with
-              a deep personal motivation — caring for family members affected by neurodegenerative diseases — and
-              has since grown into a commitment to building trustworthy clinical AI at the intersection of
-              neuroimaging, deep learning, and surgical computer vision.
-            </p>
-            <a href="about.html" class="see-more">Read my story <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
-          </div>
+      </div>
+      <div class="work-card" data-reveal="2">
+        <span class="work-card__num">02</span>
+        <h3 class="work-card__title">MRI-less Amyloid PET</h3>
+        <p class="work-card__desc">Deep learning quantification without MRI using synthetic CT for training; equivalent to MRI-based standard and robust on external PET/CT cohorts.</p>
+        <div class="work-card__tags">
+          <span>PyTorch</span>
+          <span>PET/CT</span>
+          <span>Deep Learning</span>
+        </div>
+      </div>
+      <div class="work-card" data-reveal="3">
+        <span class="work-card__num">03</span>
+        <h3 class="work-card__title">TCBC Motion Correction</h3>
+        <p class="work-card__desc">Tracer characteristic–based co-registration for simultaneous PET/MR: reduced misalignment and improved quantification.</p>
+        <div class="work-card__tags">
+          <span>MATLAB</span>
+          <span>PET/MR</span>
+          <span>Registration</span>
         </div>
       </div>
     </div>
-
-    <!-- ═══ Featured Projects Preview ═══ -->
-    <div class="home-section">
-      <div class="container">
-        <div class="home-section-header">
-          <h2>Featured Work</h2>
-          <p>Selected research projects and publications</p>
-        </div>
-        <div class="projects-grid">
-          <div class="glass-card project-card fade-element">
-            <div class="project-header">
-              <i class="far fa-folder folder-icon" aria-hidden="true"></i>
-            </div>
-            <h3 class="project-title">LEON brain segmentation</h3>
-            <p class="project-desc">
-              MR-based deep learning segmentation for amyloid PET quantification — diagnostic performance and
-              equivalence to FreeSurfer across large neuroimaging cohorts.
-            </p>
-            <div class="project-tags">
-              <span>Python</span>
-              <span>TensorFlow</span>
-              <span>PET/MRI</span>
-            </div>
-          </div>
-          <div class="glass-card project-card fade-element">
-            <div class="project-header">
-              <i class="far fa-folder folder-icon" aria-hidden="true"></i>
-            </div>
-            <h3 class="project-title">MRI-less amyloid PET</h3>
-            <p class="project-desc">
-              Deep learning quantification without MRI using synthetic CT for training; equivalent to MRI-based
-              standard and robust on external PET/CT cohorts.
-            </p>
-            <div class="project-tags">
-              <span>PyTorch</span>
-              <span>PET/CT</span>
-              <span>Deep learning</span>
-            </div>
-          </div>
-          <div class="glass-card project-card fade-element">
-            <div class="project-header">
-              <i class="far fa-folder folder-icon" aria-hidden="true"></i>
-            </div>
-            <h3 class="project-title">TCBC motion correction</h3>
-            <p class="project-desc">
-              Tracer characteristic–based co-registration for simultaneous PET/MR: reduced misalignment and
-              improved quantification.
-            </p>
-            <div class="project-tags">
-              <span>MATLAB</span>
-              <span>PET/MR</span>
-              <span>Registration</span>
-            </div>
-          </div>
-        </div>
-        <div style="text-align: center">
-          <a href="cv.html#projects" class="see-more">View all projects <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
-        </div>
-      </div>
+    <div class="section__more" data-reveal>
+      <a href="CV.html#projects" class="link-arrow">View all projects <i class="fas fa-arrow-right" style="font-size:0.8em"></i></a>
     </div>
+  </div>
+</section>
 
-    <!-- ═══ Latest Posts Preview ═══ -->
-    <div class="home-section">
-      <div class="container">
-        <div class="home-section-header">
-          <h2>Latest Posts</h2>
-          <p>Personal reflections on research, growth, and life</p>
+<!-- ═══════════ LATEST POSTS ═══════════ -->
+<section class="section" id="posts">
+  <div class="container">
+    <p class="section__label" data-reveal><span class="lp">#</span> Latest Posts</p>
+    <p class="section__desc" data-reveal>Personal reflections on research, growth, and life</p>
+    <div class="posts__list">
+      <a href="posts/articles/finding-my-north-star.html" class="post-card" data-reveal="1">
+        <span class="post-card__date">January 4, 2025</span>
+        <h3 class="post-card__title">Finding My North Star (Mandarin)</h3>
+        <p class="post-card__excerpt">透過年度回顧工作坊與人類圖的探索，找到人生使命的那一刻——用愛與真誠，真實且善良地與世界連結。</p>
+        <div class="post-card__tags">
+          <span>Reflection</span>
+          <span>Human Design</span>
         </div>
-        <div class="post-list" style="max-width: 800px; margin: 0 auto">
-          <a href="posts/articles/finding-my-north-star.html" class="glass-card post-card fade-element">
-            <div class="post-date">January 4, 2025</div>
-            <div class="post-title">Finding My North Star (Mandarin)</div>
-            <div class="post-excerpt">透過年度回顧工作坊與人類圖的探索，找到人生使命的那一刻——用愛與真誠，真實且善良地與世界連結。</div>
-            <div class="post-tags">
-              <span>Reflection</span>
-              <span>Human Design</span>
-            </div>
-          </a>
-          <a href="posts/articles/the-year-i-learned-to-let-go.html" class="glass-card post-card fade-element">
-            <div class="post-date">December 29, 2024</div>
-            <div class="post-title">The Year I Learned to Let Go (Mandarin)</div>
-            <div class="post-excerpt">2024年度回顧——從資格考的驚險、無以名狀的焦慮，到學會放下掌控、接受不完美，溫柔地向前走。</div>
-            <div class="post-tags">
-              <span>Reflection</span>
-            </div>
-          </a>
+      </a>
+      <a href="posts/articles/the-year-i-learned-to-let-go.html" class="post-card" data-reveal="2">
+        <span class="post-card__date">December 29, 2024</span>
+        <h3 class="post-card__title">The Year I Learned to Let Go (Mandarin)</h3>
+        <p class="post-card__excerpt">2024年度回顧——從資格考的驚險、無以名狀的焦慮，到學會放下掌控、接受不完美，溫柔地向前走。</p>
+        <div class="post-card__tags">
+          <span>Reflection</span>
         </div>
-        <div style="text-align: center">
-          <a href="posts/reflections.html" class="see-more">All reflections <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
-        </div>
-      </div>
+      </a>
     </div>
-
-    <!-- ═══ Contact CTA ═══ -->
-    <div class="home-section" style="background: var(--page-muted)">
-      <div class="container" style="text-align: center">
-        <div class="home-section-header">
-          <h2>Let's Connect</h2>
-          <p>Interested in collaboration or just want to say hello?</p>
-        </div>
-        <a href="contact.html" class="btn-cta">Get In Touch</a>
-      </div>
+    <div class="section__more" data-reveal>
+      <a href="posts/reflections.html" class="link-arrow">All reflections <i class="fas fa-arrow-right" style="font-size:0.8em"></i></a>
     </div>
+  </div>
+</section>
 
-    <!-- ═══ Footer ═══ -->
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <div class="footer-social">
-          <a href="mailto:scchiu.phd@gmail.com" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
-          <a href="https://linkedin.com/in/chocolatetoast-chiu" target="_blank" rel="noopener" aria-label="LinkedIn"
-            ><i class="fab fa-linkedin-in" aria-hidden="true"></i
-          ></a>
-          <a href="https://github.com/chocolatetoast-chiu" target="_blank" rel="noopener" aria-label="GitHub"
-            ><i class="fab fa-github" aria-hidden="true"></i
-          ></a>
-        </div>
-        <div class="footer-copy">&copy; 2026 Sheng-Chieh (Leon) Chiu</div>
-      </div>
-    </footer>
+<!-- ═══════════ CTA ═══════════ -->
+<section class="section section--cta" id="contact">
+  <div class="container" data-reveal>
+    <h2>Let's Connect</h2>
+    <p>Interested in collaboration or just want to say hello?</p>
+    <a href="contact.html" class="btn btn--glow btn--lg">Get In Touch <i class="fas fa-arrow-right" style="font-size:0.8em"></i></a>
+  </div>
+</section>
 
-    <div id="scrollTop" onclick="scrollToTop()" role="button" tabindex="0" aria-label="Back to top">
-      <i class="fas fa-arrow-up" aria-hidden="true"></i>
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__social">
+      <a href="mailto:scchiu.phd@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://linkedin.com/in/chocolatetoast-chiu" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://github.com/chocolatetoast-chiu" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
     </div>
+    <p class="footer__copy">&copy; 2026 Sheng-Chieh (Leon) Chiu</p>
+  </div>
+</footer>
 
-    <script src="assets/js/main.js"></script>
-  </body>
+<button id="scrollTop" onclick="scrollToTop()" aria-label="Back to top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+<script src="assets/js/main.js"></script>
+</body>
 </html>

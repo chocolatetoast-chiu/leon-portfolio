@@ -1,229 +1,317 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About | Sheng-Chieh (Leon) Chiu</title>
-    <meta
-      name="description"
-      content="Leon's journey in biomedical engineering, from NCKU to UAB PhD and now postdoctoral research at NYCU. Research philosophy and timeline."
-    />
-    <meta name="author" content="Sheng-Chieh (Leon) Chiu" />
-    <meta property="og:title" content="About | Sheng-Chieh (Leon) Chiu" />
-    <meta property="og:description" content="Leon's journey in biomedical engineering — from NCKU to UAB PhD and now postdoctoral research at NYCU." />
-    <meta property="og:type" content="website" />
-    <link rel="icon" href="assets/images/favicon.png" type="image/png" />
-    <link rel="apple-touch-icon" href="assets/images/favicon.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="assets/css/styles.css" />
-  </head>
-  <body>
-    <!-- ═══ Navbar ═══ -->
-    <nav>
-      <div class="container nav-inner">
-        <a href="index.html" class="logo">
-          <img class="logo-img" src="assets/images/favicon.png" alt="" width="36" height="36" />
-          <span>SC<span class="logo-light">.Chiu</span></span>
-        </a>
-        <div class="nav-links">
-          <a href="index.html" onclick="toggleMenu()">Home</a>
-          <a href="about.html" onclick="toggleMenu()">About</a>
-          <a href="cv.html" onclick="toggleMenu()">CV</a>
-          <div class="nav-dropdown">
-            <a href="#">Posts <i class="fas fa-chevron-down" aria-hidden="true"></i></a>
-            <div class="dropdown-menu">
-              <a href="posts/tutorials.html">Tutorials</a>
-              <a href="posts/reflections.html">Reflections</a>
-            </div>
-          </div>
-          <a href="contact.html" onclick="toggleMenu()">Contact</a>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Sheng-Chieh (Leon) Chiu</title>
+  <meta name="description" content="Leon's journey in biomedical engineering — from NCKU to UAB PhD and now postdoctoral research at NYCU.">
+  <link rel="icon" href="assets/images/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <style>
+    /* ═══ About-specific styles ═══ */
+    .page-hero {
+      padding: 140px 0 80px;
+      background: radial-gradient(ellipse at 30% 40%, rgba(94,170,180,0.05), transparent 60%), var(--bg);
+      border-bottom: 1px solid var(--border);
+    }
+    .page-hero__inner {
+      display: grid; grid-template-columns: 1fr 280px;
+      align-items: end; gap: 48px;
+    }
+    .page-hero__label {
+      font-family: var(--font-m); font-size: 0.75rem; color: var(--accent);
+      letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 16px;
+    }
+    .page-hero__label .lp { opacity: 0.4; margin-right: 0.5ch; }
+    .page-hero h1 { font-size: clamp(2rem, 4vw, 3rem); color: var(--text); margin-bottom: 20px; }
+    .page-hero__lead { font-size: 1.05rem; color: var(--text-2); line-height: 1.7; max-width: 600px; }
+    .page-hero__portrait img {
+      width: 280px; height: 280px; object-fit: cover;
+      border-radius: var(--radius); border: 1px solid var(--border-accent);
+      filter: grayscale(10%) contrast(1.05);
+    }
+
+    /* ── Quote Callout ── */
+    .quote-callout {
+      max-width: 680px; margin: 0 auto; text-align: center; padding: 20px 0;
+    }
+    .quote-callout blockquote {
+      font-family: var(--font-d); font-size: 1.25rem; font-style: italic;
+      color: var(--text); line-height: 1.6; margin-bottom: 12px;
+    }
+    .quote-callout footer {
+      font-family: var(--font-m); font-size: 0.78rem; color: var(--text-3);
+    }
+
+    /* ── Interactive Timeline ── */
+    .timeline { position: relative; max-width: 800px; margin: 0 auto; }
+    .timeline__line {
+      position: absolute; left: 24px; top: 0; bottom: 0;
+      width: 1px; background: var(--border);
+    }
+    .timeline__line-fill {
+      position: absolute; left: 0; top: 0; width: 100%; height: 0;
+      background: var(--accent); transition: height 0.6s ease-out;
+    }
+    .tl-item { position: relative; padding-left: 64px; padding-bottom: 40px; cursor: pointer; }
+    .tl-item:last-child { padding-bottom: 0; }
+    .tl-item__dot {
+      position: absolute; left: 16px; top: 4px;
+      width: 17px; height: 17px; border-radius: 50%;
+      border: 2px solid var(--text-3); background: var(--bg);
+      z-index: 2; transition: all var(--tr);
+    }
+    .tl-item.active .tl-item__dot, .tl-item:hover .tl-item__dot {
+      border-color: var(--accent); background: var(--accent);
+      box-shadow: 0 0 12px rgba(94,170,180,0.3);
+    }
+    .tl-item__year {
+      font-family: var(--font-m); font-size: 0.78rem; font-weight: 500;
+      color: var(--accent); margin-bottom: 6px; display: block;
+    }
+    .tl-item__title { font-family: var(--font-d); font-size: 1.15rem; font-weight: 600; color: var(--text); margin-bottom: 4px; }
+    .tl-item__org { font-size: 0.88rem; color: var(--text-2); margin-bottom: 4px; }
+    .tl-item__highlight { font-size: 0.82rem; color: var(--accent); font-weight: 500; margin-bottom: 8px; }
+    .tl-item__details {
+      max-height: 0; overflow: hidden;
+      transition: max-height 0.5s ease-out, opacity 0.4s ease-out; opacity: 0;
+    }
+    .tl-item.active .tl-item__details { max-height: 600px; opacity: 1; }
+    .tl-item__details p { font-size: 0.88rem; color: var(--text-2); line-height: 1.7; padding-top: 8px; }
+    .tl-item__details p + p { padding-top: 10px; }
+    .tl-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+    .tl-tags span {
+      font-family: var(--font-m); font-size: 0.68rem;
+      padding: 4px 10px; border-radius: 999px;
+      background: var(--accent-dim); color: var(--accent);
+      border: 1px solid rgba(94,170,180,0.1);
+    }
+
+    /* ── Philosophy Cards ── */
+    .phi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .phi-card {
+      background: var(--bg-surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 28px 24px;
+      transition: all var(--tr);
+    }
+    .phi-card:hover { border-color: var(--border-accent); box-shadow: var(--shadow-glow); transform: translateY(-4px); }
+    .phi-card__icon {
+      width: 44px; height: 44px; border-radius: 12px;
+      background: var(--accent-dim); color: var(--accent);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; margin-bottom: 20px;
+    }
+    .phi-card h3 { font-family: var(--font-b); font-weight: 600; font-size: 1rem; color: var(--text); margin-bottom: 8px; }
+    .phi-card p { font-size: 0.88rem; color: var(--text-2); line-height: 1.6; }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      .page-hero__inner { grid-template-columns: 1fr; text-align: center; }
+      .page-hero__portrait { justify-self: center; }
+      .page-hero__portrait img { width: 200px; height: 200px; }
+      .page-hero__lead { margin: 0 auto; }
+      .phi-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════ NAV ═══════════ -->
+<nav class="nav" id="nav">
+  <div class="container nav__inner">
+    <a href="index.html" class="nav__logo">
+      <span>SC<span class="nav__logo-dot">.</span><span class="nav__logo-name">Chiu</span></span>
+    </a>
+    <div class="nav__links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="cv.html">CV</a>
+      <div class="nav-dropdown">
+        <a href="#">Posts <i class="fas fa-chevron-down"></i></a>
+        <div class="dropdown-menu">
+          <a href="posts/tutorials.html">Tutorials</a>
+          <a href="posts/reflections.html">Reflections</a>
         </div>
-        <div class="nav-aside">
-          <div class="nav-social">
-            <a href="https://linkedin.com/in/chocolatetoast-chiu" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
-            <a href="https://github.com/chocolatetoast-chiu" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
-          </div>
-          <div class="mobile-menu-btn" onclick="toggleMenu()">
-            <i class="fas fa-bars" aria-hidden="true"></i>
+      </div>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="nav__aside">
+      <div class="nav__social">
+        <a href="https://linkedin.com/in/chocolatetoast-chiu" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/chocolatetoast-chiu" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      </div>
+      <button class="nav__menu-btn" onclick="toggleMenu()" aria-label="Menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══════════ PAGE HERO ═══════════ -->
+<section class="page-hero">
+  <div class="container page-hero__inner">
+    <div>
+      <p class="page-hero__label"><span class="lp">//</span> About Me</p>
+      <h1>A Journey Through Engineering, Medicine &amp; Trustworthy AI</h1>
+      <p class="page-hero__lead">From Taiwan to Alabama and back — building clinical AI that clinicians can trust and patients can benefit from.</p>
+    </div>
+    <div class="page-hero__portrait">
+      <img src="assets/images/smilingme.jpeg" alt="Sheng-Chieh (Leon) Chiu">
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ QUOTE ═══════════ -->
+<section class="section">
+  <div class="container">
+    <div class="quote-callout" data-reveal>
+      <blockquote>
+        <p>"I'd rather regret doing something than regret missing the chance."</p>
+        <footer>— A motto that shaped my undergraduate years at NCKU</footer>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ TIMELINE ═══════════ -->
+<section class="section" id="journey">
+  <div class="container">
+    <p class="section__label" data-reveal><span class="lp">#</span> My Journey</p>
+    <p class="section__desc" data-reveal>Click any milestone to expand the full story.</p>
+    <div class="timeline" data-reveal>
+      <div class="timeline__line">
+        <div class="timeline__line-fill" id="timelineFill"></div>
+      </div>
+
+      <!-- NYCU -->
+      <div class="tl-item active" data-tl="0">
+        <div class="tl-item__dot"></div>
+        <span class="tl-item__year">2026 — Present</span>
+        <div class="tl-item__title">National Yang Ming Chiao Tung University (NYCU)</div>
+        <div class="tl-item__org">Postdoctoral Researcher · Digital Medicine &amp; Smart Healthcare Research Center</div>
+        <div class="tl-item__details">
+          <p>After five years abroad, I returned to Taiwan in early 2026 — a homecoming with fresh energy. I joined the Digital Medicine &amp; Smart Healthcare Research Center at NYCU, working alongside Albert Yang. It felt like closing a circle while opening a new one.</p>
+          <p>My research directions are expanding: sovereign AI and how to build trustworthy systems within Taiwan's healthcare ecosystem; digital twins that can replicate patient physiology; surgical computer vision (DaVinci systems); and fMRI foundation models that might unlock new understanding of brain function.</p>
+          <div class="tl-tags">
+            <span>Sovereign AI</span>
+            <span>Digital Twin</span>
+            <span>Surgical CV</span>
+            <span>fMRI</span>
           </div>
         </div>
       </div>
-    </nav>
 
-    <!-- ═══ Page Header ═══ -->
-    <header class="page-header">
-      <div class="container">
-        <h1>About Me</h1>
-        <p class="page-subtitle">A journey through engineering, medicine, and the pursuit of trustworthy clinical AI</p>
+      <!-- UAB -->
+      <div class="tl-item" data-tl="1">
+        <div class="tl-item__dot"></div>
+        <span class="tl-item__year">2020 — 2025</span>
+        <div class="tl-item__title">University of Alabama at Birmingham (UAB)</div>
+        <div class="tl-item__org">Ph.D. in Biomedical Engineering</div>
+        <div class="tl-item__details">
+          <p>I arrived in the fall of 2020, right as COVID-19 locked down the world. The first two years were isolating — almost no social life, limited lab access, plenty of self-doubt. But isolation can be clarifying. During those quiet months, I faced a personal motivation that became my research compass: family members were beginning to show early signs of cognitive decline.</p>
+          <p>By 2022, momentum shifted. My research evolved with clarity: starting with motion correction challenges in PET/MR (TCBC), then MR-based deep learning segmentation (LEON), then pushing toward an MRI-less quantification approach, and finally analyzing biomarkers at scale across large cohorts. Conference presentations at SNMMI (2023, 2024) pushed me to communicate beyond just the lab.</p>
+          <div class="tl-tags">
+            <span>PET/MRI</span>
+            <span>Deep Learning</span>
+            <span>Alzheimer's</span>
+            <span>SNMMI</span>
+          </div>
+        </div>
       </div>
-    </header>
 
-    <!-- ═══ Quote Callout ═══ -->
-    <div class="home-section">
-      <div class="container">
-        <div class="quote-callout fade-element">
-          <blockquote>
-            <p>"I'd rather regret doing something than regret missing the chance."</p>
-            <footer>— A motto that shaped my undergraduate years at NCKU</footer>
-          </blockquote>
+      <!-- NCKU -->
+      <div class="tl-item" data-tl="2">
+        <div class="tl-item__dot"></div>
+        <span class="tl-item__year">2016 — 2020</span>
+        <div class="tl-item__title">National Cheng Kung University (NCKU)</div>
+        <div class="tl-item__org">B.S. in Biomedical Engineering</div>
+        <div class="tl-item__details">
+          <p>I arrived at NCKU with a simple belief: engineering should serve people. I joined the Biomedical Information Analysis Lab in my sophomore year. Our team developed VEINAVI, an auto-phlebotomy device that reached the EMedIC finals — but we lost because it lacked clinical grounding. That stung, and I learned that good engineering must be paired with genuine clinical need.</p>
+          <p>Junior year, I got proactive. From hospital conversations emerged EmoSpace, a mobile game for children with ASD, winning 3rd place worldwide at RehabWeek 2019 (RESNA Student Design Competition). I also explored VR for cultural preservation and joined the CareFULL social entrepreneurship team — winning Best Social Impact at Aalto University in Finland.</p>
+          <div class="tl-tags">
+            <span>Biomedical Eng.</span>
+            <span>EmoSpace</span>
+            <span>VEINAVI</span>
+            <span>RehabWeek</span>
+          </div>
         </div>
       </div>
     </div>
+  </div>
+</section>
 
-    <!-- ═══ Story Timeline ═══ -->
-    <div class="home-section">
-      <div class="container">
-        <h2 class="section-title">My Journey</h2>
-        <div class="section-hr"></div>
-
-        <div class="story-timeline">
-          <!-- NCKU Era -->
-          <div class="story-node">
-            <div class="story-dot"></div>
-            <div class="story-era"><i class="fas fa-graduation-cap" aria-hidden="true"></i> 2016 – 2020</div>
-            <div class="story-card fade-element">
-              <h3>National Cheng Kung University (NCKU)</h3>
-              <p class="story-highlight">B.S. in Biomedical Engineering</p>
-
-              <p>
-                I arrived at NCKU with a simple belief: engineering should serve people. That motto — "I'd rather regret doing something than regret missing the chance" — became the north star for my undergraduate years. I joined the Biomedical Information Analysis Lab in my sophomore year, initially diving into robotics to understand the fundamentals of automation and control.
-              </p>
-
-              <p>
-                But robotics alone didn't feel enough. I wanted to see real impact. Sophomore year brought my first lesson in innovation: our team developed VEINAVI, an auto-phlebotomy device that reached the EMedIC finals. It was impressive technically, but we lost because it lacked clinical grounding. That stung. I learned then that good engineering must be paired with genuine clinical need — a principle that still guides me today.
-              </p>
-
-              <p>
-                Junior year, I got proactive. I visited hospitals, talked to clinicians, and identified real problems. From those conversations emerged EmoSpace, a mobile game designed to help children with autism spectrum disorder (ASD) develop emotional regulation skills. We built a cross-disciplinary team and won 3rd place worldwide at RehabWeek 2019 (RESNA Student Design Competition). I also explored VR for cultural preservation (a Tainan food culture experience shown in Sendai) and joined the CareFULL social entrepreneurship team — which took us to Aalto University in Finland and won Best Social Impact at their summer school.
-              </p>
-
-              <p>
-                Beyond projects, I grew through student leadership: activity department officer, then executive secretary. I learned that managing people and communicating ideas are as critical as technical skill. The core conviction crystallized: <em>use engineering to solve others' life problems and help them get back on track.</em>
-              </p>
-            </div>
-          </div>
-
-          <!-- UAB Era -->
-          <div class="story-node">
-            <div class="story-dot"></div>
-            <div class="story-era"><i class="fas fa-microscope" aria-hidden="true"></i> 2020 – 2025</div>
-            <div class="story-card fade-element">
-              <h3>University of Alabama at Birmingham (UAB)</h3>
-              <p class="story-highlight">Ph.D. in Biomedical Engineering</p>
-
-              <p>
-                I arrived in the fall of 2020, right as COVID-19 locked down the world. The American dream I had imagined looked very different from a quiet apartment. The first two years were isolating — almost no social life, limited lab access, plenty of self-doubt. But isolation can be clarifying. During those quiet months, I faced a personal motivation that became my research compass: family members were beginning to show early signs of cognitive decline. Dementia was no longer abstract.
-              </p>
-
-              <p>
-                I chose Alzheimer's disease research because I could finally apply my engineering skills to something deeply personal and urgent. The early PhD years (2020–2022) were exploratory — finding the right collaborators, learning neuroimaging, discovering what problems I could actually contribute to. It wasn't always smooth, and there were moments of real doubt about whether I belonged. But I kept pushing.
-              </p>
-
-              <p>
-                By 2022, momentum shifted. My research evolved with clarity: starting with motion correction challenges in PET/MR (TCBC), then MR-based deep learning segmentation (LEON), then pushing toward an MRI-less quantification approach, and finally analyzing biomarkers at scale across large cohorts. I learned to collaborate across disciplines — nuclear medicine, radiology, neurology, computer science. Conference presentations at SNMMI (2023, 2024) pushed me to communicate beyond just the lab. By 2025, my dissertation focused on optimizing amyloid PET quantification, integrating everything I'd learned about imaging, machine learning, and clinical precision.
-              </p>
-
-              <p>
-                Those five years reshaped me. Not just as a researcher, but as someone who understands that good science requires persistence, collaboration, and keeping your "why" always in view.
-              </p>
-            </div>
-          </div>
-
-          <!-- NYCU Era -->
-          <div class="story-node">
-            <div class="story-dot"></div>
-            <div class="story-era"><i class="fas fa-building" aria-hidden="true"></i> 2026 – Present</div>
-            <div class="story-card fade-element">
-              <h3>National Yang Ming Chiao Tung University (NYCU)</h3>
-              <p class="story-highlight">Postdoctoral Researcher, Digital Medicine & Smart Healthcare Research Center</p>
-
-              <p>
-                After five years abroad, I returned to Taiwan in early 2026 — a homecoming with fresh energy. I joined the Digital Medicine & Smart Healthcare Research Center at NYCU, working alongside Albert Yang. It felt like closing a circle while opening a new one.
-              </p>
-
-              <p>
-                My research directions are expanding: sovereign AI and how to build trustworthy systems within Taiwan's healthcare ecosystem; digital twins that can replicate patient physiology; surgical computer vision (DaVinci systems); and fMRI foundation models that might unlock new understanding of brain function. The mission remains unchanged — trustworthy clinical AI — but the scope is broader and more ambitious.
-              </p>
-
-              <p>
-                Being back in Taiwan, I'm reconnecting with home while pushing toward something larger: technology that serves people, systems that clinicians can trust, and research that bridges East and West. This is where the journey continues.
-              </p>
-            </div>
-          </div>
-        </div>
+<!-- ═══════════ RESEARCH PHILOSOPHY ═══════════ -->
+<section class="section" id="philosophy">
+  <div class="container">
+    <p class="section__label" data-reveal><span class="lp">#</span> Research Philosophy</p>
+    <div class="phi-grid">
+      <div class="phi-card" data-reveal="1">
+        <div class="phi-card__icon"><i class="fas fa-shield-alt"></i></div>
+        <h3>Trustworthy AI</h3>
+        <p>Clinical AI must be reliable, interpretable, and safe. I focus on building systems that clinicians can trust — minimizing false positives, addressing algorithmic bias, and ensuring robustness across diverse patient populations.</p>
+      </div>
+      <div class="phi-card" data-reveal="2">
+        <div class="phi-card__icon"><i class="fas fa-heart"></i></div>
+        <h3>Personal Motivation</h3>
+        <p>My work on Alzheimer's imaging was born from witnessing family members navigate cognitive decline. That personal stake keeps me grounded — reminds me that behind every dataset are people and their stories.</p>
+      </div>
+      <div class="phi-card" data-reveal="3">
+        <div class="phi-card__icon"><i class="fas fa-layer-group"></i></div>
+        <h3>Cross-disciplinary Collaboration</h3>
+        <p>The hardest problems live at the intersections. Trustworthy clinical AI requires engineers who understand medicine, radiologists who know deep learning, and computer scientists who grasp neuroanatomy.</p>
       </div>
     </div>
+  </div>
+</section>
 
-    <!-- ═══ Research Philosophy ═══ -->
-    <div class="home-section" style="background: var(--page-muted)">
-      <div class="container">
-        <h2 class="section-title">Research Philosophy</h2>
-        <div class="section-hr"></div>
+<!-- ═══════════ CTA ═══════════ -->
+<section class="section section--cta">
+  <div class="container" data-reveal>
+    <h2>Let's Collaborate</h2>
+    <p>Interested in AI for healthcare, neuroimaging, or digital twins? I'd love to hear from you.</p>
+    <a href="mailto:scchiu.phd@gmail.com" class="btn btn--glow btn--lg">Get in Touch <i class="fas fa-arrow-right" style="font-size:0.8em"></i></a>
+  </div>
+</section>
 
-        <div class="philosophy-grid">
-          <!-- Card 1: Trustworthy AI -->
-          <div class="philosophy-card glass-card fade-element">
-            <div class="phi-icon">
-              <i class="fas fa-shield-alt" aria-hidden="true"></i>
-            </div>
-            <h3>Trustworthy AI</h3>
-            <p>
-              Clinical AI must be reliable, interpretable, and safe. I focus on building systems that clinicians can trust—minimizing false positives, addressing algorithmic bias, and ensuring robustness across diverse patient populations. In healthcare, a confident but wrong prediction can harm; transparency matters as much as accuracy.
-            </p>
-          </div>
-
-          <!-- Card 2: Personal Motivation -->
-          <div class="philosophy-card glass-card fade-element">
-            <div class="phi-icon">
-              <i class="fas fa-heart" aria-hidden="true"></i>
-            </div>
-            <h3>Personal Motivation</h3>
-            <p>
-              Research driven by real human need is research worth doing. My work on Alzheimer's imaging was born from witnessing family members navigate cognitive decline. That personal stake keeps me grounded—reminds me that behind every dataset are people and their stories. Good science isn't detached; it's answerable to something larger than academic metrics.
-            </p>
-          </div>
-
-          <!-- Card 3: Cross-disciplinary Collaboration -->
-          <div class="philosophy-card glass-card fade-element">
-            <div class="phi-icon">
-              <i class="fas fa-layer-group" aria-hidden="true"></i>
-            </div>
-            <h3>Cross-disciplinary Collaboration</h3>
-            <p>
-              The hardest problems live at the intersections. Trustworthy clinical AI requires engineers who understand medicine, radiologists who know deep learning, and computer scientists who grasp neuroanatomy. I thrive at these boundaries, building bridges between domains and learning to speak multiple languages of expertise.
-            </p>
-          </div>
-        </div>
-      </div>
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__social">
+      <a href="mailto:scchiu.phd@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://linkedin.com/in/chocolatetoast-chiu" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://github.com/chocolatetoast-chiu" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
     </div>
+    <p class="footer__copy">&copy; 2026 Sheng-Chieh (Leon) Chiu</p>
+  </div>
+</footer>
 
-    <!-- ═══ Footer ═══ -->
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <div class="footer-social">
-          <a href="mailto:scchiu.phd@gmail.com" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
-          <a href="https://linkedin.com/in/chocolatetoast-chiu" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
-          <a href="https://github.com/chocolatetoast-chiu" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
-        </div>
-        <div class="footer-copy">&copy; 2026 Sheng-Chieh (Leon) Chiu</div>
-      </div>
-    </footer>
+<button id="scrollTop" onclick="scrollToTop()" aria-label="Back to top">
+  <i class="fas fa-arrow-up"></i>
+</button>
 
-    <div id="scrollTop" onclick="scrollToTop()" role="button" tabindex="0" aria-label="Back to top">
-      <i class="fas fa-arrow-up" aria-hidden="true"></i>
-    </div>
-
-    <script src="assets/js/main.js"></script>
-  </body>
+<script src="assets/js/main.js"></script>
+<script>
+(function () {
+  var items = document.querySelectorAll('.tl-item');
+  var fill = document.getElementById('timelineFill');
+  if (!items.length) return;
+  function activate(idx) {
+    items.forEach(function (el, i) { el.classList.toggle('active', i === idx); });
+    var container = document.querySelector('.timeline');
+    if (!container || !fill) return;
+    var active = items[idx];
+    var dot = active.querySelector('.tl-item__dot');
+    fill.style.height = (dot.offsetTop + dot.offsetHeight / 2) + 'px';
+  }
+  items.forEach(function (el, i) {
+    el.addEventListener('click', function () { activate(i); });
+  });
+  activate(0);
+})();
+</script>
+</body>
 </html>
