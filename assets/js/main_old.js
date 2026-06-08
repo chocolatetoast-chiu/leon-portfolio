@@ -48,118 +48,84 @@
       // Brain node positions (normalized, anatomical side-view profile)
       // Frontal lobe is left, occipital is right, temporal below
       var brainNodes = [
-        // Cerebrum outer — frontal face (slight irregularity)
-        [-0.78, 0.12],   // 0  frontal pole
-        [-0.83, 0.01],   // 1  frontal face lower
-        [-0.81, -0.11],  // 2  frontal face mid (slight indent)
-        [-0.79, -0.25],  // 3  frontal face upper
-        [-0.72, -0.36],  // 4  frontal-top transition (bump)
-        [-0.59, -0.45],  // 5  superior frontal
-        // Top of brain — subtle gyri bumps (not a smooth arc)
-        [-0.46, -0.52],  // 6  frontal gyrus peak
-        [-0.34, -0.49],  // 7  pre-central dip
-        [-0.22, -0.54],  // 8  precentral gyrus
-        [-0.08, -0.52],  // 9  central sulcus dip
-        [0.08, -0.54],   // 10 postcentral gyrus
-        [0.22, -0.50],   // 11 parietal
-        [0.36, -0.46],   // 12 parietal gyrus
-        [0.48, -0.36],   // 13 parieto-occipital
-        // Occipital (subtle lower bump, not too smooth)
-        [0.57, -0.22],   // 14 occipital upper
-        [0.60, -0.08],   // 15 occipital mid
-        [0.59, 0.05],    // 16 occipital (slight indent)
-        [0.54, 0.16],    // 17 occipital lower bump
-        [0.40, 0.24],    // 18 occipital pole
-        // Cerebellum gap + cerebellum (compact rounded mass)
-        [0.26, 0.26],    // 19 transverse fissure (gap)
-        [0.38, 0.32],    // 20 cerebellum back-top
-        [0.46, 0.42],    // 21 cerebellum back
-        [0.42, 0.52],    // 22 cerebellum back-bottom
-        [0.30, 0.56],    // 23 cerebellum bottom
-        [0.16, 0.52],    // 24 cerebellum front-bottom
-        [0.08, 0.44],    // 25 cerebellum front
-        [0.00, 0.36],    // 26 brainstem
-        // Temporal lobe bottom (relatively flat)
-        [-0.16, 0.34],   // 27 posterior temporal
-        [-0.34, 0.29],   // 28 mid temporal
-        [-0.52, 0.24],   // 29 anterior temporal
-        [-0.68, 0.17],   // 30 temporal-frontal
-        // Sylvian fissure (separates frontal/parietal from temporal)
-        [-0.56, -0.02],  // 31 sylvian anterior
-        [-0.36, -0.07],  // 32 sylvian mid
-        [-0.14, -0.10],  // 33 sylvian center
-        [0.10, -0.05],   // 34 sylvian posterior
-        [0.30, 0.02],    // 35 sylvian end
+        // Outer contour — top arc (frontal → parietal → occipital)
+        [-0.72, 0.10],  // 0  frontal pole bottom
+        [-0.75, -0.08], // 1  frontal lower
+        [-0.72, -0.25], // 2  frontal mid
+        [-0.62, -0.42], // 3  frontal upper
+        [-0.45, -0.55], // 4  prefrontal top
+        [-0.25, -0.63], // 5  superior frontal
+        [-0.05, -0.66], // 6  central sulcus top
+        [0.15, -0.63],  // 7  parietal anterior
+        [0.32, -0.56],  // 8  parietal mid
+        [0.48, -0.44],  // 9  parietal posterior
+        [0.58, -0.28],  // 10 parieto-occipital
+        [0.62, -0.10],  // 11 occipital upper
+        [0.58, 0.08],   // 12 occipital mid
+        [0.48, 0.22],   // 13 occipital lower
+        // Bottom contour — occipital → temporal → frontal
+        [0.38, 0.32],   // 14 occipital-temporal junction
+        [0.22, 0.28],   // 15 cerebellum top (indent)
+        [0.30, 0.42],   // 16 cerebellum back
+        [0.15, 0.48],   // 17 cerebellum bottom
+        [0.02, 0.40],   // 18 brainstem top
+        [-0.08, 0.50],  // 19 brainstem
+        [-0.15, 0.35],  // 20 temporal pole bottom
+        [-0.30, 0.30],  // 21 inferior temporal
+        [-0.48, 0.25],  // 22 middle temporal
+        [-0.62, 0.20],  // 23 temporal-frontal
+        // Sylvian fissure line (indent between frontal/parietal and temporal)
+        [-0.55, 0.05],  // 24 sylvian anterior
+        [-0.35, -0.02], // 25 sylvian mid
+        [-0.10, -0.05], // 26 sylvian center
+        [0.12, 0.00],   // 27 sylvian posterior
+        [0.35, 0.05],   // 28 sylvian end
         // Inner frontal nodes
-        [-0.56, -0.14],  // 36
-        [-0.44, -0.29],  // 37
-        [-0.28, -0.41],  // 38
+        [-0.50, -0.15], // 29
+        [-0.38, -0.30], // 30
+        [-0.20, -0.42], // 31
         // Inner parietal nodes
-        [0.02, -0.41],   // 39
-        [0.24, -0.31],   // 40
-        [0.44, -0.10],   // 41
+        [0.05, -0.45],  // 32
+        [0.25, -0.35],  // 33
+        [0.42, -0.18],  // 34
         // Inner temporal nodes
-        [-0.44, 0.12],   // 42
-        [-0.24, 0.14],   // 43
-        [-0.02, 0.17],   // 44
-        [0.18, 0.12],    // 45
-        // Deep core (thalamus)
-        [-0.16, -0.14],  // 46
-        [0.04, -0.12],   // 47
-        [0.14, 0.05],    // 48
-        [-0.08, 0.05],   // 49
-        // Cerebellum inner structure (compact spiral)
-        [0.36, 0.38],    // 50 inner top-right
-        [0.40, 0.46],    // 51 inner right
-        [0.32, 0.50],    // 52 inner bottom
-        [0.18, 0.46],    // 53 inner left
-        [0.28, 0.44],    // 54 center
+        [-0.40, 0.15],  // 35
+        [-0.20, 0.18],  // 36
+        [0.00, 0.20],   // 37
+        [0.20, 0.15],   // 38
+        // Deep core (thalamus region)
+        [-0.15, -0.12], // 39
+        [0.05, -0.10],  // 40
+        [0.15, 0.08],   // 41
+        [-0.10, 0.08],  // 42
       ];
 
       // Connection pairs
       var brainEdges = [
-        // Outer contour
-        [0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,8],[8,9],[9,10],
-        [10,11],[11,12],[12,13],[13,14],[14,15],[15,16],[16,17],[17,18],
-        [18,19],[19,20],[20,21],[21,22],[22,23],[23,24],[24,25],[25,26],
-        [26,27],[27,28],[28,29],[29,30],[30,0],
-        // Cerebellum outer cross
-        [18,20],[19,25],[19,26],
+        // Outer top contour
+        [0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,8],[8,9],[9,10],[10,11],[11,12],[12,13],
+        // Outer bottom contour
+        [13,14],[14,15],[15,16],[16,17],[17,18],[18,19],[19,20],[20,21],[21,22],[22,23],[23,0],
+        // Cerebellum detail
+        [14,16],[15,17],[15,18],
         // Sylvian fissure
-        [31,32],[32,33],[33,34],[34,35],
-        // Frontal: outer to sylvian/inner
-        [0,31],[1,31],[30,31],
-        [2,36],[3,36],[31,36],
-        [3,37],[4,37],[32,37],[7,37],
-        [5,38],[6,38],[37,38],[38,33],
-        // Parietal: outer to inner
-        [33,39],[8,39],[9,39],
-        [39,40],[10,40],[11,40],[12,40],
-        [40,41],[13,41],[14,41],[15,41],[16,41],
-        [34,41],[35,41],
-        // Temporal + occipital connections
-        [35,18],[35,19],
-        [29,42],[28,43],[27,44],[27,45],
-        [42,31],[43,32],[44,33],[45,34],
-        // Inner chains
-        [36,37],[37,38],[38,39],
-        [40,41],
-        [42,43],[43,44],[44,45],
-        [36,32],
+        [24,25],[25,26],[26,27],[27,28],
+        // Outer to Sylvian
+        [0,24],[1,24],[23,24],[2,29],[24,29],[25,29],[25,30],[3,30],[4,30],[30,31],[5,31],[31,26],
+        [26,32],[6,32],[7,32],[32,33],[8,33],[9,33],[33,34],[10,34],[11,34],[27,34],[28,34],
+        [28,13],[28,14],[27,38],[22,35],[21,36],[20,37],[35,24],[36,25],[37,26],[38,27],
+        // Inner frontal
+        [29,30],[30,31],[31,32],[29,25],
+        // Inner parietal
+        [33,34],
+        // Temporal inner
+        [35,36],[36,37],[37,38],
         // Deep core
-        [46,47],[47,48],[48,49],[49,46],
+        [39,40],[40,41],[41,42],[42,39],[39,40],
         // Core connections
-        [33,46],[32,46],[38,46],
-        [39,47],[40,47],[34,47],
-        [34,48],[45,48],
-        [44,49],[43,49],[33,49],
+        [26,39],[25,39],[31,39],[32,40],[33,40],[27,40],[27,41],[38,41],[37,42],[36,42],[26,42],[39,42],[40,41],
         // Radial to core
-        [36,46],[37,46],[41,47],[35,48],[42,49],
-        // Cerebellum inner mesh (clean, no crossing diagonals)
-        [50,51],[51,52],[52,53],[53,50],
-        [50,54],[51,54],[52,54],[53,54],
-        [20,50],[21,50],[21,51],[22,52],
-        [23,52],[24,53],[25,53],[19,54],
+        [29,39],[30,39],[34,40],[28,41],[35,42],
       ];
 
       ctx.save();
@@ -190,7 +156,7 @@
         var n = brainNodes[ni];
         var nx = n[0] * bsc, ny = n[1] * bsc;
         var nd = Math.sqrt(nx * nx + ny * ny) / bsc;
-        var nr = ni < 31 ? 2.2 : (ni < 46 ? 1.8 : (ni < 50 ? 1.4 : 1.6)); // contour > inner > core > cerebellum
+        var nr = ni < 24 ? 2.5 : (ni < 39 ? 2.0 : 1.6); // outer bigger
         var na = 0.25 + 0.35 * (1 - nd);
 
         // Glow
