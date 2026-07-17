@@ -4,18 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Reflections | Sheng-Chieh (Leon) Chiu</title>
-  <meta name="description" content="Personal thoughts on research, life, and the journey in between.">
+  <meta name="description" content="Field notes — personal thoughts on research, life, and the journey in between.">
   <link rel="icon" href="../assets/images/favicon.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="../assets/css/styles.css">
-  <style>
-    .page-hero { padding:140px 0 80px; border-bottom:1px solid var(--border); background:radial-gradient(ellipse at 30% 40%,rgba(94,170,180,0.05),transparent 60%),var(--bg); }
-    .page-hero h1 { font-size:clamp(2rem,4vw,3rem); color:var(--text); margin-bottom:12px; }
-    .page-hero__sub { font-size:1.05rem; color:var(--text-2); }
-  </style>
 </head>
 <body>
 
@@ -39,8 +34,9 @@
   </div>
 </nav>
 
-<section class="page-hero">
+<section class="page-hero page-hero--plain">
   <div class="container">
+    <p class="page-hero__label"><span class="lp">//</span> Field notes</p>
     <h1>Reflections</h1>
     <p class="page-hero__sub">Personal thoughts on research, life, and the journey in between</p>
   </div>
@@ -48,19 +44,36 @@
 
 <section class="section">
   <div class="container">
-    <div class="posts__list">
-      <a href="articles/finding-my-north-star.html" class="post-card" data-reveal="1">
-        <span class="post-card__date">January 4, 2025</span>
-        <h3 class="post-card__title">Finding My North Star (Mandarin)</h3>
-        <p class="post-card__excerpt">透過年度回顧工作坊與人類圖的探索，找到人生使命的那一刻——用愛與真誠，真實且善良地與世界連結。</p>
-        <div class="post-card__tags"><span>Reflection</span><span>Human Design</span></div>
-      </a>
-      <a href="articles/the-year-i-learned-to-let-go.html" class="post-card" data-reveal="2">
-        <span class="post-card__date">December 29, 2024</span>
-        <h3 class="post-card__title">The Year I Learned to Let Go (Mandarin)</h3>
-        <p class="post-card__excerpt">2024年度回顧——從資格考的驚險、無以名狀的焦慮，到學會放下掌控、接受不完美，溫柔地向前走。</p>
-        <div class="post-card__tags"><span>Reflection</span></div>
-      </a>
+    <div class="chip-row" data-filter-root data-reveal>
+      <button type="button" class="chip is-active" data-filter="all">All</button>
+      <button type="button" class="chip" data-filter="reflection">Reflection</button>
+      <button type="button" class="chip" data-filter="humandesign">Human Design</button>
+    </div>
+    <div class="posts-layout">
+      <div class="year-spine">
+        <div class="spine-item">
+          <span class="spine-year">2025</span>
+          <a href="articles/finding-my-north-star.html" class="post-card" data-filter-item="reflection humandesign" data-preview="透過年度回顧工作坊與人類圖的探索，找到人生使命——用愛與真誠，真實且善良地與世界連結。" data-reveal="1">
+            <span class="post-card__date">January 4, 2025</span>
+            <h3 class="post-card__title">Finding My North Star (Mandarin)</h3>
+            <p class="post-card__excerpt">透過年度回顧工作坊與人類圖的探索，找到人生使命的那一刻。</p>
+            <div class="post-card__tags"><span>Reflection</span><span>Human Design</span></div>
+          </a>
+        </div>
+        <div class="spine-item">
+          <span class="spine-year">2024</span>
+          <a href="articles/the-year-i-learned-to-let-go.html" class="post-card" data-filter-item="reflection" data-preview="從資格考的驚險、無以名狀的焦慮，到學會放下掌控、接受不完美，溫柔地向前走。" data-reveal="2">
+            <span class="post-card__date">December 29, 2024</span>
+            <h3 class="post-card__title">The Year I Learned to Let Go (Mandarin)</h3>
+            <p class="post-card__excerpt">2024年度回顧——學會放下掌控、接受不完美。</p>
+            <div class="post-card__tags"><span>Reflection</span></div>
+          </a>
+        </div>
+      </div>
+      <aside class="posts-preview instrument" data-reveal>
+        <div class="posts-preview__label">Preview</div>
+        <p class="posts-preview__text" id="postPreview">Hover a note to peek without opening.</p>
+      </aside>
     </div>
   </div>
 </section>
@@ -76,6 +89,21 @@
   </div>
 </footer>
 <button id="scrollTop" onclick="scrollToTop()" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+<script src="../assets/js/instruments.js"></script>
 <script src="../assets/js/main.js"></script>
+<script>
+(function () {
+  if (window.Instruments) Instruments.initChipFilter({ root: '[data-filter-root]', chip: '[data-filter]', item: '[data-filter-item]' });
+  var preview = document.getElementById('postPreview');
+  document.querySelectorAll('[data-preview]').forEach(function (card) {
+    card.addEventListener('mouseenter', function () {
+      if (preview) preview.textContent = card.getAttribute('data-preview');
+    });
+    card.addEventListener('focus', function () {
+      if (preview) preview.textContent = card.getAttribute('data-preview');
+    });
+  });
+})();
+</script>
 </body>
 </html>

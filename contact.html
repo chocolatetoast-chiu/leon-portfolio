@@ -4,43 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact | Sheng-Chieh (Leon) Chiu</title>
-  <meta name="description" content="Contact Sheng-Chieh (Leon) Chiu — email, phone, LinkedIn, and GitHub.">
+  <meta name="description" content="Contact Sheng-Chieh (Leon) Chiu — collaboration, hiring, or coffee.">
   <link rel="icon" href="assets/images/favicon.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="assets/css/styles.css">
-  <style>
-    .page-hero { padding:140px 0 80px; border-bottom:1px solid var(--border); background:radial-gradient(ellipse at 30% 40%,rgba(94,170,180,0.05),transparent 60%),var(--bg); }
-    .page-hero h1 { font-size:clamp(2rem,4vw,3rem); color:var(--text); margin-bottom:12px; }
-    .page-hero__sub { font-size:1.05rem; color:var(--text-2); }
-
-    .contact-grid {
-      display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
-      gap:20px; max-width:800px; margin:0 auto;
-    }
-    .contact-card {
-      display:flex; align-items:center; gap:16px;
-      background:var(--bg-surface); border:1px solid var(--border);
-      border-radius:var(--radius); padding:24px;
-      transition:all var(--tr);
-    }
-    .contact-card:hover {
-      border-color:var(--border-accent); box-shadow:var(--shadow-glow);
-      transform:translateY(-3px);
-    }
-    .contact-card__icon {
-      width:48px; height:48px; border-radius:12px; flex-shrink:0;
-      background:var(--accent-dim); color:var(--accent);
-      display:flex; align-items:center; justify-content:center;
-      font-size:1.1rem;
-    }
-    .contact-card__label { font-size:0.78rem; color:var(--text-3); margin-bottom:4px; }
-    .contact-card__value { font-size:0.95rem; color:var(--text); font-weight:500; }
-    .contact-card__value a { color:var(--accent); }
-    .contact-card__value a:hover { text-decoration:underline; }
-  </style>
 </head>
 <body>
 
@@ -64,50 +34,82 @@
   </div>
 </nav>
 
-<section class="page-hero">
+<section class="page-hero page-hero--plain">
   <div class="container">
-    <h1>Contact</h1>
-    <p class="page-hero__sub">Feel free to reach out — I'd love to hear from you.</p>
+    <p class="page-hero__label"><span class="lp">//</span> Contact</p>
+    <h1>Let's talk</h1>
+    <p class="page-hero__sub">Pick an intent — it pre-fills the email subject. Or copy a channel directly.</p>
   </div>
 </section>
 
 <section class="section">
   <div class="container">
-    <div class="contact-grid">
-      <div class="contact-card" data-reveal="1">
-        <div class="contact-card__icon"><i class="fas fa-envelope"></i></div>
-        <div>
-          <div class="contact-card__label">Email</div>
-          <div class="contact-card__value"><a href="mailto:scchiu.phd@gmail.com">scchiu.phd@gmail.com</a></div>
+    <div class="contact-instrument">
+      <div class="contact-primary instrument" data-reveal>
+        <div class="instrument__fig"><span class="lp">Fig.</span> Intent</div>
+        <h3>Why are you reaching out?</h3>
+        <p>Select one — then open mail with a ready subject line.</p>
+        <div class="chip-row">
+          <button type="button" class="chip is-active" data-intent="Collaboration inquiry — AI in medical imaging / healthcare data" data-intent-label="Collaboration">Collaboration</button>
+          <button type="button" class="chip" data-intent="Hiring / role inquiry — Sheng-Chieh Chiu" data-intent-label="Hiring">Hiring</button>
+          <button type="button" class="chip" data-intent="Coffee chat — Sheng-Chieh Chiu" data-intent-label="Coffee">Coffee</button>
+        </div>
+        <a id="contactMailBtn" class="btn btn--glow" href="mailto:scchiu.phd@gmail.com?subject=Collaboration%20inquiry%20%E2%80%94%20AI%20in%20medical%20imaging%20/%20healthcare%20data">
+          Open email · <span class="contact-mail-label">Collaboration</span>
+          <i class="fas fa-arrow-right" style="font-size:0.8em"></i>
+        </a>
+        <div class="tz-strip">
+          <div class="tz-item">
+            <div class="tz-item__label">Taipei</div>
+            <div class="tz-item__time" id="tzTaipei">—</div>
+          </div>
+          <div class="tz-item">
+            <div class="tz-item__label">New York</div>
+            <div class="tz-item__time" id="tzNYC">—</div>
+          </div>
+          <div class="tz-item">
+            <div class="tz-item__label">London</div>
+            <div class="tz-item__time" id="tzLondon">—</div>
+          </div>
         </div>
       </div>
-      <div class="contact-card" data-reveal="2">
-        <div class="contact-card__icon"><i class="fas fa-phone"></i></div>
-        <div>
-          <div class="contact-card__label">Phone (US)</div>
-          <div class="contact-card__value">+1 (205) 587-3706</div>
-        </div>
-      </div>
-      <div class="contact-card" data-reveal="3">
-        <div class="contact-card__icon"><i class="fas fa-phone"></i></div>
-        <div>
-          <div class="contact-card__label">Phone (TW)</div>
-          <div class="contact-card__value">+886 938-605-658</div>
-        </div>
-      </div>
-      <div class="contact-card" data-reveal="4">
-        <div class="contact-card__icon"><i class="fab fa-linkedin-in"></i></div>
-        <div>
-          <div class="contact-card__label">LinkedIn</div>
-          <div class="contact-card__value"><a href="https://linkedin.com/in/chocolatetoast-chiu" target="_blank" rel="noopener">linkedin.com/in/chocolatetoast-chiu</a></div>
-        </div>
-      </div>
-      <div class="contact-card" data-reveal="1">
-        <div class="contact-card__icon"><i class="fab fa-github"></i></div>
-        <div>
-          <div class="contact-card__label">GitHub</div>
-          <div class="contact-card__value"><a href="https://github.com/chocolatetoast-chiu" target="_blank" rel="noopener">github.com/chocolatetoast-chiu</a></div>
-        </div>
+
+      <div class="contact-channels" data-reveal="1">
+        <button type="button" class="channel" data-copy="scchiu.phd@gmail.com" data-copy-msg="Email copied">
+          <div class="channel__icon"><i class="fas fa-envelope"></i></div>
+          <div>
+            <div class="channel__label">Email · tap to copy</div>
+            <div class="channel__value">scchiu.phd@gmail.com</div>
+          </div>
+        </button>
+        <button type="button" class="channel" data-copy="+12055873706" data-copy-msg="US phone copied">
+          <div class="channel__icon"><i class="fas fa-phone"></i></div>
+          <div>
+            <div class="channel__label">Phone (US)</div>
+            <div class="channel__value">+1 (205) 587-3706</div>
+          </div>
+        </button>
+        <button type="button" class="channel" data-copy="+886938605658" data-copy-msg="TW phone copied">
+          <div class="channel__icon"><i class="fas fa-phone"></i></div>
+          <div>
+            <div class="channel__label">Phone (TW)</div>
+            <div class="channel__value">+886 938-605-658</div>
+          </div>
+        </button>
+        <a class="channel" href="https://linkedin.com/in/chocolatetoast-chiu" target="_blank" rel="noopener">
+          <div class="channel__icon"><i class="fab fa-linkedin-in"></i></div>
+          <div>
+            <div class="channel__label">LinkedIn</div>
+            <div class="channel__value">chocolatetoast-chiu</div>
+          </div>
+        </a>
+        <a class="channel" href="https://github.com/chocolatetoast-chiu" target="_blank" rel="noopener">
+          <div class="channel__icon"><i class="fab fa-github"></i></div>
+          <div>
+            <div class="channel__label">GitHub</div>
+            <div class="channel__value">chocolatetoast-chiu</div>
+          </div>
+        </a>
       </div>
     </div>
   </div>
@@ -124,6 +126,8 @@
   </div>
 </footer>
 <button id="scrollTop" onclick="scrollToTop()" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+<script src="assets/js/instruments.js"></script>
 <script src="assets/js/main.js"></script>
+<script src="assets/js/contact-page.js"></script>
 </body>
 </html>

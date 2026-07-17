@@ -11,25 +11,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="../../assets/css/styles.css">
-  <style>
-    .article-header { padding:140px 0 48px; border-bottom:1px solid var(--border); background:radial-gradient(ellipse at 30% 40%,rgba(94,170,180,0.05),transparent 60%),var(--bg); }
-    .article-header h1 { font-size:clamp(1.8rem,4vw,2.5rem); color:var(--text); margin-bottom:12px; }
-    .article-meta { font-family:var(--font-m); font-size:0.78rem; color:var(--text-3); }
-    .article-body { max-width:720px; margin:0 auto; padding:48px 24px 64px; }
-    .article-body p { font-size:0.95rem; color:var(--text-2); line-height:1.8; margin-bottom:20px; }
-    .article-body strong { color:var(--text); }
-    .article-body em { color:var(--text); font-style:italic; }
-    .article-body blockquote { border-left:3px solid var(--accent); padding:12px 20px; margin:28px 0; background:var(--bg-surface); border-radius:0 var(--radius-sm) var(--radius-sm) 0; font-style:italic; color:var(--text-2); font-size:0.95rem; line-height:1.7; }
-    .article-body figure { margin:28px 0; }
-    .article-body figure img { width:100%; border-radius:var(--radius); border:1px solid var(--border); }
-    .article-body figcaption { font-size:0.78rem; color:var(--text-3); text-align:center; margin-top:8px; }
-    .article-body h2 { font-size:1.3rem; color:var(--text); margin:36px 0 16px; }
-    .article-nav { max-width:720px; margin:0 auto; padding:0 24px 64px; display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; }
-    .article-nav a { font-size:0.88rem; color:var(--accent); display:inline-flex; align-items:center; gap:8px; }
-    .article-nav a:hover { text-decoration:underline; }
-  </style>
 </head>
 <body>
+<div class="reading-progress" aria-hidden="true"></div>
 
 <nav class="nav" id="nav">
   <div class="container nav__inner">
@@ -152,6 +136,7 @@
   </div>
 </footer>
 <button id="scrollTop" onclick="scrollToTop()" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+<script src="../../assets/js/instruments.js"></script>
 <script src="../../assets/js/main.js"></script>
 </body>
 </html>

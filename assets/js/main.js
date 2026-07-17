@@ -1,10 +1,14 @@
-/* ═══ v2/script.js — Portfolio Interactions ═══ */
+/* ═══ Portfolio Interactions ═══ */
 (function () {
   'use strict';
 
-  /* ── Particle Network (Hero) ── */
+  /* ── Particle Network (Hero — used when 3D brain falls back) ── */
   var canvas = document.getElementById('heroCanvas');
-  if (canvas) {
+  var reducedMotion =
+    window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var force2d = document.documentElement.classList.contains('brain-fallback');
+  var use3dMount = document.getElementById('brainMount');
+  if (canvas && !reducedMotion && (force2d || !use3dMount)) {
     var ctx = canvas.getContext('2d');
     var particles = [];
     var mouse = { x: null, y: null };
@@ -355,9 +359,21 @@
   };
 
   /* ── Active nav link ── */
-  var page = location.pathname.split('/').pop() || 'index.html';
+  var path = location.pathname.replace(/\\/g, '/');
+  var page = path.split('/').pop() || 'index.html';
+  var inPosts = /\/posts\//.test(path) || page === 'tutorials.html' || page === 'reflections.html';
   document.querySelectorAll('.nav__links > a').forEach(function (a) {
+    a.classList.remove('active');
     var hp = (a.getAttribute('href') || '').split('/').pop();
     if (hp === page) a.classList.add('active');
+  });
+  if (inPosts) {
+    var postsTrigger = document.querySelector('.nav-dropdown > a');
+    if (postsTrigger) postsTrigger.classList.add('active');
+  }
+
+  /* Lazy images */
+  document.querySelectorAll('img:not([loading])').forEach(function (img) {
+    if (!img.closest('.hero')) img.setAttribute('loading', 'lazy');
   });
 })();

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sheng-Chieh (Leon) Chiu | Postdoctoral Researcher</title>
-  <meta name="description" content="Sheng-Chieh (Leon) Chiu — Postdoc at NYCU Digital Medicine & Smart Healthcare Research Center. Deep learning, PET/MRI, trustworthy clinical AI.">
+  <title>Sheng-Chieh (Leon) Chiu | AI in Medical Imaging & Healthcare Data</title>
+  <meta name="description" content="Sheng-Chieh (Leon) Chiu — Postdoc at NYCU. AI in medical imaging & healthcare data: neuroimaging quantification, surgical vision, trustworthy clinical AI.">
   <meta name="author" content="Sheng-Chieh (Leon) Chiu">
   <link rel="icon" href="assets/images/favicon.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,25 +12,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="assets/css/styles.css">
-  <style>
-    /* Hero text-only layout (no portrait) */
-    .hero__inner {
-      grid-template-columns: 1fr !important;
-      max-width: 720px;
-    }
-    .hero__text { max-width: 720px; }
-    .hero__tagline {
-      font-size: 1.05rem;
-      color: var(--text-2);
-      line-height: 1.7;
-      margin-bottom: 36px;
-      max-width: 620px;
-    }
-  </style>
 </head>
 <body>
 
-<!-- ═══════════ NAV ═══════════ -->
 <nav class="nav" id="nav">
   <div class="container nav__inner">
     <a href="index.html" class="nav__logo">
@@ -54,26 +38,33 @@
         <a href="https://linkedin.com/in/chocolatetoast-chiu" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
         <a href="https://github.com/chocolatetoast-chiu" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
       </div>
-      <button class="nav__menu-btn" onclick="toggleMenu()" aria-label="Menu">
-        <i class="fas fa-bars"></i>
-      </button>
+      <button class="nav__menu-btn" onclick="toggleMenu()" aria-label="Menu"><i class="fas fa-bars"></i></button>
     </div>
   </div>
 </nav>
 
-<!-- ═══════════ HERO ═══════════ -->
-<section class="hero">
-  <canvas id="heroCanvas" class="hero__canvas"></canvas>
+<!-- HERO: 3D brain + Quantification Console -->
+<section class="hero hero--instrument">
+  <div class="hero__stage" id="brainMount" role="img" aria-label="Interactive stylized 3D brain linked to the quantification console"></div>
+  <canvas id="heroCanvas" class="hero__canvas" style="display:none"></canvas>
   <div class="container hero__inner">
     <div class="hero__text">
       <span class="hero__label"><span class="lp">//</span> Postdoctoral Researcher · NYCU</span>
       <h1 class="hero__name">Sheng-Chieh (Leon) Chiu</h1>
-      <p class="hero__keywords">Sovereign AI <span class="kd">·</span> Neuroimaging <span class="kd">·</span> Digital Twin</p>
-      <p class="hero__tagline">Sovereign AI and digital twin technologies for neurological and surgical care; amyloid PET/MRI quantification and trustworthy generative neuroimaging.</p>
+      <p class="hero__keywords">AI in Medical Imaging <span class="kd">·</span> Healthcare Data</p>
+      <p class="hero__tagline">From neuroimaging quantification and digital twins to surgical vision and trustworthy clinical data pipelines.</p>
       <div class="hero__actions">
-        <a href="about.html" class="btn btn--glow">Learn More About Me <i class="fas fa-arrow-right" style="font-size:0.8em"></i></a>
+        <a href="#pillars" class="btn btn--glow">Explore the work <i class="fas fa-arrow-right" style="font-size:0.8em"></i></a>
       </div>
     </div>
+    <aside class="hero__console instrument" id="quantConsole" aria-label="Quantification Console">
+      <div class="instrument__fig"><span class="lp">Fig. 1</span> — Quantification Console</div>
+      <div class="console-stages" role="tablist"></div>
+      <p class="console-title" style="font-family:var(--font-d);font-size:1.1rem;color:var(--text);margin:4px 0 12px;"></p>
+      <div class="metrics-grid"></div>
+      <p class="console-desc"></p>
+      <p class="console-hint">Hover / drag the brain · select a stage · click a lobe</p>
+    </aside>
   </div>
   <div class="hero__scroll-hint">
     <span>Scroll</span>
@@ -81,56 +72,76 @@
   </div>
 </section>
 
-<!-- ═══════════ ABOUT PREVIEW ═══════════ -->
+<!-- ABOUT PREVIEW -->
 <section class="section" id="about-preview">
   <div class="container">
     <p class="section__label" data-reveal><span class="lp">#</span> About</p>
     <div class="about-preview" data-reveal="1">
-      <img src="assets/images/portrait.jpg" alt="Sheng-Chieh (Leon) Chiu" class="about-preview__img">
+      <img src="assets/images/portrait.jpg" alt="Sheng-Chieh (Leon) Chiu" class="about-preview__img" width="200" height="200">
       <div>
-        <p style="font-size:0.95rem; color:var(--text-2); line-height:1.7;">I am a Postdoctoral Researcher at the Digital Medicine and Smart Healthcare Research Center, NYCU, working on sovereign AI and digital twin technologies for healthcare. My research journey began with a deep personal motivation — caring for family members affected by neurodegenerative diseases — and has since grown into a commitment to building trustworthy clinical AI at the intersection of neuroimaging, deep learning, and surgical computer vision.</p>
+        <p style="font-size:0.95rem; color:var(--text-2); line-height:1.7;">I am a Postdoctoral Researcher at NYCU’s Digital Medicine and Smart Healthcare Research Center, working on <strong style="color:var(--text)">AI in medical imaging and healthcare data</strong>. The path began with family members affected by neurodegenerative disease — and grew into building trustworthy clinical AI across neuroimaging, surgical vision, and privacy-aware data systems.</p>
         <a href="about.html" class="link-arrow" style="margin-top:16px; display:inline-flex;">Read my story <i class="fas fa-arrow-right" style="font-size:0.8em"></i></a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════ FEATURED WORK ═══════════ -->
+<!-- PILLARS -->
+<section class="section" id="pillars">
+  <div class="container" id="pillarsExplorer">
+    <p class="section__label" data-reveal><span class="lp">#</span> Research Focus</p>
+    <p class="section__desc" data-reveal>AI in Medical Imaging &amp; Healthcare Data — three lenses, one practice.</p>
+    <div class="pillars-tabs" data-reveal></div>
+    <div class="pillars-panels" data-reveal="1"></div>
+  </div>
+</section>
+
+<!-- COMPARISON -->
+<section class="section" id="compare">
+  <div class="container">
+    <p class="section__label" data-reveal><span class="lp">#</span> Why the signal matters</p>
+    <p class="section__desc" data-reveal>A bigger model doesn’t always mean better quantification — the right path to the signal does.</p>
+    <div class="compare-grid" data-reveal="1">
+      <div class="compare-card is-active" tabindex="0">
+        <div class="compare-card__label">Path A</div>
+        <h3>MRI-based</h3>
+        <p>Structural MRI + PET: FreeSurfer-grade anatomy, classical SUVR / Centiloid when MRI is available.</p>
+        <div class="compare-card__punch">Gold-standard anatomy — when MRI is available.</div>
+      </div>
+      <div class="compare-card" tabindex="0">
+        <div class="compare-card__label">Path B</div>
+        <h3>MRI-less</h3>
+        <p>Synthetic CT training → quantify on PET/CT without paired MRI; validated on external cohorts.</p>
+        <div class="compare-card__punch">Access when MRI is missing — without giving up defensibility.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED WORK -->
 <section class="section" id="work">
   <div class="container">
     <p class="section__label" data-reveal><span class="lp">#</span> Featured Work</p>
-    <p class="section__desc" data-reveal>Selected research projects and publications</p>
+    <p class="section__desc" data-reveal>Selected research projects — open a case study</p>
     <div class="work__grid">
-      <div class="work-card" data-reveal="1">
+      <a href="work/leon-segmentation.html" class="work-card" data-reveal="1">
         <span class="work-card__num">01</span>
         <h3 class="work-card__title">LEON Brain Segmentation</h3>
-        <p class="work-card__desc">MR-based deep learning segmentation for amyloid PET quantification — diagnostic performance and equivalence to FreeSurfer across large neuroimaging cohorts.</p>
-        <div class="work-card__tags">
-          <span>Python</span>
-          <span>TensorFlow</span>
-          <span>PET/MRI</span>
-        </div>
-      </div>
-      <div class="work-card" data-reveal="2">
+        <p class="work-card__desc">MR-based DL segmentation for amyloid PET — FreeSurfer-aligned performance at cohort scale.</p>
+        <div class="work-card__tags"><span>Python</span><span>TensorFlow</span><span>PET/MRI</span></div>
+      </a>
+      <a href="work/mri-less-amyloid.html" class="work-card" data-reveal="2">
         <span class="work-card__num">02</span>
         <h3 class="work-card__title">MRI-less Amyloid PET</h3>
-        <p class="work-card__desc">Deep learning quantification without MRI using synthetic CT for training; equivalent to MRI-based standard and robust on external PET/CT cohorts.</p>
-        <div class="work-card__tags">
-          <span>PyTorch</span>
-          <span>PET/CT</span>
-          <span>Deep Learning</span>
-        </div>
-      </div>
-      <div class="work-card" data-reveal="3">
+        <p class="work-card__desc">Quantification without MRI via synthetic CT training — EJNMMI Physics 2026.</p>
+        <div class="work-card__tags"><span>PyTorch</span><span>PET/CT</span><span>Deep Learning</span></div>
+      </a>
+      <a href="work/tcbc-motion.html" class="work-card" data-reveal="3">
         <span class="work-card__num">03</span>
         <h3 class="work-card__title">TCBC Motion Correction</h3>
-        <p class="work-card__desc">Tracer characteristic–based co-registration for simultaneous PET/MR: reduced misalignment and improved quantification.</p>
-        <div class="work-card__tags">
-          <span>MATLAB</span>
-          <span>PET/MR</span>
-          <span>Registration</span>
-        </div>
-      </div>
+        <p class="work-card__desc">Tracer-aware co-registration for simultaneous PET/MR — EJNMMI Physics 2025.</p>
+        <div class="work-card__tags"><span>MATLAB</span><span>PET/MR</span><span>Registration</span></div>
+      </a>
     </div>
     <div class="section__more" data-reveal>
       <a href="cv.html#projects" class="link-arrow">View all projects <i class="fas fa-arrow-right" style="font-size:0.8em"></i></a>
@@ -138,28 +149,23 @@
   </div>
 </section>
 
-<!-- ═══════════ LATEST POSTS ═══════════ -->
+<!-- FIELD NOTES -->
 <section class="section" id="posts">
   <div class="container">
-    <p class="section__label" data-reveal><span class="lp">#</span> Latest Posts</p>
-    <p class="section__desc" data-reveal>Personal reflections on research, growth, and life</p>
+    <p class="section__label" data-reveal><span class="lp">#</span> Field notes</p>
+    <p class="section__desc" data-reveal>From the observation log — reflections on research and life</p>
     <div class="posts__list">
       <a href="posts/articles/finding-my-north-star.html" class="post-card" data-reveal="1">
-        <span class="post-card__date">January 4, 2025</span>
+        <span class="post-card__date">2025·01·04 · 北極星</span>
         <h3 class="post-card__title">Finding My North Star (Mandarin)</h3>
         <p class="post-card__excerpt">透過年度回顧工作坊與人類圖的探索，找到人生使命的那一刻——用愛與真誠，真實且善良地與世界連結。</p>
-        <div class="post-card__tags">
-          <span>Reflection</span>
-          <span>Human Design</span>
-        </div>
+        <div class="post-card__tags"><span>Reflection</span><span>Human Design</span></div>
       </a>
       <a href="posts/articles/the-year-i-learned-to-let-go.html" class="post-card" data-reveal="2">
-        <span class="post-card__date">December 29, 2024</span>
+        <span class="post-card__date">2024·12·29 · 放下</span>
         <h3 class="post-card__title">The Year I Learned to Let Go (Mandarin)</h3>
         <p class="post-card__excerpt">2024年度回顧——從資格考的驚險、無以名狀的焦慮，到學會放下掌控、接受不完美，溫柔地向前走。</p>
-        <div class="post-card__tags">
-          <span>Reflection</span>
-        </div>
+        <div class="post-card__tags"><span>Reflection</span></div>
       </a>
     </div>
     <div class="section__more" data-reveal>
@@ -168,16 +174,14 @@
   </div>
 </section>
 
-<!-- ═══════════ CTA ═══════════ -->
 <section class="section section--cta" id="contact">
   <div class="container" data-reveal>
     <h2>Let's Connect</h2>
-    <p>Interested in collaboration or just want to say hello?</p>
+    <p>Collaboration, hiring, or just hello — pick an intent on the contact page.</p>
     <a href="contact.html" class="btn btn--glow btn--lg">Get In Touch <i class="fas fa-arrow-right" style="font-size:0.8em"></i></a>
   </div>
 </section>
 
-<!-- ═══════════ FOOTER ═══════════ -->
 <footer class="footer">
   <div class="container footer__inner">
     <div class="footer__social">
@@ -189,10 +193,38 @@
   </div>
 </footer>
 
-<button id="scrollTop" onclick="scrollToTop()" aria-label="Back to top">
-  <i class="fas fa-arrow-up"></i>
-</button>
+<button id="scrollTop" onclick="scrollToTop()" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="assets/js/research-data.js"></script>
+<script src="assets/js/instruments.js"></script>
+<script src="assets/js/brain-atlas.js"></script>
+<script>
+(function () {
+  if (document.documentElement.classList.contains('brain-fallback')) {
+    var c2 = document.getElementById('heroCanvas');
+    var mount = document.getElementById('brainMount');
+    if (c2) c2.style.display = '';
+    if (mount) { mount.removeAttribute('id'); mount.style.display = 'none'; }
+  }
+})();
+</script>
 <script src="assets/js/main.js"></script>
+<script src="assets/js/quant-console.js"></script>
+<script src="assets/js/pillars.js"></script>
+<script>
+(function () {
+  var cards = document.querySelectorAll('.compare-card');
+  cards.forEach(function (c) {
+    c.addEventListener('click', function () {
+      cards.forEach(function (x) { x.classList.remove('is-active'); });
+      c.classList.add('is-active');
+    });
+    c.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); c.click(); }
+    });
+  });
+})();
+</script>
 </body>
 </html>

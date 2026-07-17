@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LEON Brain Segmentation | Sheng-Chieh (Leon) Chiu</title>
+  <meta name="description" content="Case study — MR-based deep learning segmentation for amyloid PET quantification.">
+  <link rel="icon" href="../assets/images/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+<nav class="nav" id="nav">
+  <div class="container nav__inner">
+    <a href="../index.html" class="nav__logo"><span>SC<span class="nav__logo-dot">.</span><span class="nav__logo-name">Chiu</span></span></a>
+    <div class="nav__links" id="navLinks">
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../cv.html">CV</a>
+      <div class="nav-dropdown"><a href="#">Posts <i class="fas fa-chevron-down"></i></a><div class="dropdown-menu"><a href="../posts/tutorials.html">Tutorials</a><a href="../posts/reflections.html">Reflections</a></div></div>
+      <a href="../contact.html">Contact</a>
+    </div>
+    <div class="nav__aside">
+      <div class="nav__social">
+        <a href="https://linkedin.com/in/chocolatetoast-chiu" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/chocolatetoast-chiu" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      </div>
+      <button class="nav__menu-btn" onclick="toggleMenu()" aria-label="Menu"><i class="fas fa-bars"></i></button>
+    </div>
+  </div>
+</nav>
+
+<header class="case-hero">
+  <div class="container">
+    <span class="case-hero__num">Case 01 · Imaging Intelligence</span>
+    <h1>LEON Brain Segmentation</h1>
+    <p class="page-hero__sub">MR-based deep learning parcellation for amyloid PET quantification</p>
+  </div>
+</header>
+
+<article class="case-body" data-case="leon">
+  <h2>Problem</h2>
+  <p id="caseProblem"></p>
+  <h2>Method</h2>
+  <div class="case-fig instrument">
+    <div class="case-fig__label"><span class="lp">Fig.</span> Pipeline — click a step</div>
+    <div class="pipeline-steps" id="caseSteps"></div>
+    <p class="case-fig__note" id="caseNote"></p>
+  </div>
+  <h2>Numbers that matter</h2>
+  <div class="metrics-grid instrument" id="caseMetrics" style="padding:20px;"></div>
+  <h2>Publication</h2>
+  <p id="casePubs"></p>
+  <p style="margin-top:36px;"><a class="link-arrow" href="../cv.html#projects"><i class="fas fa-arrow-left"></i> Back to CV projects</a></p>
+</article>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__social">
+      <a href="mailto:scchiu.phd@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://linkedin.com/in/chocolatetoast-chiu" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://github.com/chocolatetoast-chiu" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+    </div>
+    <p class="footer__copy">&copy; 2026 Sheng-Chieh (Leon) Chiu</p>
+  </div>
+</footer>
+<button id="scrollTop" onclick="scrollToTop()" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+<script src="../assets/js/research-data.js"></script>
+<script src="../assets/js/instruments.js"></script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/case-study.js"></script>
+</body>
+</html>

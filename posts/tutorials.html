@@ -4,22 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tutorials | Sheng-Chieh (Leon) Chiu</title>
-  <meta name="description" content="Educational articles on neuroimaging, deep learning, and biomedical engineering.">
+  <meta name="description" content="Tutorial roadmap — neuroimaging, deep learning, healthcare data.">
   <link rel="icon" href="../assets/images/favicon.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="../assets/css/styles.css">
-  <style>
-    .page-hero { padding:140px 0 80px; border-bottom:1px solid var(--border); background:radial-gradient(ellipse at 30% 40%,rgba(94,170,180,0.05),transparent 60%),var(--bg); }
-    .page-hero h1 { font-size:clamp(2rem,4vw,3rem); color:var(--text); margin-bottom:12px; }
-    .page-hero__sub { font-size:1.05rem; color:var(--text-2); }
-    .placeholder-box { text-align:center; padding:64px 24px; background:var(--bg-surface); border:1px solid var(--border); border-radius:var(--radius); }
-    .placeholder-box i { font-size:2rem; color:var(--accent); margin-bottom:16px; display:block; }
-    .placeholder-box h3 { font-size:1.1rem; color:var(--text); margin-bottom:8px; }
-    .placeholder-box p { font-size:0.9rem; color:var(--text-2); }
-  </style>
 </head>
 <body>
 
@@ -43,19 +34,56 @@
   </div>
 </nav>
 
-<section class="page-hero">
+<section class="page-hero page-hero--plain">
   <div class="container">
-    <h1>Tutorials</h1>
-    <p class="page-hero__sub">Educational articles on neuroimaging, deep learning, and biomedical engineering</p>
+    <p class="page-hero__label"><span class="lp">//</span> Tutorials</p>
+    <h1>Topic roadmap</h1>
+    <p class="page-hero__sub">Educational notes on neuroimaging, deep learning, and healthcare data — building in public.</p>
   </div>
 </section>
 
 <section class="section">
   <div class="container">
-    <div class="placeholder-box" data-reveal>
-      <i class="fas fa-book-open"></i>
-      <h3>Coming soon</h3>
-      <p>I'm preparing tutorials on topics I'm passionate about. Check back soon.</p>
+    <div class="roadmap" data-reveal>
+      <div class="roadmap-node roadmap-node--planned">
+        <div class="roadmap-node__status">Planned</div>
+        <h3>Neuroimaging</h3>
+        <p>Centiloid / SUVR intuition, PET/MR pitfalls, motion before you quantify.</p>
+      </div>
+      <div class="roadmap-node roadmap-node--planned">
+        <div class="roadmap-node__status">Planned</div>
+        <h3>Deep Learning</h3>
+        <p>Segmentation for clinical metrics — what “equivalence” actually means.</p>
+      </div>
+      <div class="roadmap-node roadmap-node--planned">
+        <div class="roadmap-node__status">Planned</div>
+        <h3>Healthcare Data</h3>
+        <p>Privacy-aware pipelines and why trustworthy data is part of the model.</p>
+      </div>
+    </div>
+
+    <div class="work__grid" data-reveal="1">
+      <div class="work-card ghost-card">
+        <span class="work-card__num">~12 min</span>
+        <h3 class="work-card__title">Centiloid in plain language</h3>
+        <p class="work-card__desc">Stub — coming soon.</p>
+      </div>
+      <div class="work-card ghost-card">
+        <span class="work-card__num">~15 min</span>
+        <h3 class="work-card__title">MRI-less quantification: why synthetic CT</h3>
+        <p class="work-card__desc">Stub — coming soon.</p>
+      </div>
+      <div class="work-card ghost-card">
+        <span class="work-card__num">~10 min</span>
+        <h3 class="work-card__title">Reading a motion-correction paper</h3>
+        <p class="work-card__desc">Stub — coming soon.</p>
+      </div>
+    </div>
+
+    <div class="section__more" data-reveal>
+      <a class="btn btn--outline" href="mailto:scchiu.phd@gmail.com?subject=Tutorial%20topic%20request">
+        Request a topic <i class="fas fa-arrow-right" style="font-size:0.8em"></i>
+      </a>
     </div>
   </div>
 </section>
@@ -71,6 +99,7 @@
   </div>
 </footer>
 <button id="scrollTop" onclick="scrollToTop()" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+<script src="../assets/js/instruments.js"></script>
 <script src="../assets/js/main.js"></script>
 </body>
 </html>
