@@ -40,7 +40,7 @@
     <h1>Sheng-Chieh (Leon) Chiu</h1>
     <p class="page-hero__sub">Postdoctoral Researcher · AI in Medical Imaging &amp; Healthcare Data</p>
     <div class="page-hero__actions">
-      <a href="CV_260323.pdf" class="btn btn--outline" download><i class="fas fa-download" style="font-size:0.8em"></i> Download PDF</a>
+      <a href="CV_forwork_260731.pdf" class="btn btn--outline" download><i class="fas fa-download" style="font-size:0.8em"></i> Download</a>
     </div>
   </div>
 </section>
@@ -53,7 +53,6 @@
       <a href="#skills"><span class="cv-toc__dot"></span>Skills</a>
       <a href="#publications"><span class="cv-toc__dot"></span>Publications</a>
       <a href="#projects"><span class="cv-toc__dot"></span>Projects</a>
-      <a href="#leadership"><span class="cv-toc__dot"></span>Leadership</a>
     </nav>
 
     <main>
@@ -67,10 +66,10 @@
             <span>Feb 2026 – Present</span>
           </div>
           <ul class="cv-details">
-            <li>AI in medical imaging &amp; healthcare data: trustworthy, locally governed clinical AI for neurology and surgery.</li>
-            <li>Cross-modality generative AI: synthesize amyloid PET from structural MRI when PET is unavailable.</li>
-            <li>Foundation-model framework for resting-state fMRI to learn healthy brain dynamics (self-supervised).</li>
-            <li>Real-time computer vision for DaVinci robotic gynecologic surgery: detection and promptable segmentation with visibility-aware tracking.</li>
+            <li>Developing sovereign AI and digital twin technologies for trustworthy, locally governed neurological and surgical applications.</li>
+            <li>Developing cross-modality generative AI to synthesize amyloid PET from structural MRI, enabling amyloid-burden estimation without PET while safeguarding against false-positive signals in healthy populations.</li>
+            <li>Developing a self-supervised foundation model for resting-state fMRI to learn healthy brain dynamics as a baseline for clinical perturbation analysis and digital twin modeling.</li>
+            <li>Building real-time computer vision for DaVinci robotic-assisted gynecologic surgery, integrating object detection, promptable segmentation, visibility-aware tracking, and safety mechanisms under occlusion.</li>
           </ul>
         </div>
         <div class="cv-entry" data-evidence="python pet mri quant tf torch seg motion matlab">
@@ -81,10 +80,10 @@
             <span>Sep 2020 – Aug 2025</span>
           </div>
           <ul class="cv-details">
-            <li>Image processing and deep learning for amyloid PET quantification in Alzheimer's disease.</li>
-            <li>MRI-assisted and MRI-less DL segmentation; quantitative equivalence to FreeSurfer across multi-site cohorts.</li>
-            <li>Tracer characteristic-based co-registration for simultaneous PET/MR motion correction.</li>
-            <li>Large-scale stats: Centiloid calibration, equivalence testing, ROC, bootstrap; collaboration across nuclear medicine, radiology, neurology, and CS.</li>
+            <li>Developed image-processing and deep-learning methods for amyloid PET quantification in Alzheimer's disease.</li>
+            <li>Built MRI-assisted and MRI-less deep-learning segmentation pipelines, demonstrating quantitative equivalence to FreeSurfer across multi-site cohorts.</li>
+            <li>Developed tracer characteristic-based co-registration for simultaneous PET/MR motion correction and a PET biomarker for MCI-to-AD progression prediction.</li>
+            <li>Performed Centiloid calibration, equivalence testing, ROC analysis, and bootstrap validation while collaborating across nuclear medicine, radiology, neurology, and computer science.</li>
           </ul>
         </div>
       </section>
@@ -122,10 +121,10 @@
         <p class="skill-cat">Deep Learning</p>
         <div class="skills-chips">
           <span data-skill="Python">Python</span>
-          <span data-skill="TensorFlow">TensorFlow</span>
           <span data-skill="PyTorch">PyTorch</span>
+          <span data-skill="Generative AI">Generative AI</span>
         </div>
-        <p class="skill-cat">Medical Imaging</p>
+        <p class="skill-cat">Medical Imaging Processing</p>
         <div class="skills-chips">
           <span data-skill="PET">PET</span>
           <span data-skill="MRI">MRI</span>
@@ -133,7 +132,7 @@
           <span data-skill="Segmentation">Segmentation</span>
           <span data-skill="Quantification">Quantification</span>
         </div>
-        <p class="skill-cat">Imaging Tools</p>
+        <p class="skill-cat">Medical Imaging Tools</p>
         <div class="skills-chips">
           <span data-skill="MATLAB">MATLAB</span>
           <span>3D Slicer</span>
@@ -149,70 +148,122 @@
         <div class="chip-row" data-pub-filters>
           <button type="button" class="chip is-active" data-filter="all">All</button>
           <button type="button" class="chip" data-filter="published">Published</button>
-          <button type="button" class="chip" data-filter="prep">In prep</button>
+          <button type="button" class="chip" data-filter="review">Under review</button>
+          <button type="button" class="chip" data-filter="prep">In preparation</button>
           <button type="button" class="chip" data-filter="poster">Poster</button>
           <button type="button" class="chip" data-filter="pet">PET</button>
           <button type="button" class="chip" data-filter="mri-less">MRI-less</button>
           <button type="button" class="chip" data-filter="motion">Motion</button>
         </div>
 
-        <div class="pub-item" data-pub="published pet mri-less quant" data-evidence="pet mri quant torch">
+        <div class="pub-item" data-pub="published pet mri quant" data-evidence="pet mri quant python">
           <span class="pub-num">1.</span>
+          <div>
+            <p class="pub-title">"Classification of tau status with machine learning models in amyloid-positive cohorts"</p>
+            <p class="pub-authors">Lin YC, Chiu SC, Massey R, Fang YHD</p>
+            <p class="pub-meta">Jul 2026, Alzheimer's &amp; Dementia · <a href="https://doi.org/10.1002/alz.71683" target="_blank" rel="noopener">DOI</a></p>
+            <p class="pub-context">Machine-learning surrogate for tau-PET status using MRI and amyloid PET across ADNI, OASIS-3, and SCAN cohorts (AUC 0.92).</p>
+          </div>
+        </div>
+        <div class="pub-item" data-pub="published pet mri-less quant" data-evidence="pet mri quant torch">
+          <span class="pub-num">2.</span>
           <div>
             <p class="pub-title">"Amyloid PET quantification with deep learning segmentation models without MRI"</p>
             <p class="pub-authors">Chiu SC, Lin YC, McConathy J, Lin SY, Fang YHD</p>
             <p class="pub-meta">Mar 2026, EJNMMI Physics · <a href="https://doi.org/10.1186/s40658-026-00854-8" target="_blank" rel="noopener">DOI</a></p>
-            <p class="pub-context">MRI-less path: synthetic CT training, external PET/CT validation — click to pin context.</p>
+            <p class="pub-context">MRI-less amyloid PET quantification using synthetic CT, with quantitative equivalence and external PET/CT validation.</p>
           </div>
         </div>
         <div class="pub-item" data-pub="published pet motion" data-evidence="pet mri motion matlab">
-          <span class="pub-num">2.</span>
+          <span class="pub-num">3.</span>
           <div>
             <p class="pub-title">"Motion correction of simultaneous brain PET/MR images based on tracer uptake characteristics"</p>
             <p class="pub-authors">Chiu SC, Perucho JA, Fang YHD</p>
-            <p class="pub-meta">Jul 2025, EJNMMI Physics 12(1):75 · <a href="https://doi.org/10.1186/s40658-025-00789-6" target="_blank" rel="noopener">DOI</a></p>
-            <p class="pub-context">TCBC co-registration before quantification — reduces motion-induced bias.</p>
+            <p class="pub-meta">Jul 2025, EJNMMI Physics · <a href="https://doi.org/10.1186/s40658-025-00789-6" target="_blank" rel="noopener">DOI</a></p>
+            <p class="pub-context">Tracer characteristic-based co-registration that reduces PET/MR misalignment and improves quantification and lesion detectability.</p>
           </div>
         </div>
-        <div class="pub-item" data-pub="prep pet seg" data-evidence="pet mri seg tf">
-          <span class="pub-num">·</span>
-          <div>
-            <p class="pub-title">"Deep learning MR-based segmentation approach for amyloid PET quantification (LEON)"</p>
-            <p class="pub-authors">Chiu SC, Lin YC, McConathy J, Lin SY, Fang YHD</p>
-            <p class="pub-meta">Mar 2026, Target: EJNMMI Physics</p>
-            <p class="pub-context">LEON vs FreeSurfer diagnostic equivalence across cohorts.</p>
-          </div>
-        </div>
-        <div class="pub-item" data-pub="published pet quant" data-evidence="pet quant">
-          <span class="pub-num">·</span>
+        <div class="pub-item" data-pub="published pet quant" data-evidence="pet mri quant">
+          <span class="pub-num">4.</span>
           <div>
             <p class="pub-title">"Prediction of MCI-to-AD progression with atrophy-weighted standard uptake value ratios of ¹⁸F-Florbetapir PET"</p>
-            <p class="pub-authors">Fang YHD, Perucho JA, Chiu SC, Lin YC, McConathy J</p>
+            <p class="pub-authors">Fang YHD, Perucho JA, Chiu SC, Lin YC, McConathy JE</p>
             <p class="pub-meta">Mar 2023, medRxiv · <a href="https://doi.org/10.1101/2023.03.09.23287059" target="_blank" rel="noopener">DOI</a></p>
-            <p class="pub-context">Preprint — atrophy-weighted SUVR for progression prediction.</p>
+            <p class="pub-context">Atrophy-weighted SUVR combining amyloid uptake and hippocampal volume to predict MCI-to-AD progression.</p>
           </div>
         </div>
+
+        <h3 class="cv-subsection-title" data-pub-heading="review">Under Review</h3>
+        <div class="pub-item" data-pub="review pet seg" data-evidence="pet mri seg torch">
+          <span class="pub-num">R</span>
+          <div>
+            <p class="pub-title">"Deep learning MR-based segmentation approach for amyloid PET quantification"</p>
+            <p class="pub-authors">Chiu SC, Lin YC, McConathy J, Lin SY, Fang YHD</p>
+            <p class="pub-meta">Under review, EJNMMI Physics</p>
+            <p class="pub-context">MR-based deep-learning brain segmentation for amyloid PET quantification.</p>
+          </div>
+        </div>
+
+        <h3 class="cv-subsection-title" data-pub-heading="prep">In Preparation</h3>
+        <div class="pub-item" data-pub="prep pet" data-evidence="pet mri python">
+          <span class="pub-num">I1</span>
+          <div>
+            <p class="pub-title">"Accelerated tau deposition is associated with COVID infection in the ADNI cohort"</p>
+            <p class="pub-authors">Lee J, Chiu SC, Lin YC, McConathy J, Fang YHD</p>
+            <p class="pub-meta">In preparation</p>
+          </div>
+        </div>
+        <div class="pub-item" data-pub="prep pet mri" data-evidence="pet mri quant">
+          <span class="pub-num">I2</span>
+          <div>
+            <p class="pub-title">"Evaluating the association between cerebral atrophy and tau deposition in amyloid-positive individuals across the Alzheimer's disease continuum"</p>
+            <p class="pub-authors">Lin YC, Massey R, Chiu SC, Lee J, Fang YHD</p>
+            <p class="pub-meta">In preparation</p>
+          </div>
+        </div>
+        <div class="pub-item" data-pub="prep pet quant" data-evidence="pet quant">
+          <span class="pub-num">I3</span>
+          <div>
+            <p class="pub-title">"A simplified scoring system for MCI-to-AD conversion prediction based on Centiloid and cognitive tests"</p>
+            <p class="pub-authors">Massey R, Perucho J, Chiu SC, Lin YC, Lee J, Fang YHD</p>
+            <p class="pub-meta">In preparation</p>
+          </div>
+        </div>
+
+        <h3 class="cv-subsection-title" data-pub-heading="poster">Poster Presentations</h3>
         <div class="pub-item" data-pub="poster pet seg" data-evidence="pet seg">
           <span class="pub-num">P1</span>
           <div>
             <p class="pub-title">"Evaluation of Deep Learning Models for Brain Parcellation in Neuroimaging of Alzheimer's Disease"</p>
+            <p class="pub-authors">Chiu SC, Fang YHD</p>
             <p class="pub-meta">SNMMI Jun 2024 · <a href="https://jnm.snmjournals.org/content/65/supplement_2/242449.abstract" target="_blank" rel="noopener">Abstract</a></p>
             <p class="pub-context">Conference poster on DL parcellation for AD neuroimaging.</p>
           </div>
         </div>
-        <div class="pub-item" data-pub="poster pet motion" data-evidence="pet motion">
+        <div class="pub-item" data-pub="poster mri seg" data-evidence="mri seg">
           <span class="pub-num">P2</span>
           <div>
+            <p class="pub-title">"Volumetric Brain Tumor Segmentation in High-Grade Glioma Using a Semi-Automated Workflow"</p>
+            <p class="pub-authors">Perry J, Nikpanah M, Chiu SC, Fang YHD, McConathy J</p>
+            <p class="pub-meta">SNMMI Jun 2024 · <a href="https://jnm.snmjournals.org/content/65/supplement_2/242500.abstract" target="_blank" rel="noopener">Abstract</a></p>
+            <p class="pub-context">Semi-automated volumetric brain-tumor segmentation workflow for high-grade glioma.</p>
+          </div>
+        </div>
+        <div class="pub-item" data-pub="poster pet motion" data-evidence="pet mri motion">
+          <span class="pub-num">P3</span>
+          <div>
             <p class="pub-title">"Correction for Involuntary Motion of Simultaneous PET/MR Brain Scans Based on Regional Tracer Characteristics"</p>
+            <p class="pub-authors">Chiu SC</p>
             <p class="pub-meta">SNMMI Jun 2023 · <a href="https://jnm.snmjournals.org/content/64/supplement_1/P1340.abstract" target="_blank" rel="noopener">Abstract</a></p>
             <p class="pub-context">Early TCBC presentation at SNMMI.</p>
           </div>
         </div>
         <div class="pub-item" data-pub="poster" data-evidence="python">
-          <span class="pub-num">P3</span>
+          <span class="pub-num">P4</span>
           <div>
-            <p class="pub-title">"Deep learning–based image processing and analysis with cloud computing for open-source imaging software"</p>
-            <p class="pub-meta">WMIC Oct 2021 · <a href="https://github.com/IQMLatUAB/IQMLServer" target="_blank" rel="noopener">GitHub</a></p>
+            <p class="pub-title">"Development of an Extension Framework to Enable Deep Learning-Based Image Processing and Analysis with Cloud Computing for Open-Source Imaging Software"</p>
+            <p class="pub-authors">Chiu SC</p>
+            <p class="pub-meta">WMIC Oct 2021 · <a href="https://www.xcdsystem.com/wmis/program/QSb7b5D/index.cfm?pgid=2585&amp;sid=23773&amp;abid=84541" target="_blank" rel="noopener">Abstract</a> · <a href="https://github.com/IQMLatUAB/IQMLServer" target="_blank" rel="noopener">GitHub</a></p>
             <p class="pub-context">Cloud DL tooling for open-source imaging workflows.</p>
           </div>
         </div>
@@ -242,41 +293,6 @@
         </div>
       </section>
 
-      <section class="section cv-section" id="leadership" data-toc-section style="padding-top:48px;">
-        <h2 class="cv-section-title">Leadership &amp; Activities</h2>
-        <div class="leadership-item">
-          <div class="leadership-icon"><i class="fas fa-star"></i></div>
-          <div>
-            <div class="leadership-title">Vice President, Taiwanese Student Association at UAB</div>
-            <div class="leadership-date">Jul 2021 – Aug 2022</div>
-            <div class="leadership-desc">Community engagement and cultural events for the Taiwanese student body.</div>
-          </div>
-        </div>
-        <div class="leadership-item">
-          <div class="leadership-icon"><i class="fas fa-users"></i></div>
-          <div>
-            <div class="leadership-title">Team Lead, EmoSpace Project</div>
-            <div class="leadership-date">Oct 2018 – Dec 2019</div>
-            <div class="leadership-desc">Multidisciplinary team — mobile assistive technology for ASD support.</div>
-          </div>
-        </div>
-        <div class="leadership-item">
-          <div class="leadership-icon"><i class="fas fa-clipboard"></i></div>
-          <div>
-            <div class="leadership-title">Executive Secretary, Student Association BME Dept NCKU</div>
-            <div class="leadership-date">Sep 2018 – Jun 2019</div>
-            <div class="leadership-desc">Department events and student association communications.</div>
-          </div>
-        </div>
-        <div class="leadership-item">
-          <div class="leadership-icon"><i class="fas fa-globe"></i></div>
-          <div>
-            <div class="leadership-title">International Exhibitor, Taiwan Festival in Japan (Sendai)</div>
-            <div class="leadership-date">Mar 2019 – Oct 2019</div>
-            <div class="leadership-desc">Cultural exchange at international festival.</div>
-          </div>
-        </div>
-      </section>
     </main>
   </div>
 </div>

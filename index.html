@@ -43,10 +43,12 @@
   </div>
 </nav>
 
-<!-- HERO: 3D brain + Quantification Console -->
-<section class="hero hero--instrument">
-  <div class="hero__stage" id="brainMount" role="img" aria-label="Interactive stylized 3D brain linked to the quantification console"></div>
-  <canvas id="heroCanvas" class="hero__canvas" style="display:none"></canvas>
+<!-- HERO: 2D amyloid PET imaging -->
+<section class="hero hero--brain">
+  <div class="hero__pet-image" role="img" aria-label="PET-inspired axial brain image with amyloid tracer uptake">
+    <img src="assets/images/amyloid-pet-hero.png" alt="" width="1254" height="1254">
+  </div>
+  <canvas id="heroConnectivity" class="hero__connectivity" aria-hidden="true"></canvas>
   <div class="container hero__inner">
     <div class="hero__text">
       <span class="hero__label"><span class="lp">//</span> Postdoctoral Researcher · NYCU</span>
@@ -57,14 +59,6 @@
         <a href="#pillars" class="btn btn--glow">Explore the work <i class="fas fa-arrow-right" style="font-size:0.8em"></i></a>
       </div>
     </div>
-    <aside class="hero__console instrument" id="quantConsole" aria-label="Quantification Console">
-      <div class="instrument__fig"><span class="lp">Fig. 1</span> — Quantification Console</div>
-      <div class="console-stages" role="tablist"></div>
-      <p class="console-title" style="font-family:var(--font-d);font-size:1.1rem;color:var(--text);margin:4px 0 12px;"></p>
-      <div class="metrics-grid"></div>
-      <p class="console-desc"></p>
-      <p class="console-hint">Hover / drag the brain · select a stage · click a lobe</p>
-    </aside>
   </div>
   <div class="hero__scroll-hint">
     <span>Scroll</span>
@@ -93,28 +87,6 @@
     <p class="section__desc" data-reveal>AI in Medical Imaging &amp; Healthcare Data — three lenses, one practice.</p>
     <div class="pillars-tabs" data-reveal></div>
     <div class="pillars-panels" data-reveal="1"></div>
-  </div>
-</section>
-
-<!-- COMPARISON -->
-<section class="section" id="compare">
-  <div class="container">
-    <p class="section__label" data-reveal><span class="lp">#</span> Why the signal matters</p>
-    <p class="section__desc" data-reveal>A bigger model doesn’t always mean better quantification — the right path to the signal does.</p>
-    <div class="compare-grid" data-reveal="1">
-      <div class="compare-card is-active" tabindex="0">
-        <div class="compare-card__label">Path A</div>
-        <h3>MRI-based</h3>
-        <p>Structural MRI + PET: FreeSurfer-grade anatomy, classical SUVR / Centiloid when MRI is available.</p>
-        <div class="compare-card__punch">Gold-standard anatomy — when MRI is available.</div>
-      </div>
-      <div class="compare-card" tabindex="0">
-        <div class="compare-card__label">Path B</div>
-        <h3>MRI-less</h3>
-        <p>Synthetic CT training → quantify on PET/CT without paired MRI; validated on external cohorts.</p>
-        <div class="compare-card__punch">Access when MRI is missing — without giving up defensibility.</div>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -195,36 +167,10 @@
 
 <button id="scrollTop" onclick="scrollToTop()" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="assets/js/research-data.js"></script>
 <script src="assets/js/instruments.js"></script>
-<script src="assets/js/brain-atlas.js"></script>
-<script>
-(function () {
-  if (document.documentElement.classList.contains('brain-fallback')) {
-    var c2 = document.getElementById('heroCanvas');
-    var mount = document.getElementById('brainMount');
-    if (c2) c2.style.display = '';
-    if (mount) { mount.removeAttribute('id'); mount.style.display = 'none'; }
-  }
-})();
-</script>
 <script src="assets/js/main.js"></script>
-<script src="assets/js/quant-console.js"></script>
+<script src="assets/js/hero-connectivity.js"></script>
 <script src="assets/js/pillars.js"></script>
-<script>
-(function () {
-  var cards = document.querySelectorAll('.compare-card');
-  cards.forEach(function (c) {
-    c.addEventListener('click', function () {
-      cards.forEach(function (x) { x.classList.remove('is-active'); });
-      c.classList.add('is-active');
-    });
-    c.addEventListener('keydown', function (e) {
-      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); c.click(); }
-    });
-  });
-})();
-</script>
 </body>
 </html>

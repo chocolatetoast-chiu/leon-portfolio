@@ -11,6 +11,7 @@
   if (filterRoot) {
     var chips = filterRoot.querySelectorAll('[data-filter]');
     var pubs = document.querySelectorAll('[data-pub]');
+    var headings = document.querySelectorAll('[data-pub-heading]');
     chips.forEach(function (chip) {
       chip.addEventListener('click', function () {
         var key = chip.getAttribute('data-filter');
@@ -21,6 +22,14 @@
           var tags = (p.getAttribute('data-pub') || '').split(/\s+/);
           var show = key === 'all' || tags.indexOf(key) !== -1;
           p.classList.toggle('is-hidden', !show);
+        });
+        headings.forEach(function (heading) {
+          var group = heading.getAttribute('data-pub-heading');
+          var hasVisibleItem = Array.prototype.some.call(
+            document.querySelectorAll('[data-pub~="' + group + '"]'),
+            function (item) { return !item.classList.contains('is-hidden'); }
+          );
+          heading.hidden = key !== 'all' && !hasVisibleItem;
         });
       });
     });
@@ -36,8 +45,8 @@
   /* Skills → evidence */
   var skillMap = {
     Python: ['#experience', '[data-evidence~="python"]'],
-    TensorFlow: ['#projects', '[data-evidence~="tf"]'],
     PyTorch: ['#projects', '[data-evidence~="torch"]'],
+    'Generative AI': ['#experience', '[data-evidence~="python"]'],
     PET: ['#publications', '[data-evidence~="pet"]'],
     MRI: ['#publications', '[data-evidence~="mri"]'],
     'Co-registration': ['#publications', '[data-evidence~="motion"]'],

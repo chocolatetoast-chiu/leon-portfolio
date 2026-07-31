@@ -62,52 +62,37 @@ window.ResearchData = {
   pillars: [
     {
       id: 'imaging',
+      index: '01',
       label: 'Imaging Intelligence',
-      title: 'Neuroimaging Quantification & Digital Twins',
-      desc: 'Amyloid PET/MRI pipelines, generative neuroimaging, and fMRI foundation models that learn healthy brain dynamics for digital-twin style biomarkers.',
+      title: 'Neuroimaging Intelligence',
+      desc: 'Quantitative imaging across PET, MRI, and fMRI — from amyloid PET segmentation and motion correction to generative neuroimaging and brain digital twins.',
       chips: [
         { label: 'LEON', href: 'work/leon-segmentation.html' },
         { label: 'MRI-less PET', href: 'work/mri-less-amyloid.html' },
-        { label: 'fMRI Twin', href: 'cv.html#experience' }
-      ],
-      metrics: [
-        { label: 'Modalities', value: 'PET · MRI · fMRI' },
-        { label: 'Heritage', value: 'PhD → NYCU' },
-        { label: 'Key metric', value: 'Centiloid / BAG' },
-        { label: 'Pubs', value: 'EJNMMI ×2' }
+        { label: 'PET · MRI · fMRI', href: 'cv.html#experience' },
+        { label: 'EJNMMI', href: 'cv.html#publications' }
       ]
     },
     {
       id: 'vision',
-      label: 'Clinical Vision',
-      title: 'Surgical & Intraoperative Vision',
-      desc: 'Real-time computer vision for DaVinci robotic surgery — detection, promptable segmentation, and visibility-aware tracking for anatomical safety.',
+      index: '02',
+      label: 'Clinical Co-vision',
+      title: 'Real-time Surgical Co-vision',
+      desc: 'Computer vision that works alongside the surgical team: real-time video segmentation, detection, and visibility-aware tracking for robotic surgery.',
       chips: [
-        { label: 'DaVinci CV', href: 'cv.html#experience' },
-        { label: 'Motion-Adapter', href: 'about.html#journey' }
-      ],
-      metrics: [
-        { label: 'Domain', value: 'OR / robotics' },
-        { label: 'Task', value: 'Seg + track' },
-        { label: 'Constraint', value: 'Real-time' },
-        { label: 'Goal', value: 'Anat. safety' }
+        { label: 'Real-time segmentation', href: 'cv.html#experience' },
+        { label: 'DaVinci robotics', href: 'about.html#journey' }
       ]
     },
     {
       id: 'data',
-      label: 'Trustworthy Data',
-      title: 'Trustworthy Health Data AI',
-      desc: 'Privacy-preserving learning, de-identification risk, and cognitive digital phenotyping — healthcare data pipelines that stay useful and governable.',
+      index: '03',
+      label: 'Trustworthy Health Data',
+      title: 'Trustworthy Healthcare Data',
+      desc: 'Healthcare data de-identification and disclosure-risk assessment — systems designed to remain useful, accountable, and governable.',
       chips: [
-        { label: 'Privacy / DP', href: 'about.html#philosophy' },
-        { label: 'Digital phenotype', href: 'cv.html#experience' },
+        { label: 'De-identification', href: 'about.html#philosophy' },
         { label: 'Sovereign AI', href: 'about.html#journey' }
-      ],
-      metrics: [
-        { label: 'Themes', value: 'DP · de-ID' },
-        { label: 'Signals', value: 'Wearable / draw' },
-        { label: 'Frame', value: 'Sovereign AI' },
-        { label: 'Care', value: 'Local trust' }
       ]
     }
   ],
