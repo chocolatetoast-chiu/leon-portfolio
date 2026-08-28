@@ -1,6 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 360" role="img" aria-labelledby="t d">
   <title id="t">Spin angular momentum I</title>
-  <desc id="d">A small sphere with an I arrow through its center and a rotation arc around the axis. The particle is not literally spinning; I is a property.</desc>
+  <desc id="d">A small sphere with an I arrow through its center and a rotation arc around the axis.</desc>
   <rect width="420" height="360" fill="#0d1117"/>
   <defs>
     <radialGradient id="ball" cx="38%" cy="32%" r="68%">
@@ -11,16 +12,12 @@
       <path d="M0 0 L9 4.5 L0 9 z" fill="#5eead4"/>
     </marker>
   </defs>
-  <!-- rotation rings, slightly tilted with the axis -->
   <g transform="rotate(-32 210 196)" fill="none" stroke="#5eead4" stroke-linecap="round">
     <ellipse cx="210" cy="196" rx="64" ry="22" stroke-width="1.15" opacity="0.45"/>
     <ellipse cx="210" cy="196" rx="48" ry="16" stroke-width="0.9" opacity="0.28"/>
   </g>
-  <!-- sphere -->
   <circle cx="210" cy="196" r="58" fill="url(#ball)" stroke="#5eead4" stroke-width="2"/>
-  <!-- axis I, ~30 deg off vertical -->
   <line x1="162" y1="278" x2="262" y2="108" stroke="#5eead4" stroke-width="2.6" marker-end="url(#ah)"/>
-  <!-- rotation sense at the base of the axis -->
   <path d="M132 256 C148 278 186 286 214 272" fill="none" stroke="#5eead4" stroke-width="1.7" marker-end="url(#ah)"/>
-  <text x="274" y="104" fill="#5eead4" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="28">I</text>
+  <text x="274" y="104" fill="#5eead4" font-family="DejaVu Serif, Liberation Serif, Georgia, serif" font-style="italic" font-size="28">I</text>
 </svg>
