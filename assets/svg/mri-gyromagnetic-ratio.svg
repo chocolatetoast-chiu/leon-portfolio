@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 300" role="img" aria-labelledby="t d">
+  <title id="t">Gyromagnetic ratio ? between I and ?</title>
+  <desc id="d">Colinear I and ? arrows. Positive ? means they point the same way; negative ? means opposite, still on the same line.</desc>
+  <rect width="700" height="300" fill="#0d1117"/>
+  <defs>
+    <marker id="arrI" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0 0 L9 4.5 L0 9 z" fill="#8ab4ff"/>
+    </marker>
+    <marker id="arrMu" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0 0 L9 4.5 L0 9 z" fill="#5eead4"/>
+    </marker>
+  </defs>
+
+  <!-- ? > 0 : same ray, ? is I scaled by ? -->
+  <g>
+    <text x="180" y="40" text-anchor="middle" fill="#c8d0dc" font-family="DM Sans, system-ui, sans-serif" font-size="14">? &gt; 0  same way</text>
+    <line x1="180" y1="210" x2="271" y2="84" stroke="#5eead4" stroke-width="3.2" marker-end="url(#arrMu)"/>
+    <line x1="180" y1="210" x2="230" y2="141" stroke="#8ab4ff" stroke-width="2.4" marker-end="url(#arrI)"/>
+    <circle cx="180" cy="210" r="5" fill="#0d1117" stroke="#c8d0dc" stroke-width="1.5"/>
+    <text x="282" y="80" fill="#5eead4" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="20">?</text>
+    <text x="240" y="136" fill="#8ab4ff" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="18">I</text>
+    <text x="108" y="155" fill="#e8d48b" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="18">?</text>
+    <path d="M124 162 C140 142 154 118 166 100" fill="none" stroke="#e8d48b" stroke-width="1.2" stroke-dasharray="3 3"/>
+  </g>
+
+  <!-- ? < 0 : opposite along the same line -->
+  <g>
+    <text x="520" y="40" text-anchor="middle" fill="#c8d0dc" font-family="DM Sans, system-ui, sans-serif" font-size="14">? &lt; 0  opposite, same line</text>
+    <line x1="520" y1="130" x2="429" y2="256" stroke="#5eead4" stroke-width="3.2" marker-end="url(#arrMu)"/>
+    <line x1="520" y1="130" x2="570" y2="61" stroke="#8ab4ff" stroke-width="2.4" marker-end="url(#arrI)"/>
+    <circle cx="520" cy="130" r="5" fill="#0d1117" stroke="#c8d0dc" stroke-width="1.5"/>
+    <text x="400" y="268" fill="#5eead4" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="20">?</text>
+    <text x="580" y="58" fill="#8ab4ff" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="18">I</text>
+    <text x="448" y="100" fill="#e8d48b" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="18">?</text>
+    <path d="M464 108 C480 90 496 74 508 64" fill="none" stroke="#e8d48b" stroke-width="1.2" stroke-dasharray="3 3"/>
+  </g>
+</svg>

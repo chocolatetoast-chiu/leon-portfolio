@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MRI learning note: magnetic moment | Sheng-Chieh (Leon) Chiu</title>
+  <meta name="description" content="μ is a tiny bar magnet trying to line up with B0.">
+  <link rel="icon" href="../../assets/images/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../../assets/css/styles.css">
+</head>
+<body>
+<div class="reading-progress" aria-hidden="true"></div>
+
+<nav class="nav" id="nav">
+  <div class="container nav__inner">
+    <a href="../../index.html" class="nav__logo"><span>SC<span class="nav__logo-dot">.</span><span class="nav__logo-name">Chiu</span></span></a>
+    <div class="nav__links" id="navLinks">
+      <a href="../../index.html">Home</a>
+      <a href="../../about.html">About</a>
+      <a href="../../cv.html">CV</a>
+      <div class="nav-dropdown"><a href="#" class="active">Posts <i class="fas fa-chevron-down"></i></a><div class="dropdown-menu"><a href="../tutorials.html">Tutorials</a><a href="../reflections.html">Reflections</a></div></div>
+      <a href="../../contact.html">Contact</a>
+    </div>
+    <div class="nav__aside">
+      <div class="nav__social">
+        <a href="https://linkedin.com/in/chocolatetoast-chiu" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/chocolatetoast-chiu" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      </div>
+      <button class="nav__menu-btn" onclick="toggleMenu()" aria-label="Menu"><i class="fas fa-bars"></i></button>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <h1>MRI learning note: magnetic moment</h1>
+    <p class="article-header__bilingual">MRI課間學習記錄：磁矩</p>
+    <div class="article-meta"><time datetime="2026-08-28">August 28, 2026</time> · Learning note · ~3 min</div>
+  </div>
+</header>
+
+<article class="article-body">
+  <p><em>Split from a 2021 class note on spin, magnetic moment, and gyromagnetic ratio.</em></p>
+
+  <p><strong>Magnetic moment</strong> is a vector for how much an object wants to interact with an outside magnetic field. The object can be a molecule, an atom, a nucleus, or a smaller particle. For these, people also say <strong>magnetic dipole moment (μ)</strong>, like a tiny bar magnet with a north and a south pole.</p>
+
+  <p>μ tries to line up with B0. To get there it has to fight <strong>torque</strong>, μ × B0. Lined up with B0 is the lowest energy, no torque. Pointing the other way is the highest energy. The energy is <code>E = - μ·B0</code>.</p>
+
+  <figure class="note-fig">
+    <img src="../../assets/svg/mri-magnetic-moment.svg" alt="Bar magnet dipole next to B0 under torque, then μ parallel to B0 (low energy) and opposed (high energy)">
+    <figcaption>μ as a tiny bar magnet. Torque pulls it toward B0. Parallel is low energy; opposed is high energy.</figcaption>
+  </figure>
+
+  <p>Spin was the last note. Gyromagnetic ratio is next: the constant that ties μ to I.</p>
+</article>
+
+<nav class="article-nav">
+  <a href="mri-spin.html"><i class="fas fa-arrow-left"></i> Previous: spin</a>
+  <a href="mri-gyromagnetic-ratio.html">Next: gyromagnetic ratio <i class="fas fa-arrow-right"></i></a>
+</nav>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__social">
+      <a href="mailto:scchiu.phd@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://linkedin.com/in/chocolatetoast-chiu" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://github.com/chocolatetoast-chiu" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+    </div>
+    <p class="footer__copy">&copy; 2026 Sheng-Chieh (Leon) Chiu</p>
+  </div>
+</footer>
+<button id="scrollTop" onclick="scrollToTop()" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+<script src="../../assets/js/instruments.js"></script>
+<script src="../../assets/js/main.js"></script>
+</body>
+</html>
