@@ -68,6 +68,20 @@
   <p>A T1-weighted image is not a T1 map. Weighted means you picked TR and TE so tissues with different T1 look brighter or darker. A T1 map is a voxel-wise fit of the time constant itself. Do not read a bright pixel as “this voxel’s T1.” Same split for T2-weighted vs T2 map.</p>
 
   <p>Next note: TE/TR contrast is not in this set yet.</p>
+  <hr class="lang-break" aria-hidden="true">
+  <div class="article-zh" lang="zh-Hant">
+    <p class="lang-label">中文</p>
+    <p><em>接 RF pulse。90° 之後 M 在 xy，它不會待在那裡。</em></p>
+    <p>兩種回復同時在跑。各有自己的時間常數。</p>
+    <p>T1 是 Mz 長回 M0 有多快，M0 是沿 B0 的平衡。90° pulse 之後：</p>
+    <p class="formula"><code>Mz(t) = M0 (1 − exp(−t/T1))</code></p>
+    <p>人也叫 spin-lattice relaxation：spin 把能量丟給周圍。脂肪 T1 短。CSF T1 長。這個差後面會當對比。T1 是時間，毫秒到秒，看組織。</p>
+    <p>T2 是 xy 分量消失有多快：</p>
+    <p class="formula"><code>Mxy(t) = Mxy(0) exp(−t/T2)</code></p>
+    <p>旁邊的 spin 會推彼此的場，所以就算 B0 完美，這包也會散相。T2 永遠比 T1 短。真實線圈還會看到 shims 和組織磁化率多出來的散相。那個比較快的數字是 T2*，不是 T2。另一個常數。留給別則筆記。</p>
+    <p>T1-weighted 影像不是 T1 map。Weighted 的意思是你選了 TR 和 TE，讓 T1 不同的組織看起來比較亮或比較暗。T1 map 是逐 voxel 把時間常數擬合出來。不要把亮像素讀成「這個 voxel 的 T1」。T2-weighted 跟 T2 map 也是同一套區分。</p>
+    <p>下一則：TE/TR 對比這組還沒寫。</p>
+  </div>
 </article>
 
 <nav class="article-nav">

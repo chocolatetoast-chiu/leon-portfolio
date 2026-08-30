@@ -901,6 +901,17 @@ img { display:block; max-width:100%; }
 }
 .article-body figcaption { font-size:0.78rem; color:var(--text-3); text-align:center; margin-top:8px; }
 .article-body h2 { font-size:1.3rem; color:var(--text); margin:36px 0 16px; }
+.article-body .lang-break {
+  margin: 2.75rem 0 1.5rem;
+  border: 0;
+  border-top: 1px solid var(--border);
+}
+.article-body .lang-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  color: var(--text-3);
+  margin-bottom: 1.25rem;
+}
 .article-nav {
   max-width:720px; margin:0 auto; padding:0 24px 64px;
   display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap;
