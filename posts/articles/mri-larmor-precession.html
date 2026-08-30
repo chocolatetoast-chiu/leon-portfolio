@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MRI learning note: gyromagnetic ratio | Sheng-Chieh (Leon) Chiu</title>
-  <meta name="description" content="γ is the constant between spin I and magnetic moment μ.">
+  <title>MRI learning note: Larmor precession | Sheng-Chieh (Leon) Chiu</title>
+  <meta name="description" content="μ walks around B0 on a cone. That walk is Larmor precession.">
   <link rel="icon" href="../../assets/images/favicon.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,32 +37,36 @@
 
 <header class="article-header">
   <div class="container">
-    <h1>MRI learning note: gyromagnetic ratio</h1>
-    <p class="article-header__bilingual">MRI課間學習記錄：旋磁比</p>
-    <div class="article-meta"><time datetime="2026-08-28">August 28, 2026</time> · Learning note · ~3 min</div>
+    <h1>MRI learning note: Larmor precession</h1>
+    <p class="article-header__bilingual">MRI課間學習記錄：拉莫爾進動</p>
+    <div class="article-meta"><time datetime="2026-08-30">August 30, 2026</time> · Learning note · ~4 min</div>
   </div>
 </header>
 
 <article class="article-body">
-  <p><em>Split from a 2021 class note on spin, magnetic moment, and gyromagnetic ratio.</em></p>
+  <p><em>Continues the 2021 class note. Last term was gyromagnetic ratio: μ = γI.</em></p>
 
-  <p>The <strong>gyromagnetic ratio (γ)</strong> is the constant between spin <em>I</em> and magnetic dipole moment μ:</p>
+  <p>Put μ in a static field B0. The torque is μ × B0. If μ were only a compass needle, it would flop onto B0. It does not, because it also carries angular momentum. Torque on angular momentum does not pull the axis in. It makes the axis walk around the field. That walk is Larmor precession.</p>
 
-  <p class="formula"><code>μ = γI</code></p>
+  <p>The path is a cone around B0. The opening of the cone does not close by itself. How fast it walks depends only on γ and |B0|:</p>
 
-  <p>γ depends on the nucleus. Most nuclei have γ &gt; 0. Some nuclei, and electrons, have γ &lt; 0. Positive means spin and μ point the same way. Negative means opposite, still on the same line.</p>
+  <p class="formula"><code>ω₀ = γ B₀</code></p>
+
+  <p>ω₀ is radians per second. The number people quote at the scanner is the cyclic frequency ν₀ = γ B₀ / 2π. For <sup>1</sup>H, γ/2π ≈ 42.58 MHz/T, so about 64 MHz at 1.5 T and 128 MHz at 3 T. Change the nucleus and you change γ, so you change the frequency. Same B0, <sup>13</sup>C and <sup>1</sup>H do not precess together.</p>
 
   <figure class="note-fig">
-    <img src="../../assets/svg/mri-gyromagnetic-ratio.svg" alt="Colinear I and μ arrows. Positive γ points the same way; negative γ points opposite, still on the same line.">
-    <figcaption>γ is the scale between <em>I</em> and μ. Same line either way; sign decides whether they point together or opposite.</figcaption>
+    <img src="../../assets/svg/mri-larmor-precession.svg" alt="Vector on a cone around a vertical B0 axis, with a dashed precession circle labeled omega-zero.">
+    <figcaption>μ walks around B0 on a cone. The cone does not close; the walk speed is ω₀ = γ B₀.</figcaption>
   </figure>
 
-  <p>That is the three-term chain from the 2021 class note: spin, magnetic moment, gyromagnetic ratio. Next note: <a href="mri-larmor-precession.html">Larmor precession</a>.</p>
+  <p>A voxel is many protons. Their tiny μ add up to a bulk magnetization M, which precesses at the same ω₀. A coil along z hears nothing from M walking around z. You hear M only after some of it sits in the xy plane. That takes a push at ω₀.</p>
+
+  <p>Next note: <a href="mri-rf-pulse.html">RF pulse / resonance</a>.</p>
 </article>
 
 <nav class="article-nav">
-  <a href="mri-magnetic-moment.html"><i class="fas fa-arrow-left"></i> Previous: magnetic moment</a>
-  <a href="mri-larmor-precession.html">Next: Larmor precession <i class="fas fa-arrow-right"></i></a>
+  <a href="mri-gyromagnetic-ratio.html"><i class="fas fa-arrow-left"></i> Previous: gyromagnetic ratio</a>
+  <a href="mri-rf-pulse.html">Next: RF pulse <i class="fas fa-arrow-right"></i></a>
 </nav>
 
 <footer class="footer">
