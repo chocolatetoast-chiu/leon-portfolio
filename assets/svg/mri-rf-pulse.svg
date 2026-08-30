@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 400" role="img" aria-labelledby="t d">
+  <title id="t">RF pulse flip angle in the rotating frame</title>
+  <desc id="d">Rotating-frame axes with a still B1 along x-prime and magnetization tipping from z toward y-prime by flip angle alpha.</desc>
+  <rect width="460" height="400" fill="#0d1117"/>
+  <defs>
+    <marker id="ahZ" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0 0 L9 4.5 L0 9 z" fill="#5eead4"/>
+    </marker>
+    <marker id="ahB1" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0 0 L9 4.5 L0 9 z" fill="#e8d48b"/>
+    </marker>
+    <marker id="ahM" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0 0 L9 4.5 L0 9 z" fill="#ff8b94"/>
+    </marker>
+    <marker id="ahY" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto">
+      <path d="M0 0 L8 4 L0 8 z" fill="#8ab4ff"/>
+    </marker>
+  </defs>
+  <line x1="220" y1="328" x2="220" y2="48" stroke="#5eead4" stroke-width="2.6" stroke-linecap="round" marker-end="url(#ahZ)"/>
+  <text x="236" y="62" fill="#5eead4" font-family="DejaVu Serif, Liberation Serif, Georgia, serif" font-style="italic" font-size="18">z</text>
+  <line x1="220" y1="270" x2="400" y2="270" stroke="#c8d0dc" stroke-width="1.7" stroke-linecap="round" marker-end="url(#ahZ)"/>
+  <text x="408" y="276" fill="#c8d0dc" font-family="DejaVu Serif, Liberation Serif, Georgia, serif" font-style="italic" font-size="18">x&#x2032;</text>
+  <line x1="220" y1="270" x2="64" y2="304" stroke="#8ab4ff" stroke-width="1.7" stroke-linecap="round" marker-end="url(#ahY)"/>
+  <text x="32" y="320" fill="#8ab4ff" font-family="DejaVu Serif, Liberation Serif, Georgia, serif" font-style="italic" font-size="18">y&#x2032;</text>
+  <line x1="220" y1="270" x2="318" y2="270" stroke="#e8d48b" stroke-width="2.6" marker-end="url(#ahB1)"/>
+  <text x="300" y="256" fill="#e8d48b" font-family="DejaVu Sans, Noto Sans, Liberation Sans, sans-serif" font-size="16">B1</text>
+  <line x1="220" y1="270" x2="88" y2="178" stroke="#ff8b94" stroke-width="2.6" marker-end="url(#ahM)"/>
+  <text x="64" y="170" fill="#ff8b94" font-family="DejaVu Serif, Liberation Serif, Georgia, serif" font-style="italic" font-size="20">M</text>
+  <path d="M220 176 A94 94 0 0 0 148 200" fill="none" stroke="#ff8b94" stroke-width="1.5" opacity="0.75"/>
+  <text x="164" y="168" fill="#ff8b94" font-family="DejaVu Serif, Liberation Serif, Georgia, serif" font-style="italic" font-size="18">&#x3B1;</text>
+  <circle cx="220" cy="270" r="3.5" fill="#0d1117" stroke="#c8d0dc" stroke-width="1.5"/>
+</svg>

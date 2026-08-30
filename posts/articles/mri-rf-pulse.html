@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MRI learning note: gyromagnetic ratio | Sheng-Chieh (Leon) Chiu</title>
-  <meta name="description" content="γ is the constant between spin I and magnetic moment μ.">
+  <title>MRI learning note: RF pulse | Sheng-Chieh (Leon) Chiu</title>
+  <meta name="description" content="Tip M off z with B1 at ω₀. That matching is resonance.">
   <link rel="icon" href="../../assets/images/favicon.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,32 +37,36 @@
 
 <header class="article-header">
   <div class="container">
-    <h1>MRI learning note: gyromagnetic ratio</h1>
-    <p class="article-header__bilingual">MRI課間學習記錄：旋磁比</p>
-    <div class="article-meta"><time datetime="2026-08-28">August 28, 2026</time> · Learning note · ~3 min</div>
+    <h1>MRI learning note: RF pulse</h1>
+    <p class="article-header__bilingual">MRI課間學習記錄：射頻脈衝／共振</p>
+    <div class="article-meta"><time datetime="2026-08-30">August 30, 2026</time> · Learning note · ~4 min</div>
   </div>
 </header>
 
 <article class="article-body">
-  <p><em>Split from a 2021 class note on spin, magnetic moment, and gyromagnetic ratio.</em></p>
+  <p><em>Continues from Larmor precession. M already walks around B0 at ω₀.</em></p>
 
-  <p>The <strong>gyromagnetic ratio (γ)</strong> is the constant between spin <em>I</em> and magnetic dipole moment μ:</p>
+  <p>A coil along z hears nothing from M precessing around z. You have to tip M off z so a piece of it sits in xy and keeps rotating. The tip is an RF pulse: a small field B1 in the xy plane, oscillating at ω₀. Same frequency as the walk. That matching is resonance. Push a swing at its natural period. Off-frequency B1 mostly misses.</p>
 
-  <p class="formula"><code>μ = γI</code></p>
+  <p>In the frame that rotates at ω₀, B0 drops out and B1 looks still. M then precesses around B1 instead of around B0. How far it tips is the flip angle. For a constant-amplitude pulse of duration t_p:</p>
 
-  <p>γ depends on the nucleus. Most nuclei have γ &gt; 0. Some nuclei, and electrons, have γ &lt; 0. Positive means spin and μ point the same way. Negative means opposite, still on the same line.</p>
+  <p class="formula"><code>α = γ B1 t_p</code></p>
 
   <figure class="note-fig">
-    <img src="../../assets/svg/mri-gyromagnetic-ratio.svg" alt="Colinear I and μ arrows. Positive γ points the same way; negative γ points opposite, still on the same line.">
-    <figcaption>γ is the scale between <em>I</em> and μ. Same line either way; sign decides whether they point together or opposite.</figcaption>
+    <img src="../../assets/svg/mri-rf-pulse.svg" alt="Rotating-frame axes with B1 along x-prime and magnetization tipping from z by flip angle alpha.">
+    <figcaption>In the rotating frame B1 looks still. M precesses around it. The tip is the flip angle α = γ B1 t_p.</figcaption>
   </figure>
 
-  <p>That is the three-term chain from the 2021 class note: spin, magnetic moment, gyromagnetic ratio. Next note: <a href="mri-larmor-precession.html">Larmor precession</a>.</p>
+  <p>A 90° pulse parks M in xy. A 180° pulse sends it to −z. The scanner talks in α, not in B1.</p>
+
+  <p>If B1 is off-resonance, M sees an effective field that is not B1, so the tip is smaller and the axis is wrong. Slice selection later uses a gradient so only one slab is on-resonance. That is a later note. What the coil actually records is the rotating xy component, not Mz.</p>
+
+  <p>Next note: <a href="mri-t1-t2.html">T1 and T2 relaxation</a>.</p>
 </article>
 
 <nav class="article-nav">
-  <a href="mri-magnetic-moment.html"><i class="fas fa-arrow-left"></i> Previous: magnetic moment</a>
-  <a href="mri-larmor-precession.html">Next: Larmor precession <i class="fas fa-arrow-right"></i></a>
+  <a href="mri-larmor-precession.html"><i class="fas fa-arrow-left"></i> Previous: Larmor precession</a>
+  <a href="mri-t1-t2.html">Next: T1 and T2 <i class="fas fa-arrow-right"></i></a>
 </nav>
 
 <footer class="footer">
