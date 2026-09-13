@@ -82,15 +82,14 @@ img { display:block; max-width:100%; }
 .nav__links {
   display:flex; align-items:center; gap:2rem; justify-self:center;
 }
-.nav__links > a, .nav-dropdown > a {
+.nav__links > a {
   font-family:'Times New Roman', 'Georgia', 'Playfair Display', serif;
   font-size:0.9rem; font-weight:500; color:var(--text-2);
   position:relative; padding:4px 0;
   letter-spacing:0.02em;
   display:block;
 }
-.nav__links > a:hover, .nav-dropdown > a:hover,
-.nav__links > a.active { color:var(--text); }
+.nav__links > a:hover, .nav__links > a.active { color:var(--text); }
 .nav__links > a::after {
   content:''; position:absolute; bottom:-2px; left:0;
   width:0; height:1.5px; background:var(--accent);
@@ -105,25 +104,6 @@ img { display:block; max-width:100%; }
   display:none; background:none; border:none;
   color:var(--text); font-size:1.25rem; cursor:pointer; padding:4px;
 }
-
-/* Dropdown */
-.nav-dropdown { position:relative; }
-.nav-dropdown > a .fa-chevron-down { font-size:0.55rem; margin-left:4px; transition:transform 0.2s; }
-.nav-dropdown.open > a .fa-chevron-down { transform:rotate(180deg); }
-.dropdown-menu {
-  display:none; position:absolute; top:calc(100% + 12px); left:50%;
-  transform:translateX(-50%);
-  background:var(--bg-elevated); border:1px solid var(--border);
-  border-radius:var(--radius-sm); box-shadow:var(--shadow);
-  min-width:160px; padding:8px 0; z-index:1001;
-}
-.nav-dropdown.open .dropdown-menu { display:block; }
-.dropdown-menu a {
-  display:block; padding:8px 20px; font-size:0.85rem;
-  color:var(--text-2); white-space:nowrap;
-}
-.dropdown-menu a:hover { color:var(--text); background:var(--bg-surface); }
-.dropdown-menu a::after { display:none; }
 
 /* ── Hero ── */
 .hero {
@@ -464,12 +444,6 @@ img { display:block; max-width:100%; }
 
   .btn { padding:10px 22px; font-size:0.84rem; }
   .btn--lg { padding:12px 28px; font-size:0.88rem; }
-
-  .dropdown-menu {
-    position:static; transform:none; box-shadow:none;
-    border:none; background:transparent; min-width:unset;
-  }
-  .dropdown-menu a { padding:6px 0; }
 
   .container { padding:0 16px; }
 

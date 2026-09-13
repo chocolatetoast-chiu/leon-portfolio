@@ -83,15 +83,14 @@ img { display:block; max-width:100%; }
 .nav__links {
   display:flex; align-items:center; gap:2rem; justify-self:center;
 }
-.nav__links > a, .nav-dropdown > a {
+.nav__links > a {
   font-family:'Times New Roman', 'Georgia', 'Playfair Display', serif;
   font-size:1rem; font-weight:500; color:var(--text-2);
   position:relative; padding:4px 0;
   letter-spacing:0.02em;
   display:block;
 }
-.nav__links > a:hover, .nav-dropdown > a:hover,
-.nav__links > a.active { color:var(--text); }
+.nav__links > a:hover, .nav__links > a.active { color:var(--text); }
 .nav__links > a::after {
   content:''; position:absolute; bottom:-2px; left:0;
   width:0; height:1.5px; background:var(--accent);
@@ -106,25 +105,6 @@ img { display:block; max-width:100%; }
   display:none; background:none; border:none;
   color:var(--text); font-size:1.25rem; cursor:pointer; padding:4px;
 }
-
-/* Dropdown */
-.nav-dropdown { position:relative; }
-.nav-dropdown > a .fa-chevron-down { font-size:0.55rem; margin-left:4px; transition:transform 0.2s; }
-.nav-dropdown.open > a .fa-chevron-down { transform:rotate(180deg); }
-.dropdown-menu {
-  display:none; position:absolute; top:calc(100% + 12px); left:50%;
-  transform:translateX(-50%);
-  background:var(--bg-elevated); border:1px solid var(--border);
-  border-radius:var(--radius-sm); box-shadow:var(--shadow);
-  min-width:160px; padding:8px 0; z-index:1001;
-}
-.nav-dropdown.open .dropdown-menu { display:block; }
-.dropdown-menu a {
-  display:block; padding:8px 20px; font-size:0.95rem;
-  color:var(--text-2); white-space:nowrap;
-}
-.dropdown-menu a:hover { color:var(--text); background:var(--bg-surface); }
-.dropdown-menu a::after { display:none; }
 
 /* ── Hero ── */
 .hero {
@@ -467,12 +447,6 @@ img { display:block; max-width:100%; }
   .btn { padding:10px 22px; font-size:0.84rem; }
   .btn--lg { padding:12px 28px; font-size:0.88rem; }
 
-  .dropdown-menu {
-    position:static; transform:none; box-shadow:none;
-    border:none; background:transparent; min-width:unset;
-  }
-  .dropdown-menu a { padding:6px 0; }
-
   .container { padding:0 16px; }
 
   .footer__inner { gap:8px; }
@@ -806,36 +780,6 @@ img { display:block; max-width:100%; }
 .tz-item__label { font-family:var(--font-m); font-size:0.65rem; color:var(--text-3); letter-spacing:0.08em; }
 .tz-item__time { font-family:var(--font-d); font-size:1.1rem; color:var(--text); }
 
-/* Year spine (reflections) */
-.year-spine { position:relative; max-width:780px; margin:0 auto; padding-left:28px; }
-.year-spine::before {
-  content:''; position:absolute; left:6px; top:0; bottom:0; width:1px; background:var(--border);
-}
-.spine-item { position:relative; margin-bottom:20px; }
-.spine-item::before {
-  content:''; position:absolute; left:-25px; top:28px; width:9px; height:9px;
-  border-radius:50%; background:var(--bg); border:2px solid var(--accent);
-}
-.spine-item .post-card { margin:0; }
-.spine-year {
-  font-family:var(--font-m); font-size:0.72rem; color:var(--accent);
-  margin-bottom:8px; display:block;
-}
-.post-card.is-hidden { display:none; }
-.posts-layout {
-  display:grid; grid-template-columns:1fr 220px; gap:32px; align-items:start;
-}
-.posts-preview {
-  position:sticky; top:100px;
-  background:var(--bg-surface); border:1px solid var(--border);
-  border-radius:var(--radius); padding:20px; min-height:120px;
-}
-.posts-preview__label {
-  font-family:var(--font-m); font-size:0.65rem; color:var(--text-3);
-  letter-spacing:0.1em; text-transform:uppercase; margin-bottom:10px;
-}
-.posts-preview__text { font-size:0.85rem; color:var(--text-2); line-height:1.6; }
-
 /* Tutorials roadmap */
 .roadmap {
   display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-bottom:32px;
@@ -1070,8 +1014,6 @@ a.work-card { color:inherit; }
   .journey__rail { position:relative; top:0; }
   .phi-toggle { grid-template-columns:1fr; }
   .phi-nav { flex-direction:row; flex-wrap:wrap; }
-  .posts-layout { grid-template-columns:1fr; }
-  .posts-preview { display:none; }
   .roadmap { grid-template-columns:1fr; }
 }
 @media (max-width:768px) {

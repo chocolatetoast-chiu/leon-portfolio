@@ -326,28 +326,7 @@
   /* ── Mobile menu ── */
   window.toggleMenu = function () {
     document.getElementById('navLinks').classList.toggle('active');
-    document.querySelectorAll('.nav-dropdown.open').forEach(function (d) {
-      d.classList.remove('open');
-    });
   };
-
-  /* ── Dropdown ── */
-  document.querySelectorAll('.nav-dropdown > a').forEach(function (a) {
-    a.addEventListener('click', function (e) {
-      e.preventDefault();
-      var p = a.closest('.nav-dropdown');
-      document.querySelectorAll('.nav-dropdown.open').forEach(function (d) {
-        if (d !== p) d.classList.remove('open');
-      });
-      p.classList.toggle('open');
-    });
-  });
-  document.addEventListener('click', function (e) {
-    if (!e.target.closest('.nav-dropdown'))
-      document.querySelectorAll('.nav-dropdown.open').forEach(function (d) {
-        d.classList.remove('open');
-      });
-  });
 
   /* ── Scroll to top ── */
   window.scrollToTop = function () {
@@ -355,9 +334,15 @@
   };
 
   /* ── Active nav link ── */
-  var page = location.pathname.split('/').pop() || 'index.html';
+  var path = location.pathname.replace(/\\/g, '/');
+  var page = path.split('/').pop() || 'index.html';
+  var inTutorials = /\/posts\//.test(path) || page === 'tutorials.html';
   document.querySelectorAll('.nav__links > a').forEach(function (a) {
     var hp = (a.getAttribute('href') || '').split('/').pop();
     if (hp === page) a.classList.add('active');
   });
+  if (inTutorials) {
+    var tutorialsLink = document.querySelector('.nav__links > a[href$="tutorials.html"]');
+    if (tutorialsLink) tutorialsLink.classList.add('active');
+  }
 })();

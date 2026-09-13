@@ -14,7 +14,6 @@ This is a **multi-page static HTML/CSS/JS personal website** with zero build dep
 | Contact | `contact.html` | Intent chips, copy-to-clipboard, timezone strip |
 | Work case studies | `work/*.html` | LEON / MRI-less / TCBC interactive case studies |
 | Tutorials | `posts/tutorials.html` | Topic roadmap + ghost stubs |
-| Reflections | `posts/reflections.html` | Year spine + theme filter + preview |
 | Article template | `posts/articles/_template.html` | Template for new articles |
 
 ### Serving locally
@@ -32,6 +31,6 @@ Open `http://localhost:8080/` in a browser. Any static HTTP server works (`npx s
 - The `CNAME` file configures GitHub Pages for the custom domain `neoleon.in`.
 - Active CSS: `assets/css/styles.css`; JS: `assets/js/main.js` plus modules (`research-data.js`, `instruments.js`, `hero-connectivity.js`, `pillars.js`, page scripts).
 - Homepage uses a static amyloid PET hero image with a lightweight canvas connectivity layer; reduced-motion preferences disable its animation.
-- Shared navbar (with Posts dropdown) and footer are duplicated in each HTML file (no templating).
-- Posts system uses pure HTML — no Markdown, no SSG.
+- Shared navbar (with a direct Tutorials link) and footer are duplicated in each HTML file (no templating).
+- Tutorials use pure HTML — no Markdown, no SSG.
 - Files in `posts/` use `../` relative paths; files in `posts/articles/` and `work/` use `../` or `../../` as needed.
