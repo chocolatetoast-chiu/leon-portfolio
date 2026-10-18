@@ -44,25 +44,31 @@
 </header>
 
 <article class="article-body">
-  <p><em>Split from a 2021 class note on spin, magnetic moment, and gyromagnetic ratio.</em></p>
+  <p><em>This note was split from a 2021 class note on spin, magnetic moment, and gyromagnetic ratio.</em></p>
 
-  <p><strong>Magnetic moment</strong> is a vector for how much an object wants to interact with an outside magnetic field. The object can be a molecule, an atom, a nucleus, or a smaller particle. For these, people also say <strong>magnetic dipole moment (μ)</strong>, like a tiny bar magnet with a north and a south pole.</p>
+  <p><strong>Magnetic moment</strong> is a vector that describes the strength and direction of an object's magnetic dipole interaction. The object may be a molecule, an atom, a nucleus, or a smaller particle. For the interaction considered here, we use the term <strong>magnetic dipole moment (μ)</strong>; a tiny bar magnet with north and south poles is a useful first picture.</p>
 
-  <p>μ tries to line up with B0. To get there it has to fight <strong>torque</strong>, μ × B0. Lined up with B0 is the lowest energy, no torque. Pointing the other way is the highest energy. The energy is <code>E = - μ·B0</code>.</p>
+  <p>In an external field B0, μ experiences a <strong>torque</strong>, μ × B0. The torque is the field's action on the magnetic moment, rather than a resistance that μ must overcome. Its potential energy is <code>E = - μ·B0</code>: parallel alignment has the lowest energy, and antiparallel alignment the highest. Both exactly parallel and exactly antiparallel orientations have zero torque, even though their energies differ. <a href="https://openstax.org/books/university-physics-volume-2/pages/11-5-force-and-torque-on-a-current-loop" target="_blank" rel="noopener">OpenStax: force and torque</a>.</p>
 
   <figure class="note-fig">
     <img src="../../assets/svg/mri-magnetic-moment.svg" alt="Bar magnet dipole next to B0 under torque, then μ parallel to B0 (low energy) and opposed (high energy)">
-    <figcaption>μ as a tiny bar magnet. Torque pulls it toward B0. Parallel is low energy; opposed is high energy.</figcaption>
+    <figcaption>Conceptual picture of a magnetic dipole in B0. Parallel alignment has lower energy than antiparallel alignment; torque changes angular momentum.</figcaption>
   </figure>
 
-  <p>Spin was the last note. Gyromagnetic ratio is next: the constant that ties μ to I.</p>
+  <p>For a nuclear magnetic moment associated with angular momentum, torque changes the direction of that angular momentum and produces precession. Torque alone does not make the moment settle into the lowest-energy orientation; relaxation is needed to describe the return to thermal equilibrium. <a href="https://journals.aps.org/pr/pdf/10.1103/PhysRev.70.460" target="_blank" rel="noopener">Bloch, 1946</a>.</p>
+
+  <p>It also helps to separate μ from <strong>magnetization M</strong>. μ refers to an individual magnetic moment, while M is the vector sum of many moments per unit volume. The bulk MRI signal depends on this collective magnetization, so the individual contributions can reinforce or cancel one another. <a href="https://web.stanford.edu/class/rad226a/Lectures/Lecture2-2019-Classical-MR.pdf#page=8" target="_blank" rel="noopener">Stanford: classical MR, p. 8</a>.</p>
+
+  <p>The previous note covered spin. The next is gyromagnetic ratio, the constant relating μ to I.</p>
   <hr class="lang-break" aria-hidden="true">
   <div class="article-zh" lang="zh-Hant">
     <p class="lang-label">中文</p>
-    <p><em>從 2021 年那篇課間筆記拆出來的。</em></p>
-    <p><strong>磁矩</strong>是一個向量，描述物體有多想跟外加磁場互動；物體可以是分子、原子、原子核，或更小的粒子。對這些來說，人也叫 <strong>magnetic dipole moment (μ)</strong>，像一顆有北極、南極的小磁鐵。</p>
-    <p>μ 想對齊 B0，要到那個方向得對抗 <strong>torque</strong>，μ × B0；跟 B0 同向是最低能量，沒有 torque，反向是最高能量，能量是 <code>E = - μ·B0</code>。</p>
-    <p>上一則是 spin；下一則是旋磁比：把 μ 跟 <em>I</em> 綁在一起的那個常數。</p>
+    <p><em>這篇從 2021 年的課間筆記拆分而來，接續 spin，說明磁矩。</em></p>
+    <p><strong>磁矩</strong>是一個向量，用來描述物體磁偶極作用的強弱與方向；物體可以是分子、原子、原子核，或更小的粒子。就這裡討論的作用而言，也會使用<strong>磁偶極矩（magnetic dipole moment, μ）</strong>這個名稱，可以先把它想成一顆有南、北極的小磁鐵。</p>
+    <p>μ 放進外加磁場 B0 後，會受到 <strong>torque（力矩）</strong> μ × B0；這個力矩是磁場對磁矩的作用，並不是 μ 必須克服的阻力。位能由 <code>E = - μ·B0</code> 決定，與 B0 同向時最低，反向時最高；值得分開理解的是，完全同向與完全反向時的力矩都為零，但兩者能量並不相同。<a href="https://openstax.org/books/university-physics-volume-2/pages/11-5-force-and-torque-on-a-current-loop" target="_blank" rel="noopener">OpenStax：力與力矩</a>。</p>
+    <p>對具有角動量的核磁矩來說，力矩會改變角動量的方向，造成進動；單靠力矩，磁矩不會自行停在最低能量的方向，回到熱平衡的過程還需要弛緩來描述。<a href="https://journals.aps.org/pr/pdf/10.1103/PhysRev.70.460" target="_blank" rel="noopener">Bloch, 1946</a>。</p>
+    <p>另外也要把 μ 與<strong>磁化向量 M</strong> 分開：μ 是個別磁矩，M 則是單位體積內許多磁矩的向量總和。MRI 接收到的是這些磁矩共同形成的訊號，因此個別貢獻可能相加，也可能互相抵消。<a href="https://web.stanford.edu/class/rad226a/Lectures/Lecture2-2019-Classical-MR.pdf#page=8" target="_blank" rel="noopener">Stanford：Classical MR，第 8 頁</a>。</p>
+    <p>上一則談的是 spin，接著要看的旋磁比，就是連結 μ 與 <em>I</em> 的那個常數。</p>
   </div>
 </article>
 

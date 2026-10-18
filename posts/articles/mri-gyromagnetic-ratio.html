@@ -44,28 +44,34 @@
 </header>
 
 <article class="article-body">
-  <p><em>Split from a 2021 class note on spin, magnetic moment, and gyromagnetic ratio.</em></p>
+  <p><em>This note was split from a 2021 class note on spin, magnetic moment, and gyromagnetic ratio.</em></p>
 
-  <p>The <strong>gyromagnetic ratio (γ)</strong> is the constant between spin <em>I</em> and magnetic dipole moment μ:</p>
+  <p>The <strong>gyromagnetic ratio (γ)</strong> is the constant relating spin angular momentum <em>I</em> to the magnetic dipole moment μ:</p>
 
   <p class="formula"><code>μ = γI</code></p>
 
-  <p>γ depends on the nucleus. Most nuclei have γ &gt; 0. Some nuclei, and electrons, have γ &lt; 0. Positive means spin and μ point the same way. Negative means opposite, still on the same line.</p>
+  <p>Here, <em>I</em> denotes angular momentum, rather than the bare spin quantum number 1/2. The value of γ depends on the nucleus. With a signed γ, a positive value means that μ and the angular momentum point in the same direction, while a negative value means that they point in opposite directions. Most NMR nuclei have γ &gt; 0, but some nuclei and electrons have γ &lt; 0 under this convention.</p>
 
   <figure class="note-fig">
     <img src="../../assets/svg/mri-gyromagnetic-ratio.svg" alt="Colinear I and μ arrows. Positive γ points the same way; negative γ points opposite, still on the same line.">
     <figcaption>γ is the scale between <em>I</em> and μ. Same line either way; sign decides whether they point together or opposite.</figcaption>
   </figure>
 
-  <p>That is the three-term chain from the 2021 class note: spin, magnetic moment, gyromagnetic ratio. Next note: <a href="mri-larmor-precession.html">Larmor precession</a>.</p>
+  <p>A practical source of confusion is the unit: γ is usually expressed in rad/s/T, whereas γ/2π is expressed in Hz/T or MHz/T. For a proton, γ/2π is approximately 42.58 MHz/T. These are two ways of reporting the same physical ratio, not two different constants. <a href="https://physics.nist.gov/cuu/pdf/CODATA_RMP2005.pdf#page=26" target="_blank" rel="noopener">NIST: definition and units</a>, <a href="https://physics.nist.gov/cgi-bin/cuu/Value?gammapbar%7Csearch_for=ratio" target="_blank" rel="noopener">proton value</a>.</p>
+
+  <p>That unit difference matters as soon as we calculate precession. Using γ with B0 gives an angular frequency; using γ/2π gives cycles per second. A quoted positive magnitude may also omit the sign convention, so the units and definition should be checked before inserting a value into an equation.</p>
+
+  <p>This connects the three terms from the 2021 class note: spin, magnetic moment, and gyromagnetic ratio. The next note is <a href="mri-larmor-precession.html">Larmor precession</a>.</p>
   <hr class="lang-break" aria-hidden="true">
   <div class="article-zh" lang="zh-Hant">
     <p class="lang-label">中文</p>
-    <p><em>從 2021 年那篇課間筆記拆出來的。</em></p>
-    <p><strong>旋磁比 (γ)</strong> 是 spin <em>I</em> 跟磁偶極矩 μ 之間的常數：</p>
+    <p><em>這篇從 2021 年的課間筆記拆分而來，接著看 spin 與磁矩之間的關係。</em></p>
+    <p><strong>旋磁比（gyromagnetic ratio, γ）</strong>是連結 spin <em>I</em> 與磁偶極矩 μ 的常數：</p>
     <p class="formula"><code>μ = γI</code></p>
-    <p>γ 看原子核；多數核 γ &gt; 0，有些核、還有電子，γ &lt; 0。正的意思是 spin 跟 μ 指向同一邊，負的是反向，但還是同一條線。</p>
-    <p>這是 2021 課間筆記的三個詞：spin、磁矩、旋磁比；下一則：<a href="mri-larmor-precession.html">拉莫爾進動</a>。</p>
+    <p>這個式子裡的 <em>I</em> 指的是角動量，並不是單獨拿量子數 1/2 代入。γ 的數值隨原子核而不同；採用有正負號的定義時，γ 為正代表 μ 與角動量同向，為負則代表兩者反向。多數 NMR 原子核的 γ &gt; 0，但有些原子核與電子在這個慣例下是 γ &lt; 0。</p>
+    <p>實際查數值時，很容易混在一起的是單位：γ 通常用 rad/s/T 表示，γ/2π 則用 Hz/T 或 MHz/T。質子的 γ/2π 約為 42.58 MHz/T，這兩種寫法描述的是同一個物理比例，並不是兩個不同的常數。<a href="https://physics.nist.gov/cuu/pdf/CODATA_RMP2005.pdf#page=26" target="_blank" rel="noopener">NIST：定義與單位</a>、<a href="https://physics.nist.gov/cgi-bin/cuu/Value?gammapbar%7Csearch_for=ratio" target="_blank" rel="noopener">質子數值</a>。</p>
+    <p>這個區分在計算進動時就會用到：γ 乘上 B0 得到角頻率，γ/2π 乘上 B0 才是每秒幾個週期。另外，有些表格只報正的大小，因此代入公式前，也要確認它採用的正負號慣例。</p>
+    <p>到這裡，2021 年課間筆記中的 spin、磁矩與旋磁比就連起來了，下一則接著看<a href="mri-larmor-precession.html">拉莫爾進動</a>。</p>
   </div>
 </article>
 

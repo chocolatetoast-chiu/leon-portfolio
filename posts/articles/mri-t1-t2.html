@@ -44,17 +44,17 @@
 </header>
 
 <article class="article-body">
-  <p><em>Continues from the RF pulse. After a 90°, M is in xy and does not stay there.</em></p>
+  <p><em>Continuing from the RF pulse: after a 90° pulse, M lies in the xy plane, but it does not remain there.</em></p>
 
-  <p>Two recoveries run at once. Each has its own time constant.</p>
+  <p>Two relaxation processes occur at the same time, each with its own time constant.</p>
 
-  <p>T1 is how fast Mz grows back toward M0, the equilibrium along B0. After a 90° pulse:</p>
+  <p>T1 describes how quickly Mz returns toward M0, its equilibrium value along B0. Starting from thermal equilibrium, an ideal 90° pulse gives Mz(0) = 0; the subsequent free recovery in the single-exponential model is:</p>
 
   <p class="formula"><code>Mz(t) = M0 (1 − exp(−t/T1))</code></p>
 
-  <p>People call it spin-lattice relaxation: the spins dump energy into the surroundings. Fat has a short T1. CSF has a long T1. That difference is later used as contrast. T1 is a time, in milliseconds to seconds, for that tissue.</p>
+  <p>This is called spin-lattice relaxation: the spins exchange energy with their surroundings. Fat generally has a shorter T1 than CSF, although the actual values depend on the tissue and measurement conditions. T1 is a time constant, commonly expressed in milliseconds or seconds.</p>
 
-  <p>T2 is how fast the xy component disappears:</p>
+  <p>T2 describes how quickly the xy component decays:</p>
 
   <p class="formula"><code>Mxy(t) = Mxy(0) exp(−t/T2)</code></p>
 
@@ -63,24 +63,27 @@
     <figcaption>T1 and T2 are time constants. Left: Mz recovers to M0. Right: Mxy decays. A weighted image is not a map of these times.</figcaption>
   </figure>
 
-  <p>Neighboring spins nudge each other’s fields, so the pack dephases even in a perfect B0. T2 is always shorter than T1. Real coils also see extra dephasing from shims and tissue susceptibility. That faster number is T2*, not T2. Different constant. Leave it for another note.</p>
+  <p>Interactions and fluctuations in the local magnetic environment lead to loss of transverse coherence, even when the applied B0 is uniform. In many biological tissues, T2 is shorter than T1, but "T2 is always shorter than T1" is not a universal rule. <a href="https://journals.aps.org/pr/pdf/10.1103/PhysRev.70.460#page=9" target="_blank" rel="noopener">Bloch, 1946, discussion of relaxation</a>.</p>
 
-  <p>A T1-weighted image is not a T1 map. Weighted means you picked TR and TE so tissues with different T1 look brighter or darker. A T1 map is a voxel-wise fit of the time constant itself. Do not read a bright pixel as “this voxel’s T1.” Same split for T2-weighted vs T2 map.</p>
+  <p>The time constants are not the times at which recovery or decay is complete. In the simple exponential model above, after one T1, Mz has recovered to about 63% of M0; after one T2, about 37% of the initial transverse magnetization remains. These percentages follow directly from <code>1 − exp(−1)</code> and <code>exp(−1)</code>.</p>
 
-  <p>Next note: TE/TR contrast is not in this set yet.</p>
+  <p>An FID also contains dephasing caused by static field differences, including imperfect shimming and susceptibility variation, so its envelope is characterized by T2* rather than T2 alone. In a simple exponential description, <code>1/T2* = 1/T2 + 1/T2′</code>, where T2′ accounts for this additional dephasing. An ideal spin echo can refocus static frequency offsets, but does not reverse intrinsic T2 decay. <a href="https://ocw.mit.edu/courses/22-920-a-hands-on-introduction-to-nuclear-magnetic-resonance-january-iap-1997/21fe102c19ad2bf3f1835c55cb33a426_lecture_4.pdf#page=2" target="_blank" rel="noopener">MIT: gradient and spin echoes, p. 2</a>.</p>
+
+  <p>A T1-weighted image is not a T1 map. Weighting comes from sequence choices such as TR and TE, which make tissue differences contribute to image brightness; a T1 map instead estimates the time constant from measurements acquired under different conditions. A bright pixel does not directly tell us “this voxel’s T1.” The same distinction applies to T2-weighted images and T2 maps. <a href="https://web.mit.edu/hst.583/www/course2001/LECTURES/hst583_NMR.pdf" target="_blank" rel="noopener">MIT: MR principles</a>.</p>
   <hr class="lang-break" aria-hidden="true">
   <div class="article-zh" lang="zh-Hant">
     <p class="lang-label">中文</p>
-    <p><em>接 RF pulse。90° 之後 M 在 xy，它不會待在那裡。</em></p>
-    <p>兩種回復同時在跑，各有自己的時間常數。</p>
-    <p>T1 是 Mz 長回 M0 有多快，M0 是沿 B0 的平衡；90° pulse 之後：</p>
+    <p><em>接續 RF pulse：90° pulse 之後，M 位於 xy 平面，但不會一直維持這個狀態。</em></p>
+    <p>接下來會同時發生兩個弛緩過程，各有自己的時間常數。</p>
+    <p>T1 描述的是 Mz 回到 M0 的速度，M0 是沿 B0 方向的平衡值；若從熱平衡開始，理想的 90° pulse 後 Mz(0) = 0，隨後的自由恢復在單一指數模型中可寫成：</p>
     <p class="formula"><code>Mz(t) = M0 (1 − exp(−t/T1))</code></p>
-    <p>人也叫 spin-lattice relaxation：spin 把能量丟給周圍；脂肪 T1 短，CSF T1 長，這個差後面會當對比。T1 是時間，毫秒到秒，看組織。</p>
-    <p>T2 是 xy 分量消失有多快：</p>
+    <p>這個過程稱為自旋晶格弛緩（spin-lattice relaxation），也就是 spin 與周圍環境交換能量；脂肪的 T1 通常比 CSF 短，但實際數值仍與組織及量測條件有關。T1 本身是時間常數，常用毫秒或秒表示。</p>
+    <p>T2 描述的則是 xy 分量衰減的速度：</p>
     <p class="formula"><code>Mxy(t) = Mxy(0) exp(−t/T2)</code></p>
-    <p>旁邊的 spin 會推彼此的場，所以就算 B0 完美，這包也會散相；T2 永遠比 T1 短。真實線圈還會看到 shims 和組織磁化率多出來的散相，那個比較快的數字是 T2*，不是 T2；另一個常數，留給別則筆記。</p>
-    <p>T1-weighted 影像不是 T1 map；Weighted 的意思是你選了 TR 和 TE，讓 T1 不同的組織看起來比較亮或比較暗。T1 map 是逐 voxel 把時間常數擬合出來，不要把亮像素讀成「這個 voxel 的 T1」；T2-weighted 跟 T2 map 也是同一套區分。</p>
-    <p>下一則：TE/TR 對比這組還沒寫。</p>
+    <p>局部磁環境中的交互作用與波動，會讓橫向磁化逐漸失去相位一致性，即使外加的 B0 均勻也會發生；在許多生物組織中，T2 比 T1 短，但「T2 永遠比 T1 短」並不是普遍成立的規則。<a href="https://journals.aps.org/pr/pdf/10.1103/PhysRev.70.460#page=9" target="_blank" rel="noopener">Bloch, 1946：弛緩的討論</a>。</p>
+    <p>時間常數也不是恢復或衰減完成所需的時間。依上面的簡單指數模型，經過一個 T1，Mz 約恢復到 M0 的 63%；經過一個 T2，橫向磁化則還剩下初始值的約 37%，這兩個比例直接來自 <code>1 − exp(−1)</code> 與 <code>exp(−1)</code>。</p>
+    <p>自由感應衰減（FID）還會包含靜態磁場差異造成的散相，例如 shimming 不完全與磁化率差異，因此其包絡衰減以 T2* 描述，而不只由 T2 決定。在簡單指數模型中，可以寫成 <code>1/T2* = 1/T2 + 1/T2′</code>，其中 T2′ 描述額外散相；理想的 spin echo 可以重新聚合靜態頻率差造成的相位散開，但無法逆轉內在的 T2 衰減。<a href="https://ocw.mit.edu/courses/22-920-a-hands-on-introduction-to-nuclear-magnetic-resonance-january-iap-1997/21fe102c19ad2bf3f1835c55cb33a426_lecture_4.pdf#page=2" target="_blank" rel="noopener">MIT：Gradient and Spin Echoes，第 2 頁</a>。</p>
+    <p>T1-weighted 影像與 T1 map 也要分開理解，前者透過 TR、TE 等序列設定，讓組織差異反映在影像亮暗上；後者則利用不同條件下的量測估計時間常數。因此，不能直接把亮的像素讀成「這個 voxel 的 T1」；T2-weighted 影像與 T2 map 也是相同的區分。<a href="https://web.mit.edu/hst.583/www/course2001/LECTURES/hst583_NMR.pdf" target="_blank" rel="noopener">MIT：磁共振基本原理</a>。</p>
   </div>
 </article>
 

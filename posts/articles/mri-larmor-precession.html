@@ -44,33 +44,36 @@
 </header>
 
 <article class="article-body">
-  <p><em>Continues the 2021 class note. Last term was gyromagnetic ratio: μ = γI.</em></p>
+  <p><em>Continuing the 2021 class note, after gyromagnetic ratio: μ = γI.</em></p>
 
-  <p>Put μ in a static field B0. The torque is μ × B0. If μ were only a compass needle, it would flop onto B0. It does not, because it also carries angular momentum. Torque on angular momentum does not pull the axis in. It makes the axis walk around the field. That walk is Larmor precession.</p>
+  <p>In the classical vector picture, a magnetic moment μ in a static field B0 experiences a torque, μ × B0. Because μ is associated with angular momentum, that torque changes the angular momentum's direction and makes the moment precess around the field. It does not simply pull the moment into alignment.</p>
 
-  <p>The path is a cone around B0. The opening of the cone does not close by itself. How fast it walks depends only on γ and |B0|:</p>
+  <p>Ignoring relaxation, the motion traces a cone around B0 without changing its opening angle. For a positive γ, such as that of <sup>1</sup>H, the usual expression for the precession rate is:</p>
 
   <p class="formula"><code>ω₀ = γ B₀</code></p>
 
-  <p>ω₀ is radians per second. The number people quote at the scanner is the cyclic frequency ν₀ = γ B₀ / 2π. For <sup>1</sup>H, γ/2π ≈ 42.58 MHz/T, so about 64 MHz at 1.5 T and 128 MHz at 3 T. Change the nucleus and you change γ, so you change the frequency. Same B0, <sup>13</sup>C and <sup>1</sup>H do not precess together.</p>
+  <p>ω₀ is the angular frequency in radians per second. At the scanner, the frequency is usually given as ν₀ = γ B₀ / 2π. For <sup>1</sup>H, γ/2π ≈ 42.58 MHz/T, giving about 64 MHz at 1.5 T and 128 MHz at 3 T. Changing the nucleus changes γ and therefore its frequency: at the same B0, <sup>13</sup>C and <sup>1</sup>H do not precess at the same rate. <a href="https://physics.nist.gov/cgi-bin/cuu/Value?gammapbar%7Csearch_for=ratio" target="_blank" rel="noopener">NIST: proton gyromagnetic ratio</a>.</p>
 
   <figure class="note-fig">
     <img src="../../assets/svg/mri-larmor-precession.svg" alt="Vector on a cone around a vertical B0 axis, with a dashed precession circle labeled omega-zero.">
-    <figcaption>μ walks around B0 on a cone. The cone does not close; the walk speed is ω₀ = γ B₀.</figcaption>
+    <figcaption>A magnetic moment precesses around B0. Ignoring relaxation, its cone angle stays constant; for positive γ, ω₀ = γ B₀.</figcaption>
   </figure>
 
-  <p>A voxel is many protons. Their tiny μ add up to a bulk magnetization M, which precesses at the same ω₀. A coil along z hears nothing from M walking around z. You hear M only after some of it sits in the xy plane. That takes a push at ω₀.</p>
+  <p>This is where the individual magnetic moment and the bulk magnetization <strong>M</strong> need to be separated. M is the sum of the moments per unit volume. At thermal equilibrium it points along B0, with no net transverse component, so it is stationary even though the individual-spin dynamics are described by the Larmor frequency. After RF excitation creates transverse magnetization, that component precesses and can produce a detectable signal. <a href="https://ocw.mit.edu/courses/22-920-a-hands-on-introduction-to-nuclear-magnetic-resonance-january-iap-1997/2c3c010568e1561a18c5b472db1d84ec_lecture_2.pdf#page=1" target="_blank" rel="noopener">MIT: rotating frame and equilibrium, p. 1</a>.</p>
+
+  <p>The receiver detects a voltage induced by the changing magnetic flux from the rotating transverse magnetization. Precession explains the rotation; relaxation explains the return to equilibrium. <a href="https://web.mit.edu/hst.583/www/course2001/LECTURES/hst583_NMR.pdf" target="_blank" rel="noopener">MIT: basic MR principles</a>.</p>
 
   <p>Next note: <a href="mri-rf-pulse.html">RF pulse / resonance</a>.</p>
   <hr class="lang-break" aria-hidden="true">
   <div class="article-zh" lang="zh-Hant">
     <p class="lang-label">中文</p>
-    <p><em>接 2021 課間筆記。上一個詞是旋磁比：μ = γI。</em></p>
-    <p>把 μ 放進靜磁場 B0，torque 是 μ × B0；如果 μ 只是指南針，它會直接倒向 B0，它沒有，因為它還帶著角動量。角動量上的 torque 不會把軸拉進去，會讓軸繞著磁場走，這就是拉莫爾進動。</p>
-    <p>路徑是繞著 B0 的圓錐，圓錐自己不會合起來；走多快只看 γ 和 |B0|：</p>
+    <p><em>接續 2021 年的課間筆記，上一則談的是旋磁比：μ = γI。</em></p>
+    <p>用古典向量的圖像來看，把磁矩 μ 放進靜磁場 B0 後，它會受到 μ × B0 的力矩（torque）；由於磁矩與角動量相連，力矩會改變角動量的方向，讓磁矩繞著磁場進動，而不是直接把它拉到與磁場對齊。</p>
+    <p>先不考慮弛緩時，這個運動會在 B0 周圍形成圓錐，開口角度維持不變；對 <sup>1</sup>H 這類 γ 為正的原子核，進動角頻率通常寫成：</p>
     <p class="formula"><code>ω₀ = γ B₀</code></p>
-    <p>ω₀ 是每秒弧度；掃描器上大家報的是週頻率 ν₀ = γ B₀ / 2π。<sup>1</sup>H 的 γ/2π 大約 42.58 MHz/T，所以 1.5 T 大約 64 MHz，3 T 大約 128 MHz；換核就換 γ，頻率也換，同一個 B0，<sup>13</sup>C 跟 <sup>1</sup>H 不會一起進動。</p>
-    <p>一個 voxel 裡很多質子，它們的小 μ 加起來是 bulk magnetization M，也以同一個 ω₀ 進動；線圈沿 z 放，聽不到 M 繞 z 走。要聽到 M，得先讓一部分躺在 xy 平面，那需要在 ω₀ 推一下。</p>
+    <p>ω₀ 是角頻率，單位為每秒弧度；掃描器上通常報的是頻率 ν₀ = γ B₀ / 2π。<sup>1</sup>H 的 γ/2π 約為 42.58 MHz/T，因此在 1.5 T 時約為 64 MHz，在 3 T 時約為 128 MHz；換了原子核，γ 與進動頻率也會跟著改變，所以同一個 B0 下，<sup>13</sup>C 與 <sup>1</sup>H 的進動頻率並不相同。<a href="https://physics.nist.gov/cgi-bin/cuu/Value?gammapbar%7Csearch_for=ratio" target="_blank" rel="noopener">NIST：質子旋磁比</a>。</p>
+    <p>這裡要把個別磁矩與整體的<strong>磁化向量 M</strong> 分開理解，M 是單位體積內許多磁矩的向量總和。在熱平衡時，它沿著 B0，整體橫向分量為零，因此 M 本身是靜止的；不能因為個別自旋以拉莫爾頻率演化，就說平衡狀態的 M 已經在繞圈。RF 激發建立橫向磁化後，這個分量才會進動並形成可偵測的訊號。<a href="https://ocw.mit.edu/courses/22-920-a-hands-on-introduction-to-nuclear-magnetic-resonance-january-iap-1997/2c3c010568e1561a18c5b472db1d84ec_lecture_2.pdf#page=1" target="_blank" rel="noopener">MIT：旋轉座標與熱平衡，第 1 頁</a>。</p>
+    <p>接收線圈偵測的是旋轉中橫向磁化造成的磁通變化，並由此產生感應電壓；進動解釋旋轉的過程，回到熱平衡則還要由後面的弛緩來說明。<a href="https://web.mit.edu/hst.583/www/course2001/LECTURES/hst583_NMR.pdf" target="_blank" rel="noopener">MIT：磁共振基本原理</a>。</p>
     <p>下一則：<a href="mri-rf-pulse.html">射頻脈衝／共振</a>。</p>
   </div>
 </article>

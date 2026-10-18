@@ -44,11 +44,11 @@
 </header>
 
 <article class="article-body">
-  <p><em>Continues from Larmor precession. M already walks around B0 at ω₀.</em></p>
+  <p><em>Continuing from Larmor precession: how do we move the equilibrium magnetization away from B0 and obtain a signal?</em></p>
 
-  <p>A coil along z hears nothing from M precessing around z. You have to tip M off z so a piece of it sits in xy and keeps rotating. The tip is an RF pulse: a small field B1 in the xy plane, oscillating at ω₀. Same frequency as the walk. That matching is resonance. Push a swing at its natural period. Off-frequency B1 mostly misses.</p>
+  <p>At thermal equilibrium, M points along B0, which we take as the z-axis, and there is no net transverse magnetization. An <strong>RF pulse</strong> tips M away from z so that it has a component in the xy plane. Here, B1 denotes the effective transverse RF component rotating in the same sense as the nuclear precession; matching the Larmor frequency ω₀ produces resonance. The swing analogy helps with the frequency matching, but does not fully describe the spin dynamics.</p>
 
-  <p>In the frame that rotates at ω₀, B0 drops out and B1 looks still. M then precesses around B1 instead of around B0. How far it tips is the flip angle. For a constant-amplitude pulse of duration t_p:</p>
+  <p>In a frame rotating at the resonant frequency, the effective longitudinal term is zero and B1 appears stationary. The physical B0 has not disappeared: its effect on the precession is canceled by the change of reference frame. M then rotates around B1. For an on-resonance, constant-amplitude pulse of duration t_p, neglecting relaxation during the pulse:</p>
 
   <p class="formula"><code>α = γ B1 t_p</code></p>
 
@@ -57,20 +57,26 @@
     <figcaption>In the rotating frame B1 looks still. M precesses around it. The tip is the flip angle α = γ B1 t_p.</figcaption>
   </figure>
 
-  <p>A 90° pulse parks M in xy. A 180° pulse sends it to −z. The scanner talks in α, not in B1.</p>
+  <p>The flip angle α is in radians in this equation. Starting from M along +z, a 90° pulse tips it into xy and a 180° pulse inverts it to −z. Once the RF is switched off, transverse magnetization continues to precess in the laboratory frame; it has not been parked motionless in xy. <a href="https://ocw.mit.edu/courses/22-920-a-hands-on-introduction-to-nuclear-magnetic-resonance-january-iap-1997/2c3c010568e1561a18c5b472db1d84ec_lecture_2.pdf#page=5" target="_blank" rel="noopener">MIT: RF excitation, pp. 5–6</a>.</p>
 
-  <p>If B1 is off-resonance, M sees an effective field that is not B1, so the tip is smaller and the axis is wrong. Slice selection later uses a gradient so only one slab is on-resonance. That is a later note. What the coil actually records is the rotating xy component, not Mz.</p>
+  <p>For an amplitude-shaped pulse with fixed RF phase, the on-resonance result depends on the pulse area: <code>α = γ ∫ B1(t) dt</code>. A longer pulse and a stronger pulse can therefore give the same flip angle under these assumptions. This is why both pulse amplitude and duration matter, rather than the scanner controlling α independently of B1.</p>
+
+  <p>Off-resonance, an effective longitudinal component remains, so M rotates around a tilted effective field rather than around B1 alone. The rotation axis and final magnetization both change; the result cannot be summarized as every off-resonance pulse simply giving a smaller flip. <a href="https://ocw.mit.edu/courses/22-920-a-hands-on-introduction-to-nuclear-magnetic-resonance-january-iap-1997/2c3c010568e1561a18c5b472db1d84ec_lecture_2.pdf#page=6" target="_blank" rel="noopener">MIT: rotating-frame effective field, pp. 5–6</a>.</p>
+
+  <p>The receiver detects the rotating transverse component through electromagnetic induction, rather than directly measuring Mz. A gradient can make resonance frequency depend on position, allowing an RF pulse to excite a selected slice. That spatial-selection step is the connection to later imaging notes. <a href="https://web.mit.edu/hst.583/www/course2001/LECTURES/hst583_NMR.pdf" target="_blank" rel="noopener">MIT: MR principles</a>.</p>
 
   <p>Next note: <a href="mri-t1-t2.html">T1 and T2 relaxation</a>.</p>
   <hr class="lang-break" aria-hidden="true">
   <div class="article-zh" lang="zh-Hant">
     <p class="lang-label">中文</p>
-    <p><em>接拉莫爾進動。M 已經在 ω₀ 繞 B0 走。</em></p>
-    <p>線圈沿 z 放，聽不到 M 繞 z 進動；得把 M 從 z 推開，讓一塊待在 xy 裡繼續轉。這一推是 RF pulse：xy 平面上一個小磁場 B1，以 ω₀ 振盪，跟走路的頻率一樣，對上就是共振；盪鞦韆要照它自己的週期推，頻率不對的 B1 多半推空。</p>
-    <p>在以 ω₀ 轉的座標系裡，B0 消失，B1 看起來是靜的；M 改繞 B1 進動，不再繞 B0。推多遠是 flip angle；振幅固定、長度 t_p 的 pulse：</p>
+    <p><em>接續拉莫爾進動：要怎麼把平衡狀態的磁化向量移離 B0，得到可偵測的訊號？</em></p>
+    <p>在熱平衡時，M 沿著 B0，也就是這裡設定的 z 軸，整體橫向磁化為零；<strong>RF pulse（射頻脈衝）</strong>會把 M 翻離 z 軸，建立 xy 平面內的分量。這裡的 B1 指與核進動同向旋轉的有效橫向 RF 分量，頻率對上拉莫爾頻率 ω₀ 時便產生共振；盪鞦韆的比喻可以幫助理解頻率匹配，但不能完全代替自旋動力學。</p>
+    <p>在以共振頻率旋轉的座標系中，有效磁場的縱向項為零，B1 則看起來是靜止的；這並不是實際的 B0 消失，而是座標轉換抵消了它造成的進動，此時 M 會繞著 B1 旋轉。若 pulse 位於共振上、振幅固定、持續時間為 t_p，且忽略脈衝期間的弛緩：</p>
     <p class="formula"><code>α = γ B1 t_p</code></p>
-    <p>90° pulse 把 M 停在 xy，180° pulse 把它送到 −z；掃描器講的是 α，不是 B1。</p>
-    <p>B1 偏離共振時，M 看到的有效場不是 B1，所以推得比較小，軸也不對；後面選層會用梯度，只讓一層在共振上，那是後面的筆記。線圈真正記到的是轉著的 xy 分量，不是 Mz。</p>
+    <p>這個公式裡的 α 以弧度表示。以 M 原本沿著 +z 為前提，90° pulse 會把它翻到 xy 平面，180° pulse 則使它反向到 −z；RF 關掉後，橫向磁化在實驗室座標中仍會繼續進動，並不是靜止地停在 xy 平面。<a href="https://ocw.mit.edu/courses/22-920-a-hands-on-introduction-to-nuclear-magnetic-resonance-january-iap-1997/2c3c010568e1561a18c5b472db1d84ec_lecture_2.pdf#page=5" target="_blank" rel="noopener">MIT：RF 激發，第 5–6 頁</a>。</p>
+    <p>若 pulse 的振幅隨時間改變，但 RF 相位固定，在相同共振假設下，翻轉角取決於脈衝面積：<code>α = γ ∫ B1(t) dt</code>。因此，較長的 pulse 與較強的 pulse 可能產生相同翻轉角，振幅與持續時間都需要一起看，並不是掃描器能獨立於 B1 直接指定 α。</p>
+    <p>偏離共振時，有效磁場會留下縱向分量，M 便繞著傾斜的有效磁場旋轉，而不再只繞 B1；旋轉軸與最後的磁化狀態都會改變，不能一律簡化成翻轉角只會變小。<a href="https://ocw.mit.edu/courses/22-920-a-hands-on-introduction-to-nuclear-magnetic-resonance-january-iap-1997/2c3c010568e1561a18c5b472db1d84ec_lecture_2.pdf#page=6" target="_blank" rel="noopener">MIT：旋轉座標中的有效磁場，第 5–6 頁</a>。</p>
+    <p>接收線圈透過電磁感應偵測旋轉的橫向分量，而不是直接量 Mz。若加入梯度，讓共振頻率隨位置改變，就能配合 RF pulse 選擇激發某一切層，這也接到後續的空間定位與成像。<a href="https://web.mit.edu/hst.583/www/course2001/LECTURES/hst583_NMR.pdf" target="_blank" rel="noopener">MIT：磁共振基本原理</a>。</p>
     <p>下一則：<a href="mri-t1-t2.html">T1 和 T2 弛緩</a>。</p>
   </div>
 </article>
