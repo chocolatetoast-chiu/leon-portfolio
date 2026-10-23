@@ -54,6 +54,9 @@
 
   <p>ω₀ is the angular frequency in radians per second. At the scanner, the frequency is usually given as ν₀ = γ B₀ / 2π. For <sup>1</sup>H, γ/2π ≈ 42.58 MHz/T, giving about 64 MHz at 1.5 T and 128 MHz at 3 T. Changing the nucleus changes γ and therefore its frequency: at the same B0, <sup>13</sup>C and <sup>1</sup>H do not precess at the same rate. <a href="https://physics.nist.gov/cgi-bin/cuu/Value?gammapbar%7Csearch_for=ratio" target="_blank" rel="noopener">NIST: proton gyromagnetic ratio</a>.</p>
 
+  <!-- animation-widget:larmor-precession:en -->
+  <div data-widget="larmor-precession" data-lang="en"></div>
+
   <figure class="note-fig">
     <img src="../../assets/svg/mri-larmor-precession.svg" alt="Vector on a cone around a vertical B0 axis, with a dashed precession circle labeled omega-zero.">
     <figcaption>A magnetic moment precesses around B0. Ignoring relaxation, its cone angle stays constant; for positive γ, ω₀ = γ B₀.</figcaption>
@@ -72,6 +75,10 @@
     <p>先不考慮弛緩時，這個運動會在 B0 周圍形成圓錐，開口角度維持不變；對 <sup>1</sup>H 這類 γ 為正的原子核，進動角頻率通常寫成：</p>
     <p class="formula"><code>ω₀ = γ B₀</code></p>
     <p>ω₀ 是角頻率，單位為每秒弧度；掃描器上通常報的是頻率 ν₀ = γ B₀ / 2π。<sup>1</sup>H 的 γ/2π 約為 42.58 MHz/T，因此在 1.5 T 時約為 64 MHz，在 3 T 時約為 128 MHz；換了原子核，γ 與進動頻率也會跟著改變，所以同一個 B0 下，<sup>13</sup>C 與 <sup>1</sup>H 的進動頻率並不相同。<a href="https://physics.nist.gov/cgi-bin/cuu/Value?gammapbar%7Csearch_for=ratio" target="_blank" rel="noopener">NIST：質子旋磁比</a>。</p>
+
+    <!-- animation-widget:larmor-precession:zh-Hant -->
+    <div data-widget="larmor-precession" data-lang="zh-Hant"></div>
+
     <p>這裡要把個別磁矩與整體的<strong>磁化向量 M</strong> 分開理解，M 是單位體積內許多磁矩的向量總和。在熱平衡時，它沿著 B0，整體橫向分量為零，因此 M 本身是靜止的；不能因為個別自旋以拉莫爾頻率演化，就說平衡狀態的 M 已經在繞圈。RF 激發建立橫向磁化後，這個分量才會進動並形成可偵測的訊號。<a href="https://ocw.mit.edu/courses/22-920-a-hands-on-introduction-to-nuclear-magnetic-resonance-january-iap-1997/2c3c010568e1561a18c5b472db1d84ec_lecture_2.pdf#page=1" target="_blank" rel="noopener">MIT：旋轉座標與熱平衡，第 1 頁</a>。</p>
     <p>接收線圈偵測的是旋轉中橫向磁化造成的磁通變化，並由此產生感應電壓；進動解釋旋轉的過程，回到熱平衡則還要由後面的弛緩來說明。<a href="https://web.mit.edu/hst.583/www/course2001/LECTURES/hst583_NMR.pdf" target="_blank" rel="noopener">MIT：磁共振基本原理</a>。</p>
     <p>下一則：<a href="mri-rf-pulse.html">射頻脈衝／共振</a>。</p>
@@ -95,6 +102,8 @@
 </footer>
 <button id="scrollTop" onclick="scrollToTop()" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
 <script src="../../assets/js/instruments.js"></script>
+<!-- animation-widget:larmor-precession:script -->
+<script src="../../assets/js/larmor-precession.js"></script>
 <script src="../../assets/js/main.js"></script>
 </body>
 </html>
