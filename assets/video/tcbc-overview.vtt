@@ -1,0 +1,34 @@
+WEBVTT
+
+1
+00:00:00.800 --> 00:00:05.140
+Heads move during a brain scan, even when people try hard to stay still.
+
+2
+00:00:05.240 --> 00:00:09.682
+And when that happens, the PET image and the MR image stop lining up.
+
+3
+00:00:10.132 --> 00:00:16.942
+Most correction methods compare how bright the two images are. They don't use what the tracer does in each kind of tissue.
+
+4
+00:00:17.392 --> 00:00:24.099
+Our idea starts with white matter. Amyloid tracers bind there at a high, steady level, so it makes a clean target.
+
+5
+00:00:24.549 --> 00:00:33.142
+So we take the white matter mask from the MR and slide it over the PET. The best spot is where the average uptake inside the mask is highest.
+
+6
+00:00:33.592 --> 00:00:39.810
+A search routine called Nelder-Mead does the sliding for us. It starts from 100 random guesses.
+
+7
+00:00:40.260 --> 00:00:45.652
+Then we apply that same move to the MR and its masks. Everything lines up again.
+
+8
+00:00:46.002 --> 00:00:49.689
+Want to try it? Drag the mask in the demo below.
+
