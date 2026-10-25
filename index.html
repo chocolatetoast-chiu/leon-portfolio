@@ -60,63 +60,80 @@
   </div>
 </section>
 
-<!-- FEATURED WORK -->
+<!-- FEATURED WORK: one row, scroll or swipe sideways -->
 <section class="section" id="work">
   <div class="container">
     <p class="section__label" data-reveal><span class="lp">#</span> Featured Work</p>
     <p class="section__desc" data-reveal>Methods for amyloid PET quantification: without MRI, under head motion, and with deep-learning parcellation.</p>
 
-    <!-- Spotlight: MRI-less amyloid PET (EJNMMI Physics 2026) -->
-    <article class="feature-spot" data-reveal="1">
-      <!-- feature-media:mri-less:video -->
-      <a href="work/mri-less-amyloid.html" class="feature-media feature-media--video" aria-label="Open the MRI-less amyloid PET case study">
-        <video class="feature-media__video" data-play="view" muted loop playsinline preload="none" poster="assets/video/mri-less-overview-poster.jpg" data-src="assets/video/mri-less-overview.mp4" aria-hidden="true"></video>
-        <span class="feature-media__badge"><i class="fas fa-play"></i> Overview · 1:16</span>
-      </a>
-      <div class="feature-spot__body">
-        <span class="work-card__num">Published · EJNMMI Physics 2026</span>
-        <h3 class="feature-spot__title">MRI-less Amyloid PET</h3>
-        <p class="feature-spot__desc">Centiloid quantification on PET/CT when no MRI is available. A deep-learning model trained with synthetic CT matched the MRI reference within a ±5 Centiloid equivalence margin on 424 external scans.</p>
-        <dl class="feature-metrics">
-          <div><dt>Mean abs. error</dt><dd>5.79 CL</dd></div>
-          <div><dt>Gray-zone acc.</dt><dd>90.3%</dd></div>
-          <div><dt>Test scans</dt><dd>424</dd></div>
-        </dl>
-        <div class="feature-chips" aria-label="What the case study has">
-          <span><i class="fas fa-play"></i> Video</span><span><i class="fas fa-sliders"></i> Interactive demo</span><span><i class="fas fa-file-lines"></i> Paper</span>
-        </div>
-        <div class="feature-spot__actions">
-          <a href="work/mri-less-amyloid.html" class="btn btn--glow">Watch and try it <i class="fas fa-arrow-right" style="font-size:0.8em"></i></a>
-          <a href="https://doi.org/10.1186/s40658-026-00854-8" target="_blank" rel="noopener" class="link-arrow">Paper <i class="fas fa-arrow-up-right-from-square" style="font-size:0.75em"></i></a>
+    <div class="reel" data-reveal="1">
+      <div class="reel__track" id="workReel" tabindex="0" role="region" aria-label="Featured projects, scroll sideways">
+
+        <!-- 1. MRI-less amyloid PET (EJNMMI Physics 2026) -->
+        <a href="work/mri-less-amyloid.html" class="reel-card" aria-label="MRI-less Amyloid PET: open the case study">
+          <!-- feature-media:mri-less:video -->
+          <div class="feature-media">
+            <video class="feature-media__video" muted loop playsinline preload="none" poster="assets/video/mri-less-overview-poster.jpg" data-src="assets/video/mri-less-overview.mp4" aria-hidden="true"></video>
+            <span class="feature-media__badge"><i class="fas fa-play"></i> Overview · 1:16</span>
+          </div>
+          <div class="reel-card__body">
+            <span class="work-card__num">Published · EJNMMI Physics 2026</span>
+            <h3 class="reel-card__title">MRI-less Amyloid PET</h3>
+            <p class="reel-card__desc">Centiloid on PET/CT when no MRI is available. Trained with synthetic CT, it matched the MRI reference within a ±5 Centiloid equivalence margin.</p>
+            <dl class="feature-metrics">
+              <div><dt>Mean abs. error</dt><dd>5.79 CL</dd></div>
+              <div><dt>Gray-zone acc.</dt><dd>90.3%</dd></div>
+              <div><dt>Test scans</dt><dd>424</dd></div>
+            </dl>
+            <div class="feature-chips"><span><i class="fas fa-play"></i> Video</span><span><i class="fas fa-sliders"></i> Interactive demo</span><span><i class="fas fa-file-lines"></i> Paper</span></div>
+            <span class="reel-card__go">Watch and try it <i class="fas fa-arrow-right" style="font-size:0.8em"></i></span>
+          </div>
+        </a>
+
+        <!-- 2. TCBC motion correction (EJNMMI Physics 2025) -->
+        <a href="work/tcbc-motion.html" class="reel-card" aria-label="TCBC Motion Correction: open the case study">
+          <!-- feature-media:tcbc:video -->
+          <div class="feature-media">
+            <video class="feature-media__video" muted loop playsinline preload="none" poster="assets/video/tcbc-overview-poster.jpg" data-src="assets/video/tcbc-overview.mp4" aria-hidden="true"></video>
+            <span class="feature-media__badge"><i class="fas fa-play"></i> Overview · 0:51</span>
+          </div>
+          <div class="reel-card__body">
+            <span class="work-card__num">Published · EJNMMI Physics 2025</span>
+            <h3 class="reel-card__title">TCBC Motion Correction</h3>
+            <p class="reel-card__desc">Uses the tracer’s own white-matter uptake to re-align simultaneous PET/MR frames after head motion.</p>
+            <div class="feature-chips"><span><i class="fas fa-play"></i> Video</span><span><i class="fas fa-sliders"></i> Interactive demo</span><span><i class="fas fa-file-lines"></i> Paper</span></div>
+            <span class="reel-card__go">Watch and try it <i class="fas fa-arrow-right" style="font-size:0.8em"></i></span>
+          </div>
+        </a>
+
+        <!-- 3. LEON brain segmentation (SNMMI 2024 poster; paper in preparation) -->
+        <a href="work/leon-segmentation.html" class="reel-card" aria-label="LEON Brain Segmentation: open the case study">
+          <!-- feature-media:leon:text  (swap for a video or widget when the paper is out) -->
+          <div class="feature-media feature-media--text" aria-hidden="true">
+            <span class="feature-media__fig"><span class="lp">Fig.</span> pipeline</span>
+            <ol class="feature-flow"><li>T1 MRI</li><li>DL parcellation</li><li>PET projection</li><li>SUVR / CL</li></ol>
+            <span class="feature-media__soon">Visual in progress</span>
+          </div>
+          <div class="reel-card__body">
+            <span class="work-card__num">SNMMI 2024 poster · paper in preparation</span>
+            <h3 class="reel-card__title">LEON Brain Segmentation</h3>
+            <p class="reel-card__desc">MR-based deep-learning parcellation for amyloid PET, checked against FreeSurfer ROIs.</p>
+            <div class="feature-chips"><span><i class="fas fa-diagram-project"></i> Pipeline</span><span><i class="fas fa-flask"></i> Poster</span></div>
+            <span class="reel-card__go">Open case study <i class="fas fa-arrow-right" style="font-size:0.8em"></i></span>
+          </div>
+        </a>
+
+      </div>
+      <div class="reel__bar">
+        <div class="reel__dots" role="group" aria-label="Go to project"></div>
+        <span class="reel__hint">swipe or scroll →</span>
+        <div class="reel__nav">
+          <button type="button" class="reel__btn" data-dir="-1" aria-label="Previous project"><span aria-hidden="true">←</span></button>
+          <button type="button" class="reel__btn" data-dir="1" aria-label="Next project"><span aria-hidden="true">→</span></button>
         </div>
       </div>
-    </article>
-
-    <div class="feature-row">
-      <a href="work/tcbc-motion.html" class="work-card work-card--media" data-reveal="2">
-        <!-- feature-media:tcbc:video -->
-        <div class="feature-media feature-media--video">
-          <video class="feature-media__video" data-play="hover" muted loop playsinline preload="none" poster="assets/video/tcbc-overview-poster.jpg" data-src="assets/video/tcbc-overview.mp4" aria-hidden="true"></video>
-          <span class="feature-media__badge"><i class="fas fa-play"></i> Overview · 0:51</span>
-        </div>
-        <span class="work-card__num">Published · EJNMMI Physics 2025</span>
-        <h3 class="work-card__title">TCBC Motion Correction</h3>
-        <p class="work-card__desc">Uses the tracer’s own white-matter uptake to re-align simultaneous PET/MR frames after head motion.</p>
-        <div class="feature-chips feature-chips--card"><span><i class="fas fa-play"></i> Video</span><span><i class="fas fa-sliders"></i> Interactive demo</span><span><i class="fas fa-file-lines"></i> Paper</span></div>
-      </a>
-      <a href="work/leon-segmentation.html" class="work-card work-card--media" data-reveal="3">
-        <!-- feature-media:leon:text  (swap for a video or widget when the paper is out) -->
-        <div class="feature-media feature-media--text" aria-hidden="true">
-          <span class="feature-media__fig"><span class="lp">Fig.</span> pipeline</span>
-          <ol class="feature-flow"><li>T1 MRI</li><li>DL parcellation</li><li>PET projection</li><li>SUVR / CL</li></ol>
-          <span class="feature-media__soon">Visual in progress</span>
-        </div>
-        <span class="work-card__num">SNMMI 2024 poster · paper in preparation</span>
-        <h3 class="work-card__title">LEON Brain Segmentation</h3>
-        <p class="work-card__desc">MR-based deep-learning parcellation for amyloid PET, checked against FreeSurfer ROIs.</p>
-        <div class="feature-chips feature-chips--card"><span><i class="fas fa-diagram-project"></i> Pipeline</span><span><i class="fas fa-flask"></i> Poster</span></div>
-      </a>
     </div>
+
     <div class="section__more" data-reveal>
       <a href="cv.html#projects" class="link-arrow">View all projects <i class="fas fa-arrow-right" style="font-size:0.8em"></i></a>
     </div>
