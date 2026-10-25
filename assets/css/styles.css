@@ -1475,7 +1475,8 @@ body::before {
 .work-card--media .work-card__num,
 .work-card--media .work-card__title,
 .work-card--media .work-card__desc,
-.work-card--media .work-card__tags { padding:0 8px; }
+.work-card--media .work-card__tags,
+.work-card--media .feature-chips { padding:0 8px; }
 
 /* text-only "figure" — placeholder until a video/widget exists */
 .feature-media--text {
@@ -1507,4 +1508,20 @@ body::before {
   .feature-spot__body { padding:0 6px 8px; }
   .feature-row { grid-template-columns:1fr; }
   .feature-spot__title { font-size:1.4rem; }
+}
+
+/* what each case study offers: video, interactive demo, paper, poster */
+.feature-chips { display:flex; flex-wrap:wrap; gap:8px; margin:0 0 22px; }
+.feature-chips span {
+  font-family:var(--font-m); font-size:0.74rem; color:var(--text-2);
+  padding:4px 10px; border-radius:999px; border:1px solid var(--border);
+  background:rgba(255,255,255,0.02);
+}
+.feature-chips i { color:var(--accent); font-size:0.7rem; margin-right:4px; }
+.feature-chips--card { margin:auto 0 0; }
+.work-card--media .feature-chips--card { padding:0 8px; }
+.work-card--media:hover .feature-media__badge,
+.work-card--media:focus-visible .feature-media__badge { border-color:var(--accent); }
+@media (max-width:420px) {
+  .feature-metrics dt { white-space:normal; letter-spacing:0.04em; }
 }

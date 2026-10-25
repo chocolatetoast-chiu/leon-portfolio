@@ -66,11 +66,11 @@
     <p class="section__label" data-reveal><span class="lp">#</span> Featured Work</p>
     <p class="section__desc" data-reveal>Methods for amyloid PET quantification: without MRI, under head motion, and with deep-learning parcellation.</p>
 
-    <!-- Spotlight: MRI-less amyloid PET (EJNMMI Physics 2026). Video asset arrives with PR animation/mri-less-overview-video. -->
+    <!-- Spotlight: MRI-less amyloid PET (EJNMMI Physics 2026) -->
     <article class="feature-spot" data-reveal="1">
       <!-- feature-media:mri-less:video -->
       <a href="work/mri-less-amyloid.html" class="feature-media feature-media--video" aria-label="Open the MRI-less amyloid PET case study">
-        <video class="feature-media__video" muted loop playsinline preload="none" poster="assets/video/mri-less-overview-poster.jpg" data-src="assets/video/mri-less-overview.mp4"></video>
+        <video class="feature-media__video" data-play="view" muted loop playsinline preload="none" poster="assets/video/mri-less-overview-poster.jpg" data-src="assets/video/mri-less-overview.mp4" aria-hidden="true"></video>
         <span class="feature-media__badge"><i class="fas fa-play"></i> Overview · 1:16</span>
       </a>
       <div class="feature-spot__body">
@@ -82,8 +82,11 @@
           <div><dt>Gray-zone acc.</dt><dd>90.3%</dd></div>
           <div><dt>Test scans</dt><dd>424</dd></div>
         </dl>
+        <div class="feature-chips" aria-label="What the case study has">
+          <span><i class="fas fa-play"></i> Video</span><span><i class="fas fa-sliders"></i> Interactive demo</span><span><i class="fas fa-file-lines"></i> Paper</span>
+        </div>
         <div class="feature-spot__actions">
-          <a href="work/mri-less-amyloid.html" class="btn btn--glow">Open case study <i class="fas fa-arrow-right" style="font-size:0.8em"></i></a>
+          <a href="work/mri-less-amyloid.html" class="btn btn--glow">Watch and try it <i class="fas fa-arrow-right" style="font-size:0.8em"></i></a>
           <a href="https://doi.org/10.1186/s40658-026-00854-8" target="_blank" rel="noopener" class="link-arrow">Paper <i class="fas fa-arrow-up-right-from-square" style="font-size:0.75em"></i></a>
         </div>
       </div>
@@ -93,13 +96,13 @@
       <a href="work/tcbc-motion.html" class="work-card work-card--media" data-reveal="2">
         <!-- feature-media:tcbc:video -->
         <div class="feature-media feature-media--video">
-          <video class="feature-media__video" muted loop playsinline preload="none" poster="assets/video/tcbc-overview-poster.jpg" data-src="assets/video/tcbc-overview.mp4" aria-hidden="true"></video>
+          <video class="feature-media__video" data-play="hover" muted loop playsinline preload="none" poster="assets/video/tcbc-overview-poster.jpg" data-src="assets/video/tcbc-overview.mp4" aria-hidden="true"></video>
           <span class="feature-media__badge"><i class="fas fa-play"></i> Overview · 0:51</span>
         </div>
         <span class="work-card__num">Published · EJNMMI Physics 2025</span>
         <h3 class="work-card__title">TCBC Motion Correction</h3>
         <p class="work-card__desc">Uses the tracer’s own white-matter uptake to re-align simultaneous PET/MR frames after head motion.</p>
-        <div class="work-card__tags"><span>MATLAB</span><span>PET/MR</span><span>Registration</span></div>
+        <div class="feature-chips feature-chips--card"><span><i class="fas fa-play"></i> Video</span><span><i class="fas fa-sliders"></i> Interactive demo</span><span><i class="fas fa-file-lines"></i> Paper</span></div>
       </a>
       <a href="work/leon-segmentation.html" class="work-card work-card--media" data-reveal="3">
         <!-- feature-media:leon:text  (swap for a video or widget when the paper is out) -->
@@ -111,7 +114,7 @@
         <span class="work-card__num">SNMMI 2024 poster · paper in preparation</span>
         <h3 class="work-card__title">LEON Brain Segmentation</h3>
         <p class="work-card__desc">MR-based deep-learning parcellation for amyloid PET, checked against FreeSurfer ROIs.</p>
-        <div class="work-card__tags"><span>Python</span><span>TensorFlow</span><span>PET/MRI</span></div>
+        <div class="feature-chips feature-chips--card"><span><i class="fas fa-diagram-project"></i> Pipeline</span><span><i class="fas fa-flask"></i> Poster</span></div>
       </a>
     </div>
     <div class="section__more" data-reveal>
